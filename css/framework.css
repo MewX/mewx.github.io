@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Author: MewX
  * Date: 7/30/2014
  * Description: CSS3 based page framwork.
@@ -7,8 +7,8 @@
 
 /* General Settings */
 * {
-	padding: 0;
-	margin: 0;
+	padding: 0px;
+	margin: 0px;
 	background-color: #FFF;
 	font-family: "Microsoft YaHei", "微软雅黑", "simhei", "黑体";
 }
@@ -145,9 +145,11 @@
 	left: 50%;
 	margin-left: -522px;
 	
-	-o-transform:rotate(5deg);
-	-webkit-transform:rotate(5deg);
-	-moz-transform:rotate(5deg);
+	transform: rotate(5deg) ;
+	-webkit-transform: rotate(5deg) ;
+	-moz-transform: rotate(5deg) ;
+	-o-transform: rotate(5deg) ;
+	-ms-transform: rotate(5deg) ;
 	
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -186,9 +188,11 @@
 	left: 50%;
 	margin-left: -502px;
 	
-	-o-transform:rotate(10deg);
-	-webkit-transform:rotate(10deg);
-	-moz-transform:rotate(10deg);
+	transform: rotate(10deg) ;
+	-webkit-transform: rotate(10deg) ;
+	-moz-transform: rotate(10deg) ;
+	-o-transform: rotate(10deg) ;
+	-ms-transform: rotate(10deg) ;
 	
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -227,9 +231,11 @@
 	left: 50%;
 	margin-left: -482px;
 	
-	-o-transform:rotate(15deg);
-	-webkit-transform:rotate(15deg);
-	-moz-transform:rotate(15deg);
+	transform: rotate(15deg) ;
+	-webkit-transform: rotate(15deg) ;
+	-moz-transform: rotate(15deg) ;
+	-o-transform: rotate(15deg) ;
+	-ms-transform: rotate(15deg) ;
 	
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -268,9 +274,11 @@
 	left: 50%;
 	margin-left: -462px;
 	
-	-o-transform:rotate(20deg);
-	-webkit-transform:rotate(20deg);
-	-moz-transform:rotate(20deg);
+	transform: rotate(20deg) ;
+	-webkit-transform: rotate(20deg) ;
+	-moz-transform: rotate(20deg) ;
+	-o-transform: rotate(20deg) ;
+	-ms-transform: rotate(20deg) ;
 	
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -309,9 +317,11 @@
 	left: 50%;
 	margin-left: -442px;
 	
-	-o-transform:rotate(25deg);
-	-webkit-transform:rotate(25deg);
-	-moz-transform:rotate(25deg);
+	transform: rotate(25deg) ;
+	-webkit-transform: rotate(25deg) ;
+	-moz-transform: rotate(25deg) ;
+	-o-transform: rotate(25deg) ;
+	-ms-transform: rotate(25deg) ;
 	
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -337,8 +347,9 @@
 	left: 0%;
 	right: 0%;
 	background-color: #000;
-	position: static;
+	position:static;
 	height: 230px;
+	z-index:10;
 	
 	/* Thanks -> http://www.colorzilla.com/gradient-editor/ */
 	background: #ffffff; /* Old browsers */
@@ -358,6 +369,7 @@
 	position: static;
 	text-align:center;
 	vertical-align:middle;
+	z-index:10;
 }
 #ContentTaken .spaceline {
 	height: 10px;
@@ -401,6 +413,7 @@
 	height: 100px;
 	text-align:center;
 	font-family: Consolas;
+	z-index:10;
 	
 	border-top-width: 1px;
 	border-right-width: 0px;

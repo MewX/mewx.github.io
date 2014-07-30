@@ -5,7 +5,7 @@
 
 baseurl: /
 permalink: /blog/:year:month/:title
-exclude: ["README.md", "changelog.md"]
+exclude: ["README.md", "changelog.md", "Gemfile.lock"]
 
 title : MewX's Blog
 author: MewX
