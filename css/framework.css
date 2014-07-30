@@ -1,0 +1,420 @@
+﻿/**
+ * Author: MewX
+ * Date: 7/30/2014
+ * Description: CSS3 based page framwork.
+ **/
+
+
+/* General Settings */
+* {
+	padding: 0;
+	margin: 0;
+	background-color: #FFF;
+	font-family: "Microsoft YaHei", "微软雅黑", "simhei", "黑体";
+}
+
+#TopBlockMaskSaveEnergy {
+	display: block;
+	opacity: 0.0;
+	filter: alpha(opacity=00); /* For IE8 and earlier */
+	height: 230px;
+	width: 720px;
+	z-index: 200;
+	cursor: default;
+	position: absolute;
+	top:0px;
+	left: 50%;
+	margin-left: -542px; /* -( 1024 / 2 + 30 ) px */
+}
+
+
+/* Main Logo and SubLogo( for subsite ) */
+#MainLogo {
+	display:block;
+	color: #FFF;
+	top:90px;
+	left: 50%;
+	margin-left: -500px;
+	font-family: 'Open Sans', sans-serif;
+	text-shadow: 4px 4px 4px #aaa;
+	position: absolute;
+	font-size:96px;
+	font-style:italic;
+	z-index: 998;
+	background-color:transparent;
+	cursor:default;
+	
+	transition:all 0.4s ease-in-out;
+	-moz-transition:all 0.4s ease-in-out;
+	-o-transition:all 0.4s ease-in-out;
+	-webkit-transition:all 0.4s ease-in-out;
+}
+#MainLogo:hover {
+	text-shadow:0px 0px 8px #6FF;
+}
+#SubLogo {
+	display:block;
+	color: #FFF;
+	top:50px;
+	left: 50%;
+	width: 450px;
+	margin-left: -500px; /* This adjust the position */
+	font-family: 'Lato', sans-serif;
+	font-weight:300;
+	text-shadow: 4px 4px 4px #aaa;
+	position: absolute;
+	font-size:36px;
+	z-index: 997;
+	background-color:transparent;
+	text-align: right;
+	cursor:default;
+
+	transition:all 0.4s ease-in-out;
+	-moz-transition:all 0.4s ease-in-out;
+	-o-transition:all 0.4s ease-in-out;
+	-webkit-transition:all 0.4s ease-in-out;
+}
+#SubLogo:hover {
+	color:#6FF;
+}
+
+
+/* Language Switcher */
+#LanguageSwitcher {
+}
+#LanguageSwitcher selected {
+}
+
+
+/* Blocks, the switcher of subsites */
+/* Low -> High: Purple -> Red ( a = 6 ) */
+#TopBlock1 {
+	display: block;
+	background: #60C;
+	color: #000;
+	height: 200px;
+	width: 1024px;
+	text-decoration: none;
+	opacity: 0.5;
+	filter: alpha(opacity=50); /* For IE8 and earlier */
+	position: absolute;
+	top: 20px;
+	font-size: 2em;
+	line-height: normal;
+	font-weight: 100;
+	z-index: 110;
+	cursor: default;
+	text-align: right;
+	left: 50%;
+	margin-left: -542px; // -( 1024 / 2 + 30 ) px;
+	
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+	border-radius: 10px;
+	
+	transition:all 0.5s ease-in-out;
+	-moz-transition:all 0.5s ease-in-out;
+	-o-transition:all 0.5s ease-in-out;
+	-webkit-transition:all 0.5s ease-in-out;
+}
+#TopBlock1:hover {
+	opacity: 0.75;
+	filter: alpha(opacity=75); /* For IE8 and earlier */
+	height: 210px;
+	top:10px;
+	color: #FFF;
+}
+
+#TopBlock2 {
+	display: block;
+	background: #00F;
+	color: #000;
+	height: 200px;
+	width: 1024px;
+	text-decoration: none;
+	opacity: 0.5;
+	filter: alpha(opacity=50); /* For IE8 and earlier */
+	position: absolute;
+	top: 10px;
+	font-size: 2em;
+	line-height: normal;
+	font-weight: 100;
+	z-index: 111;
+	cursor: default;
+	text-align: right;
+	left: 50%;
+	margin-left: -522px;
+	
+	-o-transform:rotate(5deg);
+	-webkit-transform:rotate(5deg);
+	-moz-transform:rotate(5deg);
+	
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+	border-radius: 10px;
+	
+	transition:all 0.5s ease-in-out;
+	-moz-transition:all 0.5s ease-in-out;
+	-o-transition:all 0.5s ease-in-out;
+	-webkit-transition:all 0.5s ease-in-out;
+}
+#TopBlock2:hover {
+	opacity: 0.75;
+	filter: alpha(opacity=75); /* For IE8 and earlier */
+	height: 210px;
+	top:0px;
+	color: #FFF;
+}
+
+#TopBlock3 {
+	display: block;
+	background: #0F0;
+	color: #000;
+	height: 200px;
+	width: 1024px;
+	text-decoration: none;
+	opacity: 0.5;
+	filter: alpha(opacity=50); /* For IE8 and earlier */
+	position: absolute;
+	top: 0px;
+	font-size: 2em;
+	line-height: normal;
+	font-weight: 100;
+	z-index: 112;
+	cursor: default;
+	text-align: right;
+	left: 50%;
+	margin-left: -502px;
+	
+	-o-transform:rotate(10deg);
+	-webkit-transform:rotate(10deg);
+	-moz-transform:rotate(10deg);
+	
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+	border-radius: 10px;
+	
+	transition:all 0.5s ease-in-out;
+	-moz-transition:all 0.5s ease-in-out;
+	-o-transition:all 0.5s ease-in-out;
+	-webkit-transition:all 0.5s ease-in-out;
+}
+#TopBlock3:hover {
+	opacity: 0.75;
+	filter: alpha(opacity=75); /* For IE8 and earlier */
+	height: 210px;
+	top:-10px;
+	color: #FFF;
+}
+
+#TopBlock4 {
+	display: block;
+	background: #FF0;
+	color: #000;
+	height: 200px;
+	width: 1024px;
+	text-decoration: none;
+	opacity: 0.5;
+	filter: alpha(opacity=50); /* For IE8 and earlier */
+	position: absolute;
+	top: -10px;
+	font-size: 2em;
+	line-height: normal;
+	font-weight: 100;
+	z-index: 113;
+	cursor: default;
+	text-align: right;
+	left: 50%;
+	margin-left: -482px;
+	
+	-o-transform:rotate(15deg);
+	-webkit-transform:rotate(15deg);
+	-moz-transform:rotate(15deg);
+	
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+	border-radius: 10px;
+	
+	transition:all 0.5s ease-in-out;
+	-moz-transition:all 0.5s ease-in-out;
+	-o-transition:all 0.5s ease-in-out;
+	-webkit-transition:all 0.5s ease-in-out;
+}
+#TopBlock4:hover {
+	opacity: 0.75;
+	filter: alpha(opacity=75); /* For IE8 and earlier */
+	height: 210px;
+	top:-20px;
+	color: #000; /* A little different, for apparency */
+}
+
+#TopBlock5 {
+	display: block;
+	background: #F60;
+	color: #000;
+	height: 200px;
+	width: 1024px;
+	text-decoration: none;
+	opacity: 0.5;
+	filter: alpha(opacity=50); /* For IE8 and earlier */
+	position: absolute;
+	top: -20px;
+	font-size: 2em;
+	line-height: normal;
+	font-weight: 100;
+	z-index: 114;
+	cursor: default;
+	text-align: right;
+	left: 50%;
+	margin-left: -462px;
+	
+	-o-transform:rotate(20deg);
+	-webkit-transform:rotate(20deg);
+	-moz-transform:rotate(20deg);
+	
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+	border-radius: 10px;
+	
+	transition:all 0.5s ease-in-out;
+	-moz-transition:all 0.5s ease-in-out;
+	-o-transition:all 0.5s ease-in-out;
+	-webkit-transition:all 0.5s ease-in-out;
+}
+#TopBlock5:hover {
+	opacity: 0.75;
+	filter: alpha(opacity=75); /* For IE8 and earlier */
+	height: 210px;
+	top:-30px;
+	color: #FFF;
+}
+
+#TopBlock6 {
+	display: block;
+	background: #F00;
+	color: #000;
+	height: 200px;
+	width: 1024px;
+	text-decoration: none;
+	opacity: 0.5;
+	filter: alpha(opacity=50); /* For IE8 and earlier */
+	position: absolute;
+	top: -30px;
+	font-size: 2em;
+	line-height: normal;
+	font-weight: 100;
+	z-index: 115;
+	cursor: default;
+	text-align: right;
+	left: 50%;
+	margin-left: -442px;
+	
+	-o-transform:rotate(25deg);
+	-webkit-transform:rotate(25deg);
+	-moz-transform:rotate(25deg);
+	
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+	border-radius: 10px;
+	
+	transition:all 0.5s ease-in-out;
+	-moz-transition:all 0.5s ease-in-out;
+	-o-transition:all 0.5s ease-in-out;
+	-webkit-transition:all 0.5s ease-in-out;
+}
+#TopBlock6:hover {
+	opacity: 0.75;
+	filter: alpha(opacity=75); /* For IE8 and earlier */
+	height: 210px;
+	top:-40px;
+	color: #FFF;
+}
+
+
+/* Main Divs */
+#HeadTaken { /* This is for occupying the head position */
+	top: 0px;
+	left: 0%;
+	right: 0%;
+	background-color: #000;
+	position: static;
+	height: 230px;
+	
+	/* Thanks -> http://www.colorzilla.com/gradient-editor/ */
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%,#f1f1f1), color-stop(51%,#e1e1e1), color-stop(100%,#f6f6f6)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 ); /* IE6-9 */
+}
+
+#ContentTaken {
+	left: 0%;
+	right: 0%;
+	background-color: #F6F6F6;
+	position: static;
+	text-align:center;
+	vertical-align:middle;
+}
+#ContentTaken .spaceline {
+	height: 10px;
+	background-color:transparent;
+}
+#ContentTaken .container {
+	width:1024px;
+	height: 500px;
+	background-color:#FFF;
+	position:relative;
+	left: 50%;
+	margin-left: -512px;
+	/*border-color:#666;
+	border:solid 1px;*/
+	
+	box-shadow:0px 0px 8px #06C;
+	
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+	border-radius: 10px;
+	
+	transition:all 0.4s ease-in-out;
+	-moz-transition:all 0.4s ease-in-out;
+	-o-transition:all 0.4s ease-in-out;
+	-webkit-transition:all 0.4s ease-in-out;
+}
+#ContentTaken .container:hover {
+	box-shadow:0px 0px 20px #06C;
+}
+#ContentTaken .title {
+}
+#ContentTaken .content {
+}
+
+#Copyright {
+	top: 0px;
+	left: 0%;
+	right: 0%;
+	background-color: #F6F6F6;
+	position: static;
+	height: 100px;
+	text-align:center;
+	font-family: Consolas;
+	
+	border-top-width: 1px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: dotted;
+	border-top-color: #39F;
+	box-shadow:0px 0px 0px #06C;
+	
+	transition:all 0.4s ease-in-out;
+	-moz-transition:all 0.4s ease-in-out;
+	-o-transition:all 0.4s ease-in-out;
+	-webkit-transition:all 0.4s ease-in-out;
+}
+#Copyright:hover {
+	box-shadow:0px 0px 8px #06C;
+}

@@ -1,1 +1,12 @@
+#
+#   <  MewX's Blog - 7/28/2014 >
+# This yml file refers serveral yml files, thanks to all open-source website projects.
+#
+
 baseurl: /
+permalink: /blog/:year:month/:title
+exclude: ["README.md", "changelog.md"]
+
+title : MewX's Blog
+author: MewX
+email : xiayuanzhong@gmail.com

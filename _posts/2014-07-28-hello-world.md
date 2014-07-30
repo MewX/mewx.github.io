@@ -1,13 +1,11 @@
 ---
-layout: post
+layout: testpage
 title: "Hello, World!"
 date: 2014-07-28 10:00
 comments: true
 author: MewX
 published: true
-categories: 
-- tst
-- bl
+categories: [test,post]
 ---
 {{ page.title }}
 
