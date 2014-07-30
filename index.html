@@ -1,1 +1,1 @@
----layout: testpagetitle: Home---<h2>{{ page.title }}</h2><p>最新文章</p><ul>　　{% for post in site.posts %}　　　　<li>{{ post.date | date_to_string }} <a href="{{ post.url }}">{{ post.title }}</a></li>　　{% endfor %}</ul>
+---layout: testpagetitle: Home---{{ page.title }}</br>最新文章</br>{% for post in site.posts %}{{ post.date | date_to_string }} <a href="{{ post.url }}" target="_parent">{{ post.title }}</a></br>{% endfor %}
