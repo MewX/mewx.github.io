@@ -1,9 +1,42 @@
 ---
-layout: testpage
-title: Home
+layout: MutiDivPage
+title: "Blog Home"
 ---
-{{ page.title }}</br>
-最新文章</br>
-{% for post in site.posts %}
-{{ post.date | date_to_string }} <a href="{{ post.url }}" target="_parent">{{ post.title }}</a></br>
+
+			<div id="OutlineFramework">
+{% for post in paginator.posts %}
+				<div class="OutlineBorder">
+					<a href="{{ post.url }}" target="_parent"><h1>{{ post.title }}</h1></a>
+					<div class="InlineBorder">{{ post.date | date: "%b %d, %Y" }}<br>    {{ post.content | truncatewords:5 }}</div>
+				</div>
+				<div class="spaceline"></div>
 {% endfor %}
+			
+				<!-- Add paginator button here -->
+{% if paginator.previous_page_path == nil %}
+				<div class="PageButtonDisable">First</div>
+				<div class="PageButtonDisable">Previous</div>
+{% else %}
+	{% if paginator.page == 1 %}
+				<div class="PageButtonDisable">First</div>
+	{% else %}
+				<a href="{{ site.baseurl }}"><div class="PageButton">First</div></a>
+	{% endif %}
+				<a href="{{ paginator.previous_page_path }}"><div class="PageButton">Previous</div></a>
+{% endif %}
+				{{ paginator.page }} / {{ paginator.total_pages }}
+{% if paginator.next_page_path == nil %}
+				<div class="PageButtonDisable">Next</div>
+				<div class="PageButtonDisable">Last</div>
+{% else %}
+				<a href="{{ paginator.next_page_path }}"><div class="PageButton">Next</div></a>
+	{% if paginator.page == paginator.total_pages %}
+				<div class="PageButtonDisable">Last</div>
+	{% else %}
+				<a href="{{ site.baseurl }}page{{ paginator.total_pages }}"><div class="PageButton">Last</div></a>
+	{% endif %}
+{% endif %}
+				<br style="clear:both;" /> <!-- Refresh float view -->
+				<div class="spaceline"></div>
+			
+			</div>

@@ -1,0 +1,52 @@
+---
+layout: MutiDivPage
+title: "Time Line"
+---
+
+			<div id="OutlineFramework">
+{% assign count = 0 %}
+{% for post in site.posts %}
+	{% if forloop.first %}
+		{% capture saved_month %}{{ post.date | date: "%Y-%m" }}{% endcapture %}
+		{% assign count = 1 %}
+				<div class="OutlineBorder">
+	{% else %}
+		{% capture this_month %}{{ post.date | date: "%Y-%m" }}{% endcapture %}
+		{% if this_month == saved_month %}
+			{% assign count = count | plus: 1 %}
+		{% else %}
+				
+					<a name="{{ saved_month }}"><h1>MONTH: {{ saved_month }} ( {{ count }} )</h1></a>
+					<div class="InlineBorder">
+			{% for post2 in site.posts %}
+				{% capture this_month2 %}{{ post2.date | date: "%Y-%m" }}{% endcapture %}
+				{% if this_month2 == saved_month %}
+					<a href="{{ post2.url }}">{{ post2.date | date: "%b %d, %Y" }} - {{ post2.title }}</a><br>
+				{% endif %}
+			{% endfor %}
+					</div>
+				</div>
+				<div class="spaceline"></div>
+			{% assign count = 1 %}
+			{% capture saved_month %}{{ post.date | date: "%Y-%m" }}{% endcapture %}
+				<div class="OutlineBorder">
+		{% endif %}
+	{% endif %}
+	
+	{% if forloop.last %}
+					<a name="{{ saved_month }}"><h1>MONTH: {{ saved_month }} ( {{ count }} )</h1></a>
+				
+					<div class="InlineBorder">
+			{% for post2 in site.posts %}
+				{% capture this_month2 %}{{ post2.date | date: "%Y-%m" }}{% endcapture %}
+				{% if this_month2 == saved_month %}
+					<a href="{{ post2.url }}">{{ post2.date | date: "%b %d, %Y" }} - {{ post2.title }}</a><br>
+				{% endif %}
+			{% endfor %}
+					</div>
+				</div>
+				<div class="spaceline"></div>
+	{% endif %}
+{% endfor %}
+				<br style="clear:both;" />
+			</div>

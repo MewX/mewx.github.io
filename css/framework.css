@@ -6,23 +6,36 @@
 
 
 /* General Settings */
-* {
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, td {
 	padding: 0px;
 	margin: 0px;
 	background-color: #FFF;
 	font-family: "Microsoft YaHei", "微软雅黑", "simhei", "黑体";
 }
+h1 {
+	text-align: center;
+	color: #FFF;
+	font-size: 32px;
+	background-color: transparent;
+	height: auto;
+	width: auto;
+	padding: 2px 0px 4px 0px; /* Important for text elements. */
+}
+a {
+	text-decoration:none;
+}
 
 #TopBlockMaskSaveEnergy {
 	display: block;
-	opacity: 0.0;
-	filter: alpha(opacity=00); /* For IE8 and earlier */
+	background-color: transparent;
+	/*opacity: 0.0;
+	filter: alpha(opacity=00);*/ /* For IE8 and earlier */
 	height: 230px;
 	width: 720px;
 	z-index: 200;
 	cursor: default;
 	position: absolute;
-	top:0px;
+	top: 0px;
 	left: 50%;
 	margin-left: -542px; /* -( 1024 / 2 + 30 ) px */
 }
@@ -30,59 +43,108 @@
 
 /* Main Logo and SubLogo( for subsite ) */
 #MainLogo {
-	display:block;
+	display: block;
 	color: #FFF;
-	top:90px;
+	top: 90px;
 	left: 50%;
 	margin-left: -500px;
 	font-family: 'Open Sans', sans-serif;
 	text-shadow: 4px 4px 4px #aaa;
 	position: absolute;
-	font-size:96px;
-	font-style:italic;
+	font-size: 96px;
+	font-style: italic;
 	z-index: 998;
-	background-color:transparent;
-	cursor:default;
+	background-color: transparent;
+	cursor: default;
 	
-	transition:all 0.4s ease-in-out;
-	-moz-transition:all 0.4s ease-in-out;
-	-o-transition:all 0.4s ease-in-out;
-	-webkit-transition:all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-webkit-transition: all 0.4s ease-in-out;
 }
 #MainLogo:hover {
-	text-shadow:0px 0px 8px #6FF;
+	text-shadow: 0px 0px 8px #6FF;
 }
 #SubLogo {
-	display:block;
+	display: block;
 	color: #FFF;
-	top:50px;
+	top: 50px;
 	left: 50%;
 	width: 450px;
 	margin-left: -500px; /* This adjust the position */
 	font-family: 'Lato', sans-serif;
-	font-weight:300;
+	font-weight: 300;
 	text-shadow: 4px 4px 4px #aaa;
 	position: absolute;
-	font-size:36px;
+	font-size: 36px;
 	z-index: 997;
-	background-color:transparent;
+	background-color: transparent;
 	text-align: right;
-	cursor:default;
+	cursor: default;
 
-	transition:all 0.4s ease-in-out;
-	-moz-transition:all 0.4s ease-in-out;
-	-o-transition:all 0.4s ease-in-out;
-	-webkit-transition:all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-webkit-transition: all 0.4s ease-in-out;
 }
 #SubLogo:hover {
-	color:#6FF;
+	color: #6FF;
 }
 
 
 /* Language Switcher */
 #LanguageSwitcher {
+	height: 20px;
+	width: 200px;
+	top: 0px;
+	position: absolute;
+	background-color: transparent;
+	z-index: 50;
+	font-size: 12px;
+	left: 50%;
+	margin-left: 250px;
+	text-align: center;
 }
-#LanguageSwitcher selected {
+#LanguageSwitcher .box {
+	height: 16px;
+	width: auto;
+	top: 2px;
+	position: relative;
+	z-index: 51;
+	font-family: Consolas, Monaco, monospace;
+	/*padding: 0px 10px 0px 10px;*/
+	float: left;
+	background-color: transparent;
+	cursor: pointer;
+}
+#LanguageSwitcher .space {
+	height: 100%;
+	width: 10px;
+	position: relative;
+	z-index: 51; /* same to .box */
+	background-color: transparent;
+	float: left;
+}
+#LanguageSwitcher .box #selected {
+	background-color: transparent;
+	height: 100%;
+	width: 100%;
+}
+#LanguageSwitcher #LanguageBoarder {
+	top: 0px;
+	left: 0px;
+	height: 0;
+	width: 0;
+	z-index: 30;
+	border-width: 0px;
+	border-style: solid;
+	border-color: #000;
+	position: absolute;
+	background-color:#CCC;
+	
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+	border-radius: 4px;
 }
 
 
@@ -112,16 +174,16 @@
     -moz-border-radius: 10px;
 	border-radius: 10px;
 	
-	transition:all 0.5s ease-in-out;
-	-moz-transition:all 0.5s ease-in-out;
-	-o-transition:all 0.5s ease-in-out;
-	-webkit-transition:all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
 }
 #TopBlock1:hover {
 	opacity: 0.75;
 	filter: alpha(opacity=75); /* For IE8 and earlier */
 	height: 210px;
-	top:10px;
+	top: 10px;
 	color: #FFF;
 }
 
@@ -155,16 +217,16 @@
     -moz-border-radius: 10px;
 	border-radius: 10px;
 	
-	transition:all 0.5s ease-in-out;
-	-moz-transition:all 0.5s ease-in-out;
-	-o-transition:all 0.5s ease-in-out;
-	-webkit-transition:all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
 }
 #TopBlock2:hover {
 	opacity: 0.75;
 	filter: alpha(opacity=75); /* For IE8 and earlier */
 	height: 210px;
-	top:0px;
+	top: 0px;
 	color: #FFF;
 }
 
@@ -198,16 +260,16 @@
     -moz-border-radius: 10px;
 	border-radius: 10px;
 	
-	transition:all 0.5s ease-in-out;
-	-moz-transition:all 0.5s ease-in-out;
-	-o-transition:all 0.5s ease-in-out;
-	-webkit-transition:all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
 }
 #TopBlock3:hover {
 	opacity: 0.75;
 	filter: alpha(opacity=75); /* For IE8 and earlier */
 	height: 210px;
-	top:-10px;
+	top: -10px;
 	color: #FFF;
 }
 
@@ -241,16 +303,16 @@
     -moz-border-radius: 10px;
 	border-radius: 10px;
 	
-	transition:all 0.5s ease-in-out;
-	-moz-transition:all 0.5s ease-in-out;
-	-o-transition:all 0.5s ease-in-out;
-	-webkit-transition:all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
 }
 #TopBlock4:hover {
 	opacity: 0.75;
 	filter: alpha(opacity=75); /* For IE8 and earlier */
 	height: 210px;
-	top:-20px;
+	top: -20px;
 	color: #000; /* A little different, for apparency */
 }
 
@@ -284,16 +346,16 @@
     -moz-border-radius: 10px;
 	border-radius: 10px;
 	
-	transition:all 0.5s ease-in-out;
-	-moz-transition:all 0.5s ease-in-out;
-	-o-transition:all 0.5s ease-in-out;
-	-webkit-transition:all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
 }
 #TopBlock5:hover {
 	opacity: 0.75;
 	filter: alpha(opacity=75); /* For IE8 and earlier */
 	height: 210px;
-	top:-30px;
+	top: -30px;
 	color: #FFF;
 }
 
@@ -327,16 +389,16 @@
     -moz-border-radius: 10px;
 	border-radius: 10px;
 	
-	transition:all 0.5s ease-in-out;
-	-moz-transition:all 0.5s ease-in-out;
-	-o-transition:all 0.5s ease-in-out;
-	-webkit-transition:all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
 }
 #TopBlock6:hover {
 	opacity: 0.75;
 	filter: alpha(opacity=75); /* For IE8 and earlier */
 	height: 210px;
-	top:-40px;
+	top: -40px;
 	color: #FFF;
 }
 
@@ -347,11 +409,11 @@
 	left: 0%;
 	right: 0%;
 	background-color: #000;
-	position:static;
+	position: static;
 	height: 230px;
-	z-index:10;
+	z-index: 10;
 	
-	/* Thanks -> http://www.colorzilla.com/gradient-editor/ */
+	/* Thanks -> http: //www.colorzilla.com/gradient-editor/ */
 	background: #ffffff; /* Old browsers */
 	background: -moz-linear-gradient(top,  #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%,#f1f1f1), color-stop(51%,#e1e1e1), color-stop(100%,#f6f6f6)); /* Chrome,Safari4+ */
@@ -359,51 +421,328 @@
 	background: -o-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* Opera 11.10+ */
 	background: -ms-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 ); /* IE6-9 */
+	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 ); /* IE6-9 */
 }
 
 #ContentTaken {
 	left: 0%;
 	right: 0%;
+	height: auto;
 	background-color: #F6F6F6;
 	position: static;
-	text-align:center;
-	vertical-align:middle;
-	z-index:10;
+	text-align: center;
+	vertical-align: middle;
+	z-index: 10;
 }
 #ContentTaken .spaceline {
 	height: 10px;
-	background-color:transparent;
+	background-color: transparent;
+	position: relative;
 }
 #ContentTaken .container {
-	width:1024px;
-	height: 500px;
-	background-color:#FFF;
-	position:relative;
+	width: 1024px;
+	height: auto;
+	background-color: #FFF;
+	position: relative;
 	left: 50%;
 	margin-left: -512px;
-	/*border-color:#666;
-	border:solid 1px;*/
+	/*border-color: #666;
+	border: solid 1px;*/
 	
-	box-shadow:0px 0px 8px #06C;
+	box-shadow: 0px 0px 8px #06C;
 	
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
 	border-radius: 10px;
 	
-	transition:all 0.4s ease-in-out;
-	-moz-transition:all 0.4s ease-in-out;
-	-o-transition:all 0.4s ease-in-out;
-	-webkit-transition:all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-webkit-transition: all 0.4s ease-in-out;
 }
 #ContentTaken .container:hover {
-	box-shadow:0px 0px 20px #06C;
+	box-shadow: 0px 0px 20px #06C;
 }
-#ContentTaken .title {
-}
-#ContentTaken .content {
+#ContentTaken #OutlineFramework {
+	width: 700px;
+	height: auto;
+	left: 10px;
+	position: relative;
+	float:left;
+	background-color: transparent;
 }
 
+#ContentTaken .PageButton {
+	font-family: inherit;
+	font-size: 20px;
+	color: inherit;
+	background: none;
+	cursor: pointer;
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	outline: none;
+	position: relative;
+	width: 140px;
+	height:60px;
+	line-height:60px;
+	border: 2px solid #0e83cd;
+	color: #0e83cd;
+	
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+#ContentTaken .PageButton:hover {
+	color: #FFF;
+	background-color: #0e83cd;
+}
+#ContentTaken .PageButtonDisable {
+	font-family: inherit;
+	font-size: 20px;
+	color: inherit;
+	background: none;
+	cursor: pointer;
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	outline: none;
+	position: relative;
+	width: 140px;
+	height:60px;
+	line-height:60px;
+	border: 2px solid #CCC;
+	color: #0e83cd;
+	cursor:default;
+	
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+
+#ContentTaken .OutlineBorder {
+	width: 100%;
+	height: auto;
+	border-color: #06C;
+	background-color: #06C;
+	color: #FFF;
+	border-style: solid;
+	border-width: 1px;
+	
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+	border-radius: 10px;
+	
+	transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-webkit-transition: all 0.4s ease-in-out;
+}
+#ContentTaken .OutlineBorder:hover {
+	box-shadow: 0px 0px 8px #06C;
+}
+
+#ContentTaken .OutlineBorder .InlineBorder {
+	height: 10;
+	color: #000;
+	background-color: #FFF;
+	border-width: 0px;
+	text-align: left;
+	position: relative;
+	padding: 10px 10px 10px 10px;
+	word-wrap:break-word;
+	
+	-webkit-border-bottom-right-radius:10px;
+	-webkit-border-bottom-left-radius:10px;
+	-moz-border-bottom-right-radius:10px;
+	-moz-border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+	border-bottom-left-radius:10px;
+}
+#ContentTaken #TagOutlineBoarder {
+	width: 290px;
+	height: auto;
+	background-color:transparent;
+	color: #000;
+	position: relative;
+	top: 00px; /* Have no idea */
+	text-align: left;
+	float: right;
+	right: 10px;
+}
+
+/* Date button effects: http://tympanus.net/Development/IconHoverEffects/ */
+.DateListStyle {
+	top:0px;
+	font-size: 16px;
+	cursor: pointer;
+	margin: 10px 10px;
+	width: 75px;/**/
+	height: 75px;/**/
+	line-height: 75px; 
+	border-radius: 50%;
+	position: relative;
+	z-index: 1;
+	color: #666; /* Origin color */
+	float: left;
+	text-align:center;
+	
+	box-shadow: 0 0 0 4px #06C; /* Outline color */
+	-webkit-transition: all 0.2s, color 0.2s;
+	-moz-transition: all 0.2s, color 0.2s;
+	transition: all 0.2s, color 0.2s;
+}
+.DateListStyle:after {
+	pointer-events: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	content: '';
+	top: -8px;
+	left: -8px;
+	padding: 8px;
+	z-index: -1;
+	opacity: 0;
+	
+	box-shadow: 3px 3px #06C; /* Outline Shadow Color */
+	-webkit-box-sizing: content-box; 
+	-moz-box-sizing: content-box; 
+	box-sizing: content-box;
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+	
+	-webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+	-moz-transition: opacity 0.2s, -moz-transform 0.2s;
+	transition: opacity 0.2s, transform 0.2s;
+}
+
+.DateListStyle:before {
+	font-family: 'ecoicon';
+	speak: none;
+	font-size: 48px;
+	line-height: 75px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	display: block;
+	-webkit-font-smoothing: antialiased;
+	
+	
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	-ms-transform: scale(0.8);
+	transform: scale(0.8);
+	opacity: 0.7;
+	-webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.2s, opacity 0.2s;
+	transition: transform 0.2s, opacity 0.2s;
+}
+.DateListStyle:hover {
+	color: #06C; /* Dest color */
+	font-size: 18px;
+	background-color:#EEE;
+}
+.DateListStyle:hover:after {
+	opacity: 1;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	transform: rotate(0deg);
+}
+.DateListStyle:hover:before {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+}
+
+
+/* Tag button effects: http://tympanus.net/Development/IconHoverEffects/ */
+.TagListStyle {
+	top:0px;
+	/*display: inline-block; */
+	font-size: 16px;
+	cursor: pointer;
+	margin: 10px 10px;
+	width: 75px;/**/
+	height: 75px;/**/
+	line-height: 75px; 
+	border-radius: 50%;
+	position: relative;
+	z-index: 1;
+	color: #666; /* Origin color */
+	float: left;
+	text-align:center;
+	
+	
+	/*width: 77px;
+	height: 77px;*/
+	box-shadow: 0 0 0 4px rgba(255,102,0,1);
+}
+.TagListStyle:after {
+	pointer-events: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	content: '';
+	-webkit-box-sizing: content-box; 
+	-moz-box-sizing: content-box; 
+	box-sizing: content-box;
+	
+	
+	top: -4px;
+	left: -4px;
+	padding: 0;
+	z-index: 10;
+	border: 4px dotted #F60;
+}
+.TagListStyle:before {
+	font-family: 'ecoicon';
+	speak: none;
+	font-size: 48px;
+	line-height: 75px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	display: block;
+	-webkit-font-smoothing: antialiased;
+}
+.TagListStyle:hover {
+	box-shadow: 0 0 0 0 rgba(255,102,0,0);
+	color:#F60;
+	
+	-webkit-transition: box-shadow 0.2s;
+	-moz-transition: box-shadow 0.2s;
+	transition: box-shadow 0.2s;
+}
+.TagListStyle:hover:after {
+	-webkit-animation: spinAround 9s linear infinite;
+	-moz-animation: spinAround 9s linear infinite;
+	animation: spinAround 9s linear infinite;
+}
+@-webkit-keyframes spinAround {
+	from { -webkit-transform: rotate(0deg); }
+	to { -webkit-transform: rotate(360deg); }
+}
+@-moz-keyframes spinAround {
+	from { -moz-transform: rotate(0deg); }
+	to { -moz-transform: rotate(360deg); }
+}
+@keyframes spinAround {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
+
+
+/* Bottom */
 #Copyright {
 	top: 0px;
 	left: 0%;
@@ -411,9 +750,9 @@
 	background-color: #F6F6F6;
 	position: static;
 	height: 100px;
-	text-align:center;
+	text-align: center;
 	font-family: Consolas;
-	z-index:10;
+	z-index: 10;
 	
 	border-top-width: 1px;
 	border-right-width: 0px;
@@ -421,13 +760,13 @@
 	border-left-width: 0px;
 	border-top-style: dotted;
 	border-top-color: #39F;
-	box-shadow:0px 0px 0px #06C;
+	box-shadow: 0px 0px 0px #06C;
 	
-	transition:all 0.4s ease-in-out;
-	-moz-transition:all 0.4s ease-in-out;
-	-o-transition:all 0.4s ease-in-out;
-	-webkit-transition:all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-webkit-transition: all 0.4s ease-in-out;
 }
 #Copyright:hover {
-	box-shadow:0px 0px 8px #06C;
+	box-shadow: 0px 0px 8px #06C;
 }

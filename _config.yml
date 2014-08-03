@@ -3,10 +3,16 @@
 # This yml file refers serveral yml files, thanks to all open-source website projects.
 #
 
+# General setting
+markdown: kramdown
+
+# Site info
 baseurl: /
+paginate: 5
 permalink: /blog/:year:month/:title
 exclude: ["README.md", "changelog.md", "Gemfile.lock"]
 
+# Blog info
 title : MewX's Blog
 author: MewX
 email : xiayuanzhong@gmail.com

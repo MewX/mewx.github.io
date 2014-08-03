@@ -15,30 +15,30 @@
 	<!-- Initial top framework -->
 	<div id="TopBlockMaskSaveEnergy"></div>
 	<a href="{{ site.baseurl }}"><div id="MainLogo">MewX</div></a>
-	<div id="SubLogo">- Blog Home -</div>
+	<div id="SubLogo">- {{ page.title }} -</div>
+	<div id="LanguageSwitcher">
+		<div id="LanguageBoarder"></div>
+		<div class="box"><div id="selected">简体中文</div></div>
+		<div class="space"></div>
+		<div class="box">繁體中文</div>
+		<div class="space"></div>
+		<div class="box">English</div>
+		<div class="space"></div>
+	</div>
 	<div id="TopBlock1">转向专题一</div>
 	<div id="TopBlock2">转向专题二</div>
 	<div id="TopBlock3">转向专题三</div>
 	<div id="TopBlock4">转向专题四</div>
 	<div id="TopBlock5">转向专题五</div>
 	<div id="TopBlock6">转向专题六</div>
-	
+
 	<!-- Initial main framwork -->
 	<div id="HeadTaken"></div>
 	<div id="ContentTaken">
 		<div class="spaceline"></div>
 		<div class="container">
 			<div class="spaceline"></div>
-			<div id="OutlineFramework">
-				<div class="OutlineBorder">
-					<h1>{{ page.title }}</h1>
-					<div class="InlineBorder">{{ page.date | date: "%b %d, %Y" }}<br>{{ content }}</div>
-				</div>
-				<div class="spaceline"></div>
-			
-			<!-- Add paginator button here -->
-			
-			</div>
+{{ content }}
 
 			<div id="TagOutlineBoarder">
 				<div class="spaceline"></div>
