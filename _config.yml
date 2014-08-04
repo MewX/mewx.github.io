@@ -7,8 +7,8 @@
 markdown: kramdown
 
 # Site info
-#baseurl: http://www.mewx.org/
-baseurl: /
+baseurl: http://www.mewx.org/
+#baseurl: /
 paginate: 5
 permalink: blog/:year:month/:title
 exclude: ["README.md", "changelog.md", "Gemfile.lock"]
