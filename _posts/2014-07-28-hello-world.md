@@ -28,40 +28,38 @@ First Blog Test
 Second Blog Test
 
 Code Here  
-<pre class="prettyprint">
-#include <stdio.h>
-#include <math.h>
-
-int main( )
-{
-    double a, d, x = 0.0, y = 0.0, temp = 0.0;
-    int n, i;
-    scanf( "%lf%lf%d", &a, &d, &n );
+    #include <stdio.h>
+    #include <math.h>
     
-    for( i = 0; i < n; i ++ ) {
-        // temp += d;
-        // if( temp > 4.0 * a ) temp = fmod( temp, 4.0 * a );
-		temp = fmod( temp + d, 4.0 * a );
-		
-        if( temp < a ) {
-            x = temp;
-            y = 0.0;
+    int main( )
+    {
+        double a, d, x = 0.0, y = 0.0, temp = 0.0;
+        int n, i;
+        scanf( "%lf%lf%d", &a, &d, &n );
+        
+        for( i = 0; i < n; i ++ ) {
+            // temp += d;
+            // if( temp > 4.0 * a ) temp = fmod( temp, 4.0 * a );
+    		temp = fmod( temp + d, 4.0 * a );
+    		
+            if( temp < a ) {
+                x = temp;
+                y = 0.0;
+            }
+            else if( temp < a + a ) {
+                x = a;
+                y = temp - a;
+            }
+            else if( temp < a + a + a ) {
+                x = a - ( temp - a - a );
+                y = a;
+            }
+            else {
+                x = 0.0;
+                y = a - ( temp - a - a - a );
+            }
+            printf( "%.10lf %.10lf\n", x, y );
         }
-        else if( temp < a + a ) {
-            x = a;
-            y = temp - a;
-        }
-        else if( temp < a + a + a ) {
-            x = a - ( temp - a - a );
-            y = a;
-        }
-        else {
-            x = 0.0;
-            y = a - ( temp - a - a - a );
-        }
-        printf( "%.10lf %.10lf\n", x, y );
+        
+        return 0;
     }
-    
-    return 0;
-}
-</pre>
