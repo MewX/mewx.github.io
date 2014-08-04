@@ -5,7 +5,7 @@ date: 2014-07-28 10:00
 comments: true
 author: MewX
 published: true
-categories: [WebSite, Markdown]
+categories: [WebSite, Test]
 ---
 {{ page.title }}
 

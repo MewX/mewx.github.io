@@ -7,7 +7,7 @@ title: "Blog Home"
 {% for post in paginator.posts %}
 				<div class="OutlineBorder">
 					<a href="{{ post.url }}" target="_parent"><h1>{{ post.title }}</h1></a>
-					<div class="InlineBorder">{{ post.date | date: "%b %d, %Y" }}<br>    {{ post.content | truncatewords:5 }}</div>
+					<div class="InlineBorder">{{ post.date | date: "%b %d, %Y" }}<br><br>{{ post.content | truncatewords:5 }}</div>
 				</div>
 				<div class="spaceline"></div>
 {% endfor %}
