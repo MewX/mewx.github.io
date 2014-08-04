@@ -10,6 +10,11 @@
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,100italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}css/framework.css"/>
 	<link href="{{ site.baseurl }}prettify/prettify.css" rel="stylesheet" type="text/css" media="all">
+	<style>
+	li.L0, li.L1, li.L2, li.L3,
+	li.L5, li.L6, li.L7, li.L8
+	{ list-style-type: decimal !important }
+	</style>
 </head>
 
 <body>
@@ -111,7 +116,7 @@
 		</div>
 		<div class="spaceline"></div>
 	</div>
-	<div id="Copyright"><br>Powered by MewX.<br>Mewx.org Copyright: MewX ( 2014 - 2016 )</div>
+	<div id="Copyright"><br>Powered by MewX.<br>Mewx.org Copyright: MewX ( 2014 - 2016 )<br>Email: {{ site.email }}</div>
 
 
 	<!-- It's said that this will improve loading speed. -->
@@ -147,9 +152,8 @@
 	<!-- Google Code Prettify -->
 	<script type="text/javascript" src="{{ site.baseurl }}prettify/prettify.js"></script>
 	<script type="text/javascript">
-	// 需要引入jQuery
 	$(document).ready(function() {
-		$('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto');
+		$('pre').addClass("prettyprint linenums").attr('style', 'overflow: visible;');
 		prettyPrint();
 	});
 	</script>

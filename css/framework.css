@@ -6,7 +6,7 @@
 
 
 /* General Settings */
-body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, td {
+body, div, dl, dt, dd, ol, ul, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, td {
 	padding: 0px;
 	margin: 0px;
 	background-color: #FFF;
@@ -23,6 +23,9 @@ h1 {
 }
 a {
 	text-decoration:none;
+}
+li {
+	margin-left: 50px;
 }
 
 #TopBlockMaskSaveEnergy {

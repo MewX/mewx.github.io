@@ -7,10 +7,10 @@ author: MewX
 published: true
 categories: [WebSite, Test]
 ---
-{{ page.title }}
-
-
-First Blog Test
+　　{{ page.title }}
+　　  
+　　First Blog Test
+　　
 
 | Name | Description          |
 | ------------- | ----------- |
@@ -23,12 +23,16 @@ First Blog Test
 | col 2 is      | centered        |   $12 |
 | zebra stripes | are neat        |    $1 |
 
-<!-- more -->
+<!-- more --><br>
 
-Second Blog Test
+* Second Blog Test
 
-Code Here  
-```    #include <stdio.h>
+<br>
+**Code** *Here*
+<br>
+
+<?prettify lang=clj?>
+    #include <stdio.h>
     #include <math.h>
     
     int main( )
@@ -62,6 +66,7 @@ Code Here
         }
         
         return 0;
-    }```
-
+    }
 	
+<br>
+Code End

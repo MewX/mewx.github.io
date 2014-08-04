@@ -7,7 +7,8 @@
 markdown: kramdown
 
 # Site info
-baseurl: http://www.mewx.org/
+#baseurl: http://www.mewx.org/
+baseurl: /
 paginate: 5
 permalink: blog/:year:month/:title
 exclude: ["README.md", "changelog.md", "Gemfile.lock"]
@@ -15,4 +16,4 @@ exclude: ["README.md", "changelog.md", "Gemfile.lock"]
 # Blog info
 title : MewX's Blog
 author: MewX
-email : xiayuanzhong@gmail.com
+email : mewx(at)mewx(dot)org
