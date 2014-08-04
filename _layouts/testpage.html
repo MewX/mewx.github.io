@@ -9,6 +9,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,100italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}css/framework.css"/>
+	<link href="{{ site.baseurl }}prettify/prettify.css" rel="stylesheet" type="text/css" media="all">
 </head>
 
 <body>
@@ -58,8 +59,8 @@
 						(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 					})();
 				</script>
-				<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-				<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+				<noscript>Please enable JavaScript to view <a href="http://disqus.com/?ref_noscript">MewX comments powered by Disqus.</a></noscript>
+				<a href="http://disqus.com" class="dsq-brlink">MewX comments powered by <span class="logo-disqus">Disqus</span></a>-->
     
 			</div>
 
@@ -140,6 +141,16 @@
 		$("#LanguageBoarder").css("width",$("#LanguageSwitcher .box #selected").width()+3+"px");
 		$("#LanguageBoarder").css("left",$("#LanguageSwitcher .box #selected").position().left-1+"px");
 		$("#LanguageBoarder").css("top",$("#LanguageSwitcher .box #selected").position().top+1+"px");
+	});
+	</script>
+	
+	<!-- Google Code Prettify -->
+	<script type="text/javascript" src="{{ site.baseurl }}prettify/prettify.js"></script>
+	<script type="text/javascript">
+	// 需要引入jQuery
+	$(document).ready(function() {
+		$('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;white-space:pre;white-space:pre-wrap;word-break:break-all;word-wrap:break-word;');
+		prettyPrint();
 	});
 	</script>
 	
