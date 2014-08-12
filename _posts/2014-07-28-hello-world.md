@@ -31,7 +31,7 @@ categories: [WebSite, Test]
 **Code** *Here*
 <br>
 
-<?prettify lang=clj?>
+<?prettify lang=c?>
     #include <stdio.h>
     #include <math.h>
     
@@ -44,8 +44,8 @@ categories: [WebSite, Test]
         for( i = 0; i < n; i ++ ) {
             // temp += d;
             // if( temp > 4.0 * a ) temp = fmod( temp, 4.0 * a );
-    		temp = fmod( temp + d, 4.0 * a );
-    		
+            temp = fmod( temp + d, 4.0 * a );
+            
             if( temp < a ) {
                 x = temp;
                 y = 0.0;
@@ -67,6 +67,6 @@ categories: [WebSite, Test]
         
         return 0;
     }
-	
+    
 <br>
 Code End
