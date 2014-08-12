@@ -8,11 +8,9 @@ published: true
 categories: [Liquid, Jekyll, Website]
 ---
 
-　　Liquid官方解释是一种模板语言，Jekyll中的网页模板支持插入[Liquid](http://docs.shopify.com/themes/liquid-documentation/basics/)模板语言(Templating Language)实现更加强大的效果。  
-　　下面用几段本网站的源码来介绍Liquid的一些[高级用法（点这查看全部）](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers)。  
+　　Liquid官方解释是一种模板语言，Jekyll中的网页模板支持插入[Liquid](http://docs.shopify.com/themes/liquid-documentation/basics/)模板语言(Templating Language)实现更加强大的效果。下面用几段本网站的源码来介绍Liquid的一些[高级用法（点这查看全部）](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers)。  
 　　  
-一、统计categories的数目
-------------------------
+## 一、统计categories的数目  
 
 <?prettify lang=html?>
     {% for category in site.categories %}
@@ -23,8 +21,7 @@ categories: [Liquid, Jekyll, Website]
 
 　　这算是一个比较常见的用法，在遍历site.categories时获取分类名{{ category | first }}和该分类下post数量{{ category | last | size }}。  
 　　  
-二、统计每个月的文章数目
-------------------------
+## 二、统计每个月的文章数目  
 
 <?prettify lang=html?>
     {% assign count = 0 %}
@@ -56,8 +53,7 @@ categories: [Liquid, Jekyll, Website]
 　　这里是自己编写的运算流程，利用的是site.posts是按照从新到旧的顺序排列的，也就是说相邻的两个post日期只会相同或从新到旧。  
 　　这段代码用count变量来计数，{% assign count = 1 %}用来赋初始值，{% assign count = count | plus: 1 %}意思是count自增1。其他的就是一些常见的循环和分支结构。  
 　　  
-三、按月输出文章
-----------------
+## 三、按月输出文章  
 
 <?prettify lang=html?>
     {% assign count = 0 %}
@@ -107,7 +103,8 @@ categories: [Liquid, Jekyll, Website]
 
 　　这里倒也没有用什么其他的技巧，就是在Head的部分先统计一遍每月文章数，然后再按照月遍历一遍site.posts输出符合本月的所有文章。由于最终结果是静态网页，运算流程上的优化并不是那么重要，只要能实现需要的功能就行。  
 
-四、首页文章分页的设计
+## 四、首页文章分页的设计  
+
 　　由于Jekyll只支持首页index页面的分页功能，所以如果怕麻烦，就只给首页做分页吧。其实想要给任意界面做分页也不是那么难，用Javascript就行，根据网址来筛选文章好了。以后网站修缮会在报告中详细写出的。  
 　　想要让首页分页，首先要在_config.yml里面定义paginate字段，例如希望每页5篇post，就写“paginate: 5”。  
 
