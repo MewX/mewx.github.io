@@ -93,6 +93,21 @@ li {
 #SubLogo:hover {
 	color: #6FF;
 }
+#Avatar {
+	top: 10px;
+	left: 50%;
+	margin-left: -460px;
+	height: 200px;
+	width: 200px;
+	position: absolute;
+	background-image: url(/imgs/site/avatar.png);
+	background-size:100% 100%; 
+	z-index: 950;
+	
+	-webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+	border-radius: 4px;
+}
 
 
 /* Language Switcher */

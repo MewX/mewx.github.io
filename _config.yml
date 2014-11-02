@@ -5,6 +5,7 @@
 
 # General setting
 markdown: kramdown
+encoding: utf-8
 
 # Site info
 baseurl: http://www.mewx.org/

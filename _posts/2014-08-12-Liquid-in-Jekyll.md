@@ -16,9 +16,10 @@ categories: [Liquid, Jekyll, Website]
 
 <?prettify lang=html?>
     {[% for category in site.categories %]}
-                    <a href="{[{ site.baseurl }]}tags.html#{[{ category | first }]}"><div class="TagListStyle">
-                        {[{ category | first }]}<!--({[{ category | last | size }]})-->
-                    </div></a>
+      <a href="{[{ site.baseurl }]}tags.html#{[{ category | first }]}">
+      <div class="TagListStyle">
+        {[{ category | first }]}<!--({[{ category | last | size }]})-->
+      </div></a>
     {[% endfor %]}
 
 　　这算是一个比较常见的用法，在遍历site.categories时获取分类名{[{ category | first }]}和该分类下post数量{[{ category | last | size }]}。  
@@ -29,27 +30,32 @@ categories: [Liquid, Jekyll, Website]
 <?prettify lang=html?>
     {[% assign count = 0 %]}
     {[% for post in site.posts %]}
-        {[% if forloop.first %]}
-            {[% capture saved_month %]}{[{ post.date | date: "%Y-%m" }]}{[% endcapture %]}
-            {[% assign count = 1 %]}
+      {[% if forloop.first %]}
+        {[% capture saved_month %]}{[{ post.date | date: "%Y-%m" }]}
+        {[% endcapture %]}
+        {[% assign count = 1 %]}
+      {[% else %]}
+        {[% capture this_month %]}{[{ post.date | date: "%Y-%m" }]}
+        {[% endcapture %]}
+        {[% if this_month == saved_month %]}
+          {[% assign count = count | plus: 1 %]}
         {[% else %]}
-            {[% capture this_month %]}{[{ post.date | date: "%Y-%m" }]}{[% endcapture %]}
-            {[% if this_month == saved_month %]}
-                {[% assign count = count | plus: 1 %]}
-            {[% else %]}
-                    <a href="{[{ site.baseurl }]}times.html#{[{ saved_month }]}"><div class="DateListStyle">
-                        {[{ saved_month }]}<!--({[{ count }]})-->
-                    </div></a>
-                {[% assign count = 1 %]}
-                {[% capture saved_month %]}{[{ post.date | date: "%Y-%m" }]}{[% endcapture %]}
-            {[% endif %]}
+            <a href="{[{ site.baseurl }]}times.html#{[{ saved_month }]}">
+            <div class="DateListStyle">
+              {[{ saved_month }]}<!--({[{ count }]})-->
+            </div></a>
+          {[% assign count = 1 %]}
+          {[% capture saved_month %]}{[{ post.date | date: "%Y-%m" }]}
+          {[% endcapture %]}
         {[% endif %]}
-        
-        {[% if forloop.last %]}
-                    <a href="{[{ site.baseurl }]}times.html#{[{ saved_month }]}"><div class="DateListStyle">
-                        {[{ saved_month }]}<!--({[{ count }]})-->
-                    </div></a>
-        {[% endif %]}
+      {[% endif %]}
+      
+      {[% if forloop.last %]}
+            <a href="{[{ site.baseurl }]}times.html#{[{ saved_month }]}">
+            <div class="DateListStyle">
+              {[{ saved_month }]}<!--({[{ count }]})-->
+            </div></a>
+      {[% endif %]}
     {[% endfor %]}
 
 　　这里使用assign和capture两种方式定义变量。assign的作用是自己给定的值赋给变量，而capture的作用是便于将系统提供的参数或者运算结果赋值给变量。变量引用起来是一样方便的，都是通过花括号括起来。  
@@ -62,47 +68,58 @@ categories: [Liquid, Jekyll, Website]
 <?prettify lang=html?>
     {[% assign count = 0 %]}
     {[% for post in site.posts %]}
-        {[% if forloop.first %]}
-            {[% capture saved_month %]}{[{ post.date | date: "%Y-%m" }]}{[% endcapture %]}
-            {[% assign count = 1 %]}
-                    <div class="OutlineBorder">
+      {[% if forloop.first %]}
+        {[% capture saved_month %]}{[{ post.date | date: "%Y-%m" }]}
+        {[% endcapture %]}
+        {[% assign count = 1 %]}
+            <div class="OutlineBorder">
+      {[% else %]}
+        {[% capture this_month %]}{[{ post.date | date: "%Y-%m" }]}
+        {[% endcapture %]}
+        {[% if this_month == saved_month %]}
+          {[% assign count = count | plus: 1 %]}
         {[% else %]}
-            {[% capture this_month %]}{[{ post.date | date: "%Y-%m" }]}{[% endcapture %]}
-            {[% if this_month == saved_month %]}
-                {[% assign count = count | plus: 1 %]}
-            {[% else %]}
-                    
-                        <a name="{[{ saved_month }]}"><h1>MONTH: {[{ saved_month }]} ( {[{ count }]} )</h1></a>
-                        <div class="InlineBorder">
-                {[% for post2 in site.posts %]}
-                    {[% capture this_month2 %]}{[{ post2.date | date: "%Y-%m" }]}{[% endcapture %]}
-                    {[% if this_month2 == saved_month %]}
-                        <a href="{[{ post2.url }]}">{[{ post2.date | date: "%b %d, %Y" }]} - {[{ post2.title }]}</a><br>
-                    {[% endif %]}
-                {[% endfor %]}
-                        </div>
-                    </div>
-                    <div class="spaceline"></div>
-                {[% assign count = 1 %]}
-                {[% capture saved_month %]}{[{ post.date | date: "%Y-%m" }]}{[% endcapture %]}
-                    <div class="OutlineBorder">
+            
+              <a name="{[{ saved_month }]}"><h1>MONTH: {[{ saved_month }]}
+               ( {[{ count }]} )</h1></a>
+              <div class="InlineBorder">
+          {[% for post2 in site.posts %]}
+            {[% capture this_month2 %]}{[{ post2.date | date: "%Y-%m" }]}
+            {[% endcapture %]}
+            {[% if this_month2 == saved_month %]}
+              <a href="{[{ post2.url }]}">
+              {[{ post2.date | date: "%b %d, %Y" }]} - {[{ post2.title }]}
+              </a><br>
             {[% endif %]}
+          {[% endfor %]}
+              </div>
+            </div>
+            <div class="spaceline"></div>
+          {[% assign count = 1 %]}
+          {[% capture saved_month %]}{[{ post.date | date: "%Y-%m" }]}
+          {[% endcapture %]}
+            <div class="OutlineBorder">
         {[% endif %]}
-        
-        {[% if forloop.last %]}
-                        <a name="{[{ saved_month }]}"><h1>MONTH: {[{ saved_month }]} ( {[{ count }]} )</h1></a>
-                    
-                        <div class="InlineBorder">
-                {[% for post2 in site.posts %]}
-                    {[% capture this_month2 %]}{[{ post2.date | date: "%Y-%m" }]}{[% endcapture %]}
-                    {[% if this_month2 == saved_month %]}
-                        <a href="{[{ post2.url }]}">{[{ post2.date | date: "%b %d, %Y" }]} - {[{ post2.title }]}</a><br>
-                    {[% endif %]}
-                {[% endfor %]}
-                        </div>
-                    </div>
-                    <div class="spaceline"></div>
-        {[% endif %]}
+      {[% endif %]}
+      
+      {[% if forloop.last %]}
+              <a name="{[{ saved_month }]}"><h1>MONTH: {[{ saved_month }]}
+               ( {[{ count }]} )</h1></a>
+            
+              <div class="InlineBorder">
+          {[% for post2 in site.posts %]}
+            {[% capture this_month2 %]}{[{ post2.date | date: "%Y-%m" }]}
+            {[% endcapture %]}
+            {[% if this_month2 == saved_month %]}
+              <a href="{[{ post2.url }]}">
+              {[{ post2.date | date: "%b %d, %Y" }]}
+               - {[{ post2.title }]}</a><br>
+            {[% endif %]}
+          {[% endfor %]}
+              </div>
+            </div>
+            <div class="spaceline"></div>
+      {[% endif %]}
     {[% endfor %]}
 
 　　这里倒也没有用什么其他的技巧，就是在Head的部分先统计一遍每月文章数，然后再按照月遍历一遍site.posts输出符合本月的所有文章。由于最终结果是静态网页，运算流程上的优化并不是那么重要，只要能实现需要的功能就行。  
@@ -115,36 +132,41 @@ categories: [Liquid, Jekyll, Website]
 
 <?prettify lang=html?>
     {[% for post in paginator.posts %]}
-                    <div class="OutlineBorder">
-                        <a href="{[{ post.url }]}" target="_parent"><h1>{[{ post.title }]}</h1></a>
-                        <div class="InlineBorder">{[{ post.date | date: "%b %d, %Y" }]}<br><br>{[{ post.content | truncatewords:5 }]}</div>
-                    </div>
-                    <div class="spaceline"></div>
+      <div class="OutlineBorder">
+        <a href="{[{ post.url }]}" target="_parent"><h1>{[{ post.title }]}
+        </h1></a>
+        <div class="InlineBorder">{[{ post.date | date: "%b %d, %Y" }]}
+        <br><br>{[{ post.content | truncatewords:5 }]}</div>
+      </div>
+      <div class="spaceline"></div>
     {[% endfor %]}
-                
-                    <!-- Add paginator button here -->
+          
+    <!-- Add paginator button here -->
     {[% if paginator.previous_page_path == nil %]}
-                    <div class="PageButtonDisable">First</div>
-                    <div class="PageButtonDisable">Previous</div>
+      <div class="PageButtonDisable">First</div>
+      <div class="PageButtonDisable">Previous</div>
     {[% else %]}
-        {[% if paginator.page == 1 %]}
-                    <div class="PageButtonDisable">First</div>
-        {[% else %]}
-                    <a href="{[{ site.baseurl }]}"><div class="PageButton">First</div></a>
-        {[% endif %]}
-                    <a href="{[{ paginator.previous_page_path }]}"><div class="PageButton">Previous</div></a>
+      {[% if paginator.page == 1 %]}
+        <div class="PageButtonDisable">First</div>
+      {[% else %]}
+        <a href="{[{ site.baseurl }]}"><div class="PageButton">First</div></a>
+      {[% endif %]}
+      <a href="{[{ paginator.previous_page_path }]}"><div class="PageButton">
+      Previous</div></a>
     {[% endif %]}
-                    {[{ paginator.page }]} / {[{ paginator.total_pages }]}
+      {[{ paginator.page }]} / {[{ paginator.total_pages }]}
     {[% if paginator.next_page_path == nil %]}
-                    <div class="PageButtonDisable">Next</div>
-                    <div class="PageButtonDisable">Last</div>
+      <div class="PageButtonDisable">Next</div>
+      <div class="PageButtonDisable">Last</div>
     {[% else %]}
-                    <a href="{[{ paginator.next_page_path }]}"><div class="PageButton">Next</div></a>
-        {[% if paginator.page == paginator.total_pages %]}
-                    <div class="PageButtonDisable">Last</div>
-        {[% else %]}
-                    <a href="{[{ site.baseurl }]}page{[{ paginator.total_pages }]}"><div class="PageButton">Last</div></a>
-        {[% endif %]}
+      <a href="{[{ paginator.next_page_path }]}"><div class="PageButton">
+      Next</div></a>
+      {[% if paginator.page == paginator.total_pages %]}
+        <div class="PageButtonDisable">Last</div>
+      {[% else %]}
+        <a href="{[{ site.baseurl }]}page{[{ paginator.total_pages }]}">
+        <div class="PageButton">Last</div></a>
+      {[% endif %]}
     {[% endif %]}
 
 　　要实现分页也就是通过调用在config里面声明使用的paginator来完成。通过对paginator.posts的遍历可以得到当前页面中Jekyll给你分配的文章列表。  
