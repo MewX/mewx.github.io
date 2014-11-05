@@ -21,7 +21,7 @@ title: "Time Line"
 			{% for post2 in site.posts %}
 				{% capture this_month2 %}{{ post2.date | date: "%Y-%m" }}{% endcapture %}
 				{% if this_month2 == saved_month %}
-					<a href="{{ post2.url }}">{{ post2.date | date: "%b %d, %Y" }} - {{ post2.title }}</a><br>
+					<a href="{{ post2.url }}">{{ post2.date | date: "%Y-%m-%d" }} | {{ post2.title }}</a><br>
 				{% endif %}
 			{% endfor %}
 					</div>

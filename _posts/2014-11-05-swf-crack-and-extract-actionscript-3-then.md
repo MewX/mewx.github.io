@@ -5,7 +5,7 @@ date: 2014-11-05 14:00
 comments: true
 author: MewX
 published: true
-categories: [Flash, Crack, AS3]
+categories: [Flash, Crack, AS3, 汉化]
 ---
 
 　　本篇是针对上一篇未完成的研究进行的补充，对于无法显示中文、改过脚本无法导入回去等问题都进行解决。  
@@ -33,7 +33,7 @@ categories: [Flash, Crack, AS3]
 　　这款强大的工具被埋没的原因大概是和商业软件的推广有关吧，之前使用的商业软件完全不及这款**自由软件**的功能。（于是又要扯到《大教堂与市集》了……）  
 　　  
 　　下面来说说这款软件的**强大功能**：  
-　　　　1. 直接编辑ActionScript脚本，支持P-code（伪代码）安全编辑模式和纯AS脚本实验编辑功能。也就是说允许编辑P-code，而且是安全得到保障得的；另外就是允许直接在swf上编辑ActionScript，这个对于偷懒的人来说可以尝试。  
+　　　　1. 直接编辑ActionScript脚本，支持P-code（伪代码）安全编辑和纯AS脚本实验编辑功能。也就是说允许编辑P-code，而且是安全得到保障得的；另外就是允许直接在swf上编辑ActionScript，这个对于偷懒的人来说可以尝试。  
 　　　　2. 导出完美的fla文件。这款软件同样可以导出fla，但是比其他软件要强很多，我用这款软件导出了游戏的第一个脚本，然后修改成翻译后的脚本可以直接运行的，完全没有在之前两款软件上发生的错误。软件做的太棒了，真想给他们捐钱了 \_(:з」∠)\_  
 　　　　3. 可以直接扩展字库。  
 　　  
@@ -65,11 +65,7 @@ categories: [Flash, Crack, AS3]
     
       return all_files
     
-    #print repr(get_recursive_file_list(".\\"));
-    #exit(0);
-    
     # generateList 1>l.txt
-    #print sys.argc
     dirc = ".\\";
     for fileName in get_recursive_file_list( dirc ):
       swf = open( fileName, 'rb' );
@@ -90,7 +86,7 @@ categories: [Flash, Crack, AS3]
       print( fileName[len(dirc):len(fileName)] + "\t" + str(fileSize) + "\t" +
         str(secondPos+2) + "\t" + str(scriptBeg+7) + "\t" + str(scriptEnd+5) );
 
-　　输出出来的是：文件名 文件大小 应用字符串大小数值的存储位置 脚本开始处 脚本结束处。可以使用1>fileList.txt重定向一下就到文本里了，接着就是用另一个C++工具处理了。C++因为有自己的Unicode库，所以提取文本我都用的是C++。  
+　　输出出来的是：文件名+文件大小+应用字符串大小数值的存储位置+脚本开始处+脚本结束处。可以使用1>fileList.txt重定向一下就到外部文本里了；接着就是写另一个C++工具处理了。C++因为我有自己的Unicode库，所以跟文本有关的操作我都用的是C++。  
 　　  
 　　最后提取的脚本的一小部分预览：  
 
@@ -126,13 +122,13 @@ categories: [Flash, Crack, AS3]
 　　  
 　　  
 
-## 四、简体中文没法显示怎么搞？
+## 四、简体中文没法显示怎么破？
 
 　　上一篇文章的末尾我运行时截了一张图：是部分不在字库中的字符直接就不显示了。  
-　　我自己再Adobe Flash CS6里面做了实验，导入的字库确实是矢量字库，而且导入的时候还让我选择字符集了，导入字库后再导出swf，文件会大很多。  
+　　我自己在Adobe Flash CS6里面做了实验，导入的字库确实是矢量字库，而且导入的时候还让我选择字符集了，导入字库后再导出swf，文件会大很多。  
 　　  
 　　于是任务就变成了寻找字库。  
-　　由于所有文件我都看到了AS3的源码，我发现是在AS\\StoryObj\\MsgWin\\MsgFormat.as里面定义了字体名称“MMCedar P”。最终这个字库文件最终在主程序的第4个内含的SWF中找到，于是使用之前介绍的超级强大软件把字库扩大一下，我把它扩展成“英文+日文+简中+繁中”的微软雅黑字体库了，导出r4.swf。  
+　　由于所有文件我都能看到AS3的源码，我发现是在AS\\StoryObj\\MsgWin\\MsgFormat.as里面定义了字体名称“MMCedar P”。最终这个字库文件实体在主程序的第4个内含的SWF中找到，于是使用之前介绍的超级强大软件把字库扩大一下，我把它扩展成“英文+日文+简中+繁中”的微软雅黑字体库了，导出r4.swf。  
 　　  
 　　导出了修改过字库的swf有什么用呢？没法直接运行啊！接下来就是封回到exe的过程。  
 　　  
@@ -141,7 +137,11 @@ categories: [Flash, Crack, AS3]
 ## 五、将SWF封回EXE  
 
 　　对于从exe中提取出来的swf文件，我们用16进制编辑器很容易就定位到存储位置了，而且是没有加密的。  
-　　用PEid查看之后发现swf直接就存在附加段（Overlay），所以将修改过的bytes替换原来的bytes即可。  
-　　但是替换之后发现没法运行，是白屏，于是可以想到是程序作了什么检查，搜索原来bytes的偏移或者大小，果然看到存储大小的地方了，是文件的最后4字节，可以猜到exe运行后是冲文件末尾开始读取文件的。修改文件末尾的大小即可成功运行，显示中文！  
-<center><a href="{{ site.baseurl }}imgs/201411/11-game-support-chinese.png" target="_blank"><img src="{{ site.baseurl }}imgs/201411/11-game-support-chinese.png" style="max-width:100%; height:auto;"/></a></center>  
+　　用PEid查看之后发现swf直接就存在附加数据段（Overlay Bytes），所以将修改过的bytes替换原来的bytes即可。  
+　　但是替换之后发现没法运行，是白屏，于是可以想到是程序作了什么检查，搜索原来bytes的偏移或者大小，果然看到存储大小的地方了，是文件的最后4字节，可以猜到exe运行后是从文件末尾开始读取文件的。修改文件末尾的大小即可成功运行，显示中文！  
+<center><img src="{{ site.baseurl }}imgs/201411/11-game-support-chinese.png" style="max-width:100%; height:auto;"/></center>  
+　　  
+　　最后透露一下，这款游戏是：  
+　　**[141031][RJ143025][ティンクルベル] 輪舞曲Duo -夜明けのフォルテシモ- ぷにゅぷり**  
+　　祝大家游戏愉快 23333333  
 　　   

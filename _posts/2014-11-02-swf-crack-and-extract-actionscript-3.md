@@ -5,7 +5,7 @@ date: 2014-11-02 12:00
 comments: true
 author: MewX
 published: true
-categories: [Flash, Crack, AS3]
+categories: [Flash, Crack, AS3, 汉化]
 ---
 
 　　最近受某人委托研究一下某个游戏的汉化，发现这游戏完全是用Flash写的，主程序也是Adobe Flash导出的exe程序，其他的资源也都是在swf中。  
@@ -20,7 +20,7 @@ categories: [Flash, Crack, AS3]
 　　　叫这个名字的有两个软件，图标如下图所示：  
 <center><img src="{{ site.baseurl }}imgs/201411/01-two-swf-decompilers.png" /></center>  
 　　　右边的那个也就是“百度”上广为流传的“硕思SWF反编译工具”了，全名“Sothink SWF Decompiler”，这也就意味着这个软件的破解版更好找 :P  
-　　　这个软件安装之后会叫你选择是否安装其他的工具，有一个“Sothink SWF Editor”，这个是一个能查看16进制dump文件结构的工具，只是没找到破解版比较可惜 _(:з」∠)_  
+　　　这个软件安装之后会叫你选择是否安装其他的工具，有一个“Sothink SWF Editor”，这个是一个能查看16进制dump文件结构的工具，只是没找到破解版比较可惜 \_(:з」∠)\_  
 　　　**更正：左边的全名是“FlashDecompiler Trillix”，功能强大，同样也能找到破解版的，非常推荐使用这个软件，因为这个工具自带了Dump结构查看工具，可以很容易地分析swf文件结构！破解版很完美！**  
 <center><a href="{{ site.baseurl }}imgs/201411/12-dump-view.png" target="_blank"><img src="{{ site.baseurl }}imgs/201411/12-dump-view.png" style="max-width:100%; height:auto;"/></a></center>  
 　　　不用破解版也就意味着你不能将文件导出为.fla文件，也就不能继续接下来的操作了。  

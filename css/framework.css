@@ -203,6 +203,7 @@ li {
 	height: 210px;
 	top: 10px;
 	color: #FFF;
+    z-index: 116;
 }
 
 #TopBlock2 {
@@ -246,6 +247,7 @@ li {
 	height: 210px;
 	top: 0px;
 	color: #FFF;
+    z-index: 116;
 }
 
 #TopBlock3 {
@@ -289,6 +291,7 @@ li {
 	height: 210px;
 	top: -10px;
 	color: #FFF;
+    z-index: 116;
 }
 
 #TopBlock4 {
@@ -332,6 +335,7 @@ li {
 	height: 210px;
 	top: -20px;
 	color: #000; /* A little different, for apparency */
+    z-index: 116;
 }
 
 #TopBlock5 {
@@ -375,6 +379,7 @@ li {
 	height: 210px;
 	top: -30px;
 	color: #FFF;
+    z-index: 116;
 }
 
 #TopBlock6 {
@@ -418,6 +423,7 @@ li {
 	height: 210px;
 	top: -40px;
 	color: #FFF;
+    z-index: 116;
 }
 
 
