@@ -100,6 +100,7 @@ li {
 	height: 200px;
 	width: 200px;
 	position: absolute;
+    background-color: transparent;
 	background-image: url(/imgs/site/avatar.png);
 	background-size:100% 100%; 
 	z-index: 950;
@@ -171,6 +172,7 @@ li {
 #TopBlock1 {
 	display: block;
 	background: #60C;
+	background-image: url(/imgs/site/aboutme_bg.gif);
 	color: #000;
 	height: 200px;
 	width: 1024px;
@@ -198,11 +200,11 @@ li {
 	-webkit-transition: all 0.5s ease-in-out;
 }
 #TopBlock1:hover {
-	opacity: 0.75;
-	filter: alpha(opacity=75); /* For IE8 and earlier */
+	opacity: 0.90;
+	filter: alpha(opacity=90); /* For IE8 and earlier */
 	height: 210px;
 	top: 10px;
-	color: #FFF;
+	color: #07E;
     z-index: 116;
 }
 
@@ -242,8 +244,8 @@ li {
 	-webkit-transition: all 0.5s ease-in-out;
 }
 #TopBlock2:hover {
-	opacity: 0.75;
-	filter: alpha(opacity=75); /* For IE8 and earlier */
+	opacity: 0.90;
+	filter: alpha(opacity=90); /* For IE8 and earlier */
 	height: 210px;
 	top: 0px;
 	color: #FFF;
@@ -286,8 +288,8 @@ li {
 	-webkit-transition: all 0.5s ease-in-out;
 }
 #TopBlock3:hover {
-	opacity: 0.75;
-	filter: alpha(opacity=75); /* For IE8 and earlier */
+	opacity: 0.90;
+	filter: alpha(opacity=90); /* For IE8 and earlier */
 	height: 210px;
 	top: -10px;
 	color: #FFF;
@@ -330,8 +332,8 @@ li {
 	-webkit-transition: all 0.5s ease-in-out;
 }
 #TopBlock4:hover {
-	opacity: 0.75;
-	filter: alpha(opacity=75); /* For IE8 and earlier */
+	opacity: 0.90;
+	filter: alpha(opacity=90); /* For IE8 and earlier */
 	height: 210px;
 	top: -20px;
 	color: #000; /* A little different, for apparency */
@@ -374,8 +376,8 @@ li {
 	-webkit-transition: all 0.5s ease-in-out;
 }
 #TopBlock5:hover {
-	opacity: 0.75;
-	filter: alpha(opacity=75); /* For IE8 and earlier */
+	opacity: 0.90;
+	filter: alpha(opacity=90); /* For IE8 and earlier */
 	height: 210px;
 	top: -30px;
 	color: #FFF;
@@ -385,6 +387,7 @@ li {
 #TopBlock6 {
 	display: block;
 	background: #F00;
+	background-image: url(/imgs/site/lightnovellibrary_bg.png);
 	color: #000;
 	height: 200px;
 	width: 1024px;
@@ -397,7 +400,7 @@ li {
 	line-height: normal;
 	font-weight: 100;
 	z-index: 115;
-	cursor: default;
+	cursor: pointer;
 	text-align: right;
 	left: 50%;
 	margin-left: -442px;
@@ -418,11 +421,11 @@ li {
 	-webkit-transition: all 0.5s ease-in-out;
 }
 #TopBlock6:hover {
-	opacity: 0.75;
-	filter: alpha(opacity=75); /* For IE8 and earlier */
+	opacity: 0.90;
+	filter: alpha(opacity=90); /* For IE8 and earlier */
 	height: 210px;
 	top: -40px;
-	color: #FFF;
+	color: #07E;
     z-index: 116;
 }
 
