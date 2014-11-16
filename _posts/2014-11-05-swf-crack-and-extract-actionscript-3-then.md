@@ -142,6 +142,6 @@ categories: [Flash, Crack, AS3, 汉化]
 <center><img src="{{ site.baseurl }}imgs/201411/11-game-support-chinese.png" style="max-width:100%; height:auto;"/></center>  
 　　  
 　　最后透露一下，这款游戏是：  
-　　**[141031][RJ143025][ティンクルベル] 輪舞曲Duo -夜明けのフォルテシモ- ぷにゅぷり**  
+　　**[141031][ティンクルベル] 輪舞曲Duo -夜明けのフォルテシモ- ぷにゅぷりFF**  
 　　祝大家游戏愉快 23333333  
 　　   
