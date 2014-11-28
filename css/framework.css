@@ -224,7 +224,7 @@ li {
 	line-height: normal;
 	font-weight: 100;
 	z-index: 111;
-	cursor: default;
+	cursor: pointer;
 	text-align: right;
 	left: 50%;
 	margin-left: -522px;
@@ -256,6 +256,7 @@ li {
 #TopBlock3 {
 	display: block;
 	background: #0F0;
+    background-image: url(/imgs/site/github_bg.png);
 	color: #000;
 	height: 200px;
 	width: 1024px;
