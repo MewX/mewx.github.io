@@ -211,6 +211,7 @@ li {
 #TopBlock2 {
 	display: block;
 	background: #00F;
+    background-image: url(/imgs/site/mail_bg.png);
 	color: #000;
 	height: 200px;
 	width: 1024px;
