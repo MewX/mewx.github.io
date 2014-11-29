@@ -269,7 +269,7 @@ li {
 	line-height: normal;
 	font-weight: 100;
 	z-index: 112;
-	cursor: default;
+	cursor: pointer;
 	text-align: right;
 	left: 50%;
 	margin-left: -502px;
@@ -345,6 +345,7 @@ li {
 #TopBlock5 {
 	display: block;
 	background: #F60;
+    background-image: url(/imgs/site/cc_bg.png);
 	color: #000;
 	height: 200px;
 	width: 1024px;
@@ -357,7 +358,7 @@ li {
 	line-height: normal;
 	font-weight: 100;
 	z-index: 114;
-	cursor: default;
+	cursor: pointer;
 	text-align: right;
 	left: 50%;
 	margin-left: -462px;
