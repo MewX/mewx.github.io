@@ -39,7 +39,7 @@ categories: [life]
 　　  
 
 　　最后再用“keyboard test utility”测试，完美通过：  
-<center><a href="{{ site.baseurl }}imgs/201412/09-mechanical-keyboard-test.png" target="_blank"><img src="{{ site.baseurl }}imgs/201412/09-mechanical-keyboard-test.cache.png" style="max-width:100%; height:auto;"/></a></center>  
+<center><a href="{{ site.baseurl }}imgs/201412/09-mechanical-keyboard-test.jpg" target="_blank"><img src="{{ site.baseurl }}imgs/201412/09-mechanical-keyboard-test.cache.png" style="max-width:100%; height:auto;"/></a></center>  
 
 　　  
 
