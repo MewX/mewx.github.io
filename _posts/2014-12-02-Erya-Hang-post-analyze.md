@@ -142,11 +142,11 @@ categories: [web]
 
 　　  
 
-　　我可不像那个某站长啊，我直接无偿放出来了，希望大家转载的时候能注明一下出处，带来一点小小的流量就好。。。
+　　我可不像那个某站长啊，我直接无偿放出来了，**希望对大家有用的话能留下点评论**，带来一点小小的流量就好。。。
 
 　　  
 
-　　<a href="{{ site.baseurl }}downloads/erya.csv" target="_blank">erya.csv</a>  
+　　数据库在此：<a href="{{ site.baseurl }}downloads/erya.csv" target="_blank">erya.csv</a>  
 
 　　  
 
