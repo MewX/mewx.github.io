@@ -1,6 +1,6 @@
 ---
 layout: MutiDivPage
-title: "Time Line"
+title: "时间列表"
 ---
 
 			<div id="OutlineFramework">
@@ -15,7 +15,7 @@ title: "Time Line"
 		{% if this_month == saved_month %}
 			{% assign count = count | plus: 1 %}
 		{% else %}
-				
+
 					<a name="{{ saved_month }}"><h1>MONTH: {{ saved_month }} ( {{ count }} )</h1></a>
 					<div class="InlineBorder">
 			{% for post2 in site.posts %}
@@ -32,10 +32,10 @@ title: "Time Line"
 				<div class="OutlineBorder">
 		{% endif %}
 	{% endif %}
-	
+
 	{% if forloop.last %}
 					<a name="{{ saved_month }}"><h1>MONTH: {{ saved_month }} ( {{ count }} )</h1></a>
-				
+
 					<div class="InlineBorder">
 			{% for post2 in site.posts %}
 				{% capture this_month2 %}{{ post2.date | date: "%Y-%m" }}{% endcapture %}

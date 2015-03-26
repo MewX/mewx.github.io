@@ -10,11 +10,11 @@ encoding: utf-8
 # Site info
 baseurl: http://www.mewx.org/
 #baseurl: /
-paginate: 5
+paginate: 8
 permalink: blog/:year:month/:title
 exclude: ["README.md", "changelog.md", "Gemfile.lock"]
 
 # Blog info
-title : MewX's Blog
+title : MewX的个人主页，孜孜求索中的MewX……
 author: MewX
 email : mewx(at)mewx(dot)org
