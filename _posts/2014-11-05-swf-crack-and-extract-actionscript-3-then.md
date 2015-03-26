@@ -5,7 +5,7 @@ date: 2014-11-05 14:00
 comments: true
 author: MewX
 published: true
-categories: [Flash, Crack, AS3, 汉化]
+categories: [Flash, Crack, AS3, 汉化, python]
 ---
 
 　　本篇是针对上一篇未完成的研究进行的补充，对于无法显示中文、改过脚本无法导入回去等问题都进行解决。  
@@ -52,37 +52,37 @@ categories: [Flash, Crack, AS3, 汉化]
 <?prettify lang=python?>
     #-*-encoding:utf-8-*-
     import sys, os
-    
+
     def get_recursive_file_list(path):
       current_files = os.listdir(path)
       all_files = []
       for file_name in current_files:
         full_file_name = os.path.join(path, file_name)
-    
+
         if not os.path.isdir(full_file_name) and
           full_file_name[ len(full_file_name)-4 : len(full_file_name)] == ".swf":
           all_files.append(full_file_name)
-    
+
       return all_files
-    
+
     # generateList 1>l.txt
     dirc = ".\\";
     for fileName in get_recursive_file_list( dirc ):
       swf = open( fileName, 'rb' );
       s = swf.read( );
       fileSize = len( s );
-      
+
       # 04 4E 65 78 74
       scriptEnd = s.rfind( "\x04\x4E\x65\x78\x74" );
       if scriptEnd == -1: print( "scriptEnd = 0" );
-      
+
       secondPos = s.rfind( "\xBF\x14", 0, scriptEnd );
       if scriptEnd == -1: print( "BF14 not found" );
-      
+
       # 06 73 70 6C 69 63 65
       scriptBeg = s.find( "\x06\x73\x70\x6C\x69\x63\x65", secondPos, scriptEnd );
       if scriptEnd == -1: print( "splice not found" );
-      
+
       print( fileName[len(dirc):len(fileName)] + "\t" + str(fileSize) + "\t" +
         str(secondPos+2) + "\t" + str(scriptBeg+7) + "\t" + str(scriptEnd+5) );
 
@@ -93,28 +93,28 @@ categories: [Flash, Crack, AS3, 汉化]
 <?prettify lang=python?>
     #0001: BGMstop
      Tr->: BGMstop
-    
+
     #0002: BGMplay`37`1.0
      Tr->: BGMplay`37`1.0
-    
+
     #0003: introBG`01
      Tr->: introBG`01
-    
+
     #0004: MsgWin`show
      Tr->: MsgWin`show
-    
+
     #0005: SndPlay`se_108`0.3`0`true
      Tr->: SndPlay`se_108`0.3`0`true
-    
+
     #0006: null
      Tr->: null
-    
+
     #0007: <明るい日差しが差し込む、いつもと変わらない教室。>
      Tr->: <明るい日差しが差し込む、いつもと変わらない教室。>
-    
+
     #0008: <いつも通りの面々の、他愛も無い話が聞こえてくる>
      Tr->: <いつも通りの面々の、他愛も無い話が聞こえてくる>
-    
+
     #0009: ChrPosSet`-35`-13`1.05`1.05`0`2\n
      Tr->: ChrPosSet`-35`-13`1.05`1.05`0`2\n
 
@@ -144,4 +144,4 @@ categories: [Flash, Crack, AS3, 汉化]
 　　最后透露一下，这款游戏是：  
 　　**[141031][ティンクルベル] 輪舞曲Duo -夜明けのフォルテシモ- ぷにゅぷりFF**  
 　　祝大家游戏愉快 23333333 【申请2dj】  
-　　   
+　　

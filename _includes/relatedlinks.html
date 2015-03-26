@@ -1,0 +1,68 @@
+<div id="TagOutlineBoarder">
+  <!-- 时间列表 -->
+  <div class="spaceline"></div>
+  <div class="spaceline"></div>
+  <div class="spaceline"></div>
+  Classify by DATE<br>
+  <div class="spaceline"></div>
+{% assign count = 0 %}
+{% for post in site.posts %}
+{% if forloop.first %}
+{% capture saved_month %}{{ post.date | date: "%Y-%m" }}{% endcapture %}
+{% assign count = 1 %}
+{% else %}
+{% capture this_month %}{{ post.date | date: "%Y-%m" }}{% endcapture %}
+{% if this_month == saved_month %}
+{% assign count = count | plus: 1 %}
+{% else %}
+  <a href="{{ site.baseurl }}times.html#{{ saved_month }}"><div class="DateListStyle">
+    {{ saved_month }}<!--({{ count }})-->
+  </div></a>
+{% assign count = 1 %}
+{% capture saved_month %}{{ post.date | date: "%Y-%m" }}{% endcapture %}
+{% endif %}
+{% endif %}
+
+{% if forloop.last %}
+  <a href="{{ site.baseurl }}times.html#{{ saved_month }}"><div class="DateListStyle">
+    {{ saved_month }}<!--({{ count }})-->
+  </div></a>
+{% endif %}
+{% endfor %}
+
+  <!-- 分类列表 -->
+  <br style="clear:both;" />
+  <div class="spaceline"></div>
+  <div class="spaceline"></div>
+  <div class="spaceline"></div>
+  Classify by CATEGORY<br>
+  <div class="spaceline"></div>
+{% for category in site.categories %}
+  <a href="{{ site.baseurl }}tags.html#{{ category | first }}"><div class="TagListStyle">
+    {{ category | first }}<!--({{ category | last | size }})-->
+  </div></a>
+{% endfor %}
+
+  <!-- 友情链接 -->
+  <br style="clear:both;" />
+  <div class="spaceline"></div>
+  <div class="spaceline"></div>
+  <div class="spaceline"></div>
+  Related Links:<br>
+  <div class="spaceline"></div>
+          <ul>
+              <li><a href="http://www.kiwee.me">Absolute Zero</a></li>
+              <li><a href="http://www.cnblogs.com/alan-forever">Alan-forever</a></li>
+              <li><a href="http://www.desgard.com">冬瓜</a></li>
+              <li><a href="http://dyl.gitcafe.com">dyl</a></li>
+              <li><a href="http://fael.xyz/">fael</a></li>
+              <li><a href="http://geniuze.com">geniuze</a></li>
+              <li><a href="http://phonzia.com">Phonzia</a></li>
+              <li><a href="http://www.razorsh.com">Revo</a></li>
+              <li><a href="http://foursking.github.io">Setsuna F.Seiei</a></li>
+              <li><a href="http://www.zcmyworld.com">志聪</a></li>
+              <li><a href="http://kurosaki.coding.io">ZERO</a></li>
+          </ul>
+</div>
+
+<br style="clear:both;" /> <!-- Refresh float view -->
