@@ -6,7 +6,7 @@ title: "标签列表"
 			<div id="OutlineFramework">
 {% for category in site.categories %}
 				<div class="OutlineBorder">
-					<a name="{{ category | first }}"><h1>TAG: {{ category | first }} ( {{ category | last | size }} )</h1></a>
+					<a name="{{ category | first }}"><h1 class="myh1">TAG: {{ category | first }} ( {{ category | last | size }} )</h1></a>
 					<div class="InlineBorder">
 	{% for posts in category %}
 		{% for post in posts %}

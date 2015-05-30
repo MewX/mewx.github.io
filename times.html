@@ -16,7 +16,7 @@ title: "时间列表"
 			{% assign count = count | plus: 1 %}
 		{% else %}
 
-					<a name="{{ saved_month }}"><h1>MONTH: {{ saved_month }} ( {{ count }} )</h1></a>
+					<a name="{{ saved_month }}"><h1 class="myh1">MONTH: {{ saved_month }} ( {{ count }} )</h1></a>
 					<div class="InlineBorder">
 			{% for post2 in site.posts %}
 				{% capture this_month2 %}{{ post2.date | date: "%Y-%m" }}{% endcapture %}
@@ -34,7 +34,7 @@ title: "时间列表"
 	{% endif %}
 
 	{% if forloop.last %}
-					<a name="{{ saved_month }}"><h1>MONTH: {{ saved_month }} ( {{ count }} )</h1></a>
+					<a name="{{ saved_month }}"><h1 class="myh1">MONTH: {{ saved_month }} ( {{ count }} )</h1></a>
 
 					<div class="InlineBorder">
 			{% for post2 in site.posts %}
