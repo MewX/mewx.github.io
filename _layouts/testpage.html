@@ -9,6 +9,7 @@
 	<!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,100italic' rel='stylesheet' type='text/css'>-->
 	<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}css/framework.css"/>
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}css/github-markdown.css">
 	<link href="{{ site.baseurl }}prettify/prettify.css" rel="stylesheet" type="text/css" media="all">
 	<style>
 	li.L0, li.L1, li.L2, li.L3,
@@ -26,8 +27,8 @@
 			<div class="spaceline"></div>
 			<div id="OutlineFramework">
 				<div class="OutlineBorder">
-					<h1>{{ page.title }}</h1>
-					<div class="InlineBorder">{{ page.date | date: "%b %d, %Y" }}<br><br>{{ content }}</div>
+					<h1 class="myh1">{{ page.title }}</h1>
+					<div class="InlineBorder">{{ page.date | date: "%b %d, %Y" }}<br><br><article class="markdown-body">{{ content }}</article></div>
 				</div>
 				<div class="spaceline"></div>
 

@@ -6,8 +6,8 @@ title: "首页"
 			<div id="OutlineFramework">
 {% for post in paginator.posts %}
 				<div class="OutlineBorder">
-					<a href="{{ post.url }}" target="_parent"><h1>{{ post.title }}</h1></a>
-					<div class="InlineBorder">{{ post.date | date: "%b %d, %Y" }}<br><br>{{ post.content | truncatewords:5 }}</div>
+					<a href="{{ post.url }}" target="_parent"><h1 class="myh1">{{ post.title }}</h1></a>
+					<div class="InlineBorder">{{ post.date | date: "%b %d, %Y" }}<br><br><article class="markdown-body">{{ post.content | truncatewords:5 }}</article></div>
 				</div>
 				<div class="spaceline"></div>
 {% endfor %}
