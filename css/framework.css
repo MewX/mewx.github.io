@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Author: MewX
  * Date: 7/30/2014
  * Description: CSS3 based page framwork.
@@ -24,8 +24,8 @@ body, div, dl, dt, dd, ol, ul, h1, h2, h3, h4, h5, h6, pre, form, fieldset, inpu
 a {
 	text-decoration:none;
 }
-li {
-	margin-left: 50px;
+ol li {
+	margin-left: 15px;
 }
 
 #TopBlockMaskSaveEnergy {
