@@ -189,6 +189,8 @@ categories: [php, web]
 
 **等比赛结束了再把代码放出来，免得直接被拿来主义了。**
 
+**Update: [所有源码](https://github.com/MewX/WeChat-AcademicTeachingAffairManagementSystem)**
+
 - wechat.php
 
 入口函数，微信`开发者中心`设置的网站地址，需要配置`TOKEN`、`AppID`、`EncodingAESKey`，然后实例化封装的sdk类。
