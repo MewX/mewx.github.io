@@ -428,7 +428,7 @@ ol li {
 	filter: alpha(opacity=90); /* For IE8 and earlier */
 	height: 210px;
 	top: -40px;
-	color: #07E;
+	color: #000;
     z-index: 116;
 }
 
