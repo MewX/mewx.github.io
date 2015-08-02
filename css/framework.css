@@ -75,7 +75,7 @@ ol li {
 	left: 50%;
 	width: 450px;
 	margin-left: -500px; /* This adjust the position */
-	font-family: 'Lato', sans-serif;
+	font-family: 'Lato', sans-serif, "Microsoft YaHei", "微软雅黑", "simhei", "黑体";
 	font-weight: 300;
 	text-shadow: 4px 4px 4px #aaa;
 	position: absolute;
