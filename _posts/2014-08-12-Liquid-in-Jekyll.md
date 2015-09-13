@@ -5,7 +5,7 @@ date: 2014-08-12 23:00
 comments: true
 author: MewX
 published: true
-categories: [Liquid, Jekyll, Website]
+categories: [Liquid, Jekyll, web]
 ---
 
 　　Liquid官方解释是一种模板语言，Jekyll中的网页模板支持插入[Liquid](http://docs.shopify.com/themes/liquid-documentation/basics/)模板语言(Templating Language)实现更加强大的效果。下面用几段本网站的源码来介绍Liquid的一些[高级用法（点这查看全部）](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers)。  
@@ -49,7 +49,7 @@ categories: [Liquid, Jekyll, Website]
           {[% endcapture %]}
         {[% endif %]}
       {[% endif %]}
-      
+
       {[% if forloop.last %]}
             <a href="{[{ site.baseurl }]}times.html#{[{ saved_month }]}">
             <div class="DateListStyle">
@@ -79,7 +79,7 @@ categories: [Liquid, Jekyll, Website]
         {[% if this_month == saved_month %]}
           {[% assign count = count | plus: 1 %]}
         {[% else %]}
-            
+
               <a name="{[{ saved_month }]}"><h1>MONTH: {[{ saved_month }]}
                ( {[{ count }]} )</h1></a>
               <div class="InlineBorder">
@@ -101,11 +101,11 @@ categories: [Liquid, Jekyll, Website]
             <div class="OutlineBorder">
         {[% endif %]}
       {[% endif %]}
-      
+
       {[% if forloop.last %]}
               <a name="{[{ saved_month }]}"><h1>MONTH: {[{ saved_month }]}
                ( {[{ count }]} )</h1></a>
-            
+
               <div class="InlineBorder">
           {[% for post2 in site.posts %]}
             {[% capture this_month2 %]}{[{ post2.date | date: "%Y-%m" }]}
@@ -140,7 +140,7 @@ categories: [Liquid, Jekyll, Website]
       </div>
       <div class="spaceline"></div>
     {[% endfor %]}
-          
+
     <!-- Add paginator button here -->
     {[% if paginator.previous_page_path == nil %]}
       <div class="PageButtonDisable">First</div>

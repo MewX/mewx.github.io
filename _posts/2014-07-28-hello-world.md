@@ -5,7 +5,7 @@ date: 2014-07-28 10:00
 comments: true
 author: MewX
 published: true
-categories: [WebSite, Test]
+categories: [web, Test]
 ---
 　　{{ page.title }}
 　　  
@@ -34,18 +34,18 @@ categories: [WebSite, Test]
 <?prettify lang=c?>
     #include <stdio.h>
     #include <math.h>
-    
+
     int main( )
     {
         double a, d, x = 0.0, y = 0.0, temp = 0.0;
         int n, i;
         scanf( "%lf%lf%d", &a, &d, &n );
-        
+
         for( i = 0; i < n; i ++ ) {
             // temp += d;
             // if( temp > 4.0 * a ) temp = fmod( temp, 4.0 * a );
             temp = fmod( temp + d, 4.0 * a );
-            
+
             if( temp < a ) {
                 x = temp;
                 y = 0.0;
@@ -64,9 +64,9 @@ categories: [WebSite, Test]
             }
             printf( "%.10lf %.10lf\n", x, y );
         }
-        
+
         return 0;
     }
-    
+
 <br>
 Code End

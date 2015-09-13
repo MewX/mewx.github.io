@@ -5,13 +5,13 @@ date: 2014-08-04 14:00
 comments: true
 author: MewX
 published: true
-categories: [Website, Life]
+categories: [web, Life]
 ---
 
 　　这是本博客第一次建站的报告，也当是自己做网页历程的一个小结吧。  
 　　之前考虑过用GoogleAppEngine以及其他类似的免费云计算平台来搭建，但是免费的只找到了GAE。本来对Py就不熟，网上流行的micolog（一个用Python写的模板）也不方便修改。最后选择了GitHub Pages作为主机（GitCafé类似）。  
 　　在GitHub上建立网站通过Jekyll（Ruby写成的用于生成静态网页的工具）来完成，首选的模板有Octopress和JekyllBootstrap，他们的官方网站上有丰富的模板，而且由于是Ruby写的，跨平台性很好！  
-  
+
 　　本机运行Octopress后发现，_config.yml里面设置项目繁多，想达到高度自定制化也不是那么容易；JekyllBootstrap效果不错，推荐使用。不过自己最后选择的还是DIY，因为之前那段时间比较闲。  
 　　  
 **下面简单说说我与网页的历史吧：**  
