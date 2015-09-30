@@ -43,7 +43,7 @@ categories: [Flash, Crack, AS3, 汉化, python]
 
 　　**1. 解压swf文件**  
 　　　首先看到游戏目录下68个剧本swf文件，果然是想写个工具来提取文本了，但是这些文件都是“CWS”文件头，是经过压缩的。所以需要先解压，再提取明文。  
-　　　这里我在找提取工具的过程中发现了一个小工具，于是用它把所有脚本都解压了，文件头变成“FWS”（SWF反过来）了。现在文件内的内容全是明文，令人心情愉悦啊。如图：  
+　　　这里我在找提取工具的过程中发现了一个[小工具](http://hp.vector.co.jp/authors/VA020429/ffmpeg/swf_comp.html)，于是用它把所有脚本都解压了，文件头变成“FWS”（SWF反过来）了。现在文件内的内容全是明文，令人心情愉悦啊。如图：  
 <center><a href="{{ site.baseurl }}imgs/201411/10-raw-content.png" target="_blank"><img src="{{ site.baseurl }}imgs/201411/10-raw-content.png" style="max-width:100%; height:auto;"/></a></center>  
 　　  
 　　**2. 提取swf文件中的脚本**  
@@ -143,5 +143,5 @@ categories: [Flash, Crack, AS3, 汉化, python]
 　　  
 　　最后透露一下，这款游戏是：  
 　　**[141031][ティンクルベル] 輪舞曲Duo -夜明けのフォルテシモ- ぷにゅぷりFF**  
-　　祝大家游戏愉快 23333333 【申请2dj】  
+　　祝大家游戏愉快 23333333  
 　　
