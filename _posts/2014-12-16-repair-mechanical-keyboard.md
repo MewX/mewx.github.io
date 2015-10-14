@@ -24,22 +24,22 @@ categories: [life]
 
 　　  
 
-　　我取了双绞线的铜线，然后绕城套索状套到引脚上，通过焊锡固定：  
-<center><img src="{{ site.baseurl }}imgs/201412/06-mechanical-keyboard-shaft.png" style="max-width:100%; height:auto;"/></center>  
+　　我取了双绞线的铜线，然后绕成套索状套到引脚上，通过焊锡固定：  
+<center><img src="{{ site.cdn }}imgs/201412/06-mechanical-keyboard-shaft.png" style="max-width:100%; height:auto;"/></center>  
 
 　　  
 
 　　然后焊到电路板上（看到千疮百孔了吧 XD 简直手残）：
-<center><img src="{{ site.baseurl }}imgs/201412/07-mechanical-keyboard-shaft-on-PCB.png" style="max-width:100%; height:auto;"/></center>  
+<center><img src="{{ site.cdn }}imgs/201412/07-mechanical-keyboard-shaft-on-PCB.png" style="max-width:100%; height:auto;"/></center>  
 
 　　  
 
-<center><img src="{{ site.baseurl }}imgs/201412/08-mechanical-keyboard-shaft-on-PCB-ok.png" style="max-width:100%; height:auto;"/></center>  
+<center><img src="{{ site.cdn }}imgs/201412/08-mechanical-keyboard-shaft-on-PCB-ok.png" style="max-width:100%; height:auto;"/></center>  
 
 　　  
 
 　　最后再用“keyboard test utility”测试，完美通过：  
-<center><a href="{{ site.baseurl }}imgs/201412/09-mechanical-keyboard-test.jpg" target="_blank"><img src="{{ site.baseurl }}imgs/201412/09-mechanical-keyboard-test.cache.png" style="max-width:100%; height:auto;"/></a></center>  
+<center><a href="{{ site.cdn }}imgs/201412/09-mechanical-keyboard-test.jpg" target="_blank"><img src="{{ site.cdn }}imgs/201412/09-mechanical-keyboard-test.cache.png" style="max-width:100%; height:auto;"/></a></center>  
 
 　　  
 

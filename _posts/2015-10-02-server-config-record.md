@@ -1,7 +1,7 @@
 ---
 layout: testpage
 title: "网站搭建小记：ECS+LNMP+SSL"
-date: 2015-10-13 22:26
+date: 2015-10-02 22:26
 comments: true
 author: MewX
 published: true
@@ -10,7 +10,7 @@ categories: [web, php]
 
 同样是[`云翼计划`](http://www.aliyun.com/act/aliyun/campus.html)弄到的ECS，手头上几个域名就拿出来使用了，同时还配备了SSL证书。这里做一个记录~
 
-其中SSL证书遇到了在PC平台上没有问题，但是在Android平台上一直显示证书不受信任的标识，这里查了资料对其做了解决。
+其中遇到了一些问题，比如SSL证书在PC平台上没有问题，但是在Android平台上一直显示证书不受信任的标识，这里查了资料对其做了解决；LNMP删除了`vhost`记录之后目录无法删除的问题也做了解决。
 
 ## 安装LNMP
 
@@ -121,7 +121,7 @@ categories: [web, php]
 
 没错，就是把`redirect`改成`permanent`，大功告成，来个截图纪念下：
 
-<center><img src="{{ site.baseurl }}imgs/201510/ssl-preview.jpg" style="max-width:100%; height:auto;"/></center>
+<center><img src="{{ site.cdn }}imgs/201510/ssl-preview.jpg" style="max-width:100%; height:auto;"/></center>
 
 ## 关于删除lnmp的项目
 
@@ -151,7 +151,7 @@ categories: [web, php]
 
 安卓的任何浏览器打开都是清一色显示证书不受信任，这里测试的浏览器有：Google Chrome, UC浏览器, 360免流浏览器, Firefox, Via，以谷歌浏览器的截图为例：
 
-<center><img src="{{ site.baseurl }}imgs/201510/cert-err.jpg" style="max-width:100%; height:auto;"/></center>
+<center><img src="{{ site.cdn }}imgs/201510/cert-err.jpg" style="max-width:100%; height:auto;"/></center>
 
 查了一下还蛮普遍的，是因为StartSSL没有入驻Android的根证书系统，所以在安卓平台上的所有浏览器都会认证失败。可能是因为StartCom的Class 1就是个`中间签发机构`，而Android并不认识它们。那么按照查到的方法，只需要将StartCom的CA证书链合并到我的证书里面，就可以搞定了。
 
@@ -167,4 +167,4 @@ categories: [web, php]
 
 搞定，放图：
 
-<center><img src="{{ site.baseurl }}imgs/201510/cert-pass.jpg" style="max-width:100%; height:auto;"/></center>
+<center><img src="{{ site.cdn }}imgs/201510/cert-pass.jpg" style="max-width:100%; height:auto;"/></center>

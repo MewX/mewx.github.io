@@ -18,3 +18,4 @@ exclude: ["README.md", "changelog.md", "Gemfile.lock"]
 title : MewX的个人主页，孜孜求索中的MewX……
 author: MewX
 email : mewx(at)mewx(dot)org
+cdn   : http://7xn9yq.com1.z0.glb.clouddn.com/mewx/

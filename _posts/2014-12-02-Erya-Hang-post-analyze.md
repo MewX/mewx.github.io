@@ -23,7 +23,7 @@ categories: [web]
 　　  
 
 　　**先来看看很久以前抓包弄出来的小库吧：**  
-<center><a href="{{ site.baseurl }}imgs/201412/01-erya-db-old.png" target="_blank"><img src="{{ site.baseurl }}imgs/201412/01-erya-db-old.png" style="max-width:100%; height:auto;"/></a></center>  
+<center><a href="{{ site.cdn }}imgs/201412/01-erya-db-old.png" target="_blank"><img src="{{ site.cdn }}imgs/201412/01-erya-db-old.png" style="max-width:100%; height:auto;"/></a></center>  
 
 　　  
 

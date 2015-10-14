@@ -25,7 +25,7 @@ categories: [Win32, barcode]
 
 　　  
 　　**效果图（可以用app扫的）：**  
-<center><img src="{{ site.baseurl }}imgs/201411/13-ean-13-111111111111.png" /></center>  
+<center><img src="{{ site.cdn }}imgs/201411/13-ean-13-111111111111.png" /></center>  
 　　  
 　　**代码如下**（主要就是WM_PAINT的部分，三目用的有点多，分行不自然 \_(:з」∠)\_）：  
 

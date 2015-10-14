@@ -17,22 +17,22 @@ categories: [web]
 　　  
 
 　　改好效果，第一张是鼠标移开的状态，第二张是鼠标框上：  
-<center><a href="{{ site.baseurl }}imgs/201412/02-stylish-baidu-home.png" target="_blank"><img src="{{ site.baseurl }}imgs/201412/02-stylish-baidu-home.png" style="max-width:100%; height:auto;"/></a></center>  
+<center><a href="{{ site.cdn }}imgs/201412/02-stylish-baidu-home.png" target="_blank"><img src="{{ site.cdn }}imgs/201412/02-stylish-baidu-home.png" style="max-width:100%; height:auto;"/></a></center>  
 
 　　  
 
-<center><a href="{{ site.baseurl }}imgs/201412/03-stylish-baidu-home-focus.png" target="_blank"><img src="{{ site.baseurl }}imgs/201412/03-stylish-baidu-home-focus.png" style="max-width:100%; height:auto;"/></a></center>  
+<center><a href="{{ site.cdn }}imgs/201412/03-stylish-baidu-home-focus.png" target="_blank"><img src="{{ site.cdn }}imgs/201412/03-stylish-baidu-home-focus.png" style="max-width:100%; height:auto;"/></a></center>  
 
 　　  
 
 　　  
 
 　　但是搜索结果界面直接就跳到白底的页面上了啊，很不爽，所以在结果界面又添加了半透明以及背景效果，如图（同样：第一张是鼠标移开的状态，第二张是鼠标在结果中）：  
-<center><a href="{{ site.baseurl }}imgs/201412/04-stylish-baidu-result.png" target="_blank"><img src="{{ site.baseurl }}imgs/201412/04-stylish-baidu-result.png" style="max-width:100%; height:auto;"/></a></center>  
+<center><a href="{{ site.cdn }}imgs/201412/04-stylish-baidu-result.png" target="_blank"><img src="{{ site.cdn }}imgs/201412/04-stylish-baidu-result.png" style="max-width:100%; height:auto;"/></a></center>  
 
 　　  
 
-<center><a href="{{ site.baseurl }}imgs/201412/05-stylish-baidu-result-focus.png" target="_blank"><img src="{{ site.baseurl }}imgs/201412/05-stylish-baidu-result-focus.png" style="max-width:100%; height:auto;"/></a></center>  
+<center><a href="{{ site.cdn }}imgs/201412/05-stylish-baidu-result-focus.png" target="_blank"><img src="{{ site.cdn }}imgs/201412/05-stylish-baidu-result-focus.png" style="max-width:100%; height:auto;"/></a></center>  
 
 　　  
 

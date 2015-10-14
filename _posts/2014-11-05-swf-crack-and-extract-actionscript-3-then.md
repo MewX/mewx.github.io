@@ -28,7 +28,7 @@ categories: [Flash, Crack, AS3, 汉化, python]
 　　它的名字就叫 —— “[JPEXS Free Flash Decompiler](http://www.free-decompiler.com/flash/)”！  
 　　这款软件的核心使用Java写的，所以它具有跨平台的特性！**开源的！开放接口的！**  
 　　软件运行界面如下：  
-<center><a href="{{ site.baseurl }}imgs/201411/09-jpexs-free-flash-decompiler.png" target="_blank"><img src="{{ site.baseurl }}imgs/201411/09-jpexs-free-flash-decompiler.png" style="max-width:100%; height:auto;"/></a></center>  
+<center><a href="{{ site.cdn }}imgs/201411/09-jpexs-free-flash-decompiler.png" target="_blank"><img src="{{ site.cdn }}imgs/201411/09-jpexs-free-flash-decompiler.png" style="max-width:100%; height:auto;"/></a></center>  
 　　  
 　　这款强大的工具被埋没的原因大概是和商业软件的推广有关吧，之前使用的商业软件完全不及这款**自由软件**的功能。（于是又要扯到《大教堂与市集》了……）  
 　　  
@@ -44,7 +44,7 @@ categories: [Flash, Crack, AS3, 汉化, python]
 　　**1. 解压swf文件**  
 　　　首先看到游戏目录下68个剧本swf文件，果然是想写个工具来提取文本了，但是这些文件都是“CWS”文件头，是经过压缩的。所以需要先解压，再提取明文。  
 　　　这里我在找提取工具的过程中发现了一个[小工具](http://hp.vector.co.jp/authors/VA020429/ffmpeg/swf_comp.html)，于是用它把所有脚本都解压了，文件头变成“FWS”（SWF反过来）了。现在文件内的内容全是明文，令人心情愉悦啊。如图：  
-<center><a href="{{ site.baseurl }}imgs/201411/10-raw-content.png" target="_blank"><img src="{{ site.baseurl }}imgs/201411/10-raw-content.png" style="max-width:100%; height:auto;"/></a></center>  
+<center><a href="{{ site.cdn }}imgs/201411/10-raw-content.png" target="_blank"><img src="{{ site.cdn }}imgs/201411/10-raw-content.png" style="max-width:100%; height:auto;"/></a></center>  
 　　  
 　　**2. 提取swf文件中的脚本**  
 　　对于68个已经解压的脚本文件，果断得写个小工具把脚本提取出来，于是找规律，写了个py脚本来提取文件信息：  
@@ -139,7 +139,7 @@ categories: [Flash, Crack, AS3, 汉化, python]
 　　对于从exe中提取出来的swf文件，我们用16进制编辑器很容易就定位到存储位置了，而且是没有加密的。  
 　　用PEid查看之后发现swf直接就存在附加数据段（Overlay Bytes），所以将修改过的bytes替换原来的bytes即可。  
 　　但是替换之后发现没法运行，是白屏，于是可以想到是程序作了什么检查，搜索原来bytes的偏移或者大小，果然看到存储大小的地方了，是文件的最后4字节，可以猜到exe运行后是从文件末尾开始读取文件的。修改文件末尾的大小即可成功运行，显示中文！  
-<center><img src="{{ site.baseurl }}imgs/201411/11-game-support-chinese.png" style="max-width:100%; height:auto;"/></center>  
+<center><img src="{{ site.cdn }}imgs/201411/11-game-support-chinese.png" style="max-width:100%; height:auto;"/></center>  
 　　  
 　　最后透露一下，这款游戏是：  
 　　**[141031][ティンクルベル] 輪舞曲Duo -夜明けのフォルテシモ- ぷにゅぷりFF**  

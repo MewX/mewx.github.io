@@ -24,14 +24,14 @@ categories: [android, app]
 
 下面放上几个审核拒绝的信息默哀一下吧：
 
-<center><a href="{{ site.baseurl }}imgs/201507/app-baidu.jpg" target="_blank"><img src="{{ site.baseurl }}imgs/201507/app-baidu.jpg" style="max-width:100%; height:auto;"/></a></center>
+<center><a href="{{ site.cdn }}imgs/201507/app-baidu.jpg" target="_blank"><img src="{{ site.cdn }}imgs/201507/app-baidu.jpg" style="max-width:100%; height:auto;"/></a></center>
 
-<center><a href="{{ site.baseurl }}imgs/201507/app-wandoujia.jpg" target="_blank"><img src="{{ site.baseurl }}imgs/201507/app-wandoujia.jpg" style="max-width:100%; height:auto;"/></a></center>
+<center><a href="{{ site.cdn }}imgs/201507/app-wandoujia.jpg" target="_blank"><img src="{{ site.cdn }}imgs/201507/app-wandoujia.jpg" style="max-width:100%; height:auto;"/></a></center>
 
-<center><a href="{{ site.baseurl }}imgs/201507/app-360.jpg" target="_blank"><img src="{{ site.baseurl }}imgs/201507/app-360.jpg" style="max-width:100%; height:auto;"/></a></center>
+<center><a href="{{ site.cdn }}imgs/201507/app-360.jpg" target="_blank"><img src="{{ site.cdn }}imgs/201507/app-360.jpg" style="max-width:100%; height:auto;"/></a></center>
 
-<center><a href="{{ site.baseurl }}imgs/201507/app-huawei.jpg" target="_blank"><img src="{{ site.baseurl }}imgs/201507/app-huawei.jpg" style="max-width:100%; height:auto;"/></a></center>
+<center><a href="{{ site.cdn }}imgs/201507/app-huawei.jpg" target="_blank"><img src="{{ site.cdn }}imgs/201507/app-huawei.jpg" style="max-width:100%; height:auto;"/></a></center>
 
-<center><a href="{{ site.baseurl }}imgs/201507/app-sogou.jpg" target="_blank"><img src="{{ site.baseurl }}imgs/201507/app-sogou.jpg" style="max-width:100%; height:auto;"/></a></center>
+<center><a href="{{ site.cdn }}imgs/201507/app-sogou.jpg" target="_blank"><img src="{{ site.cdn }}imgs/201507/app-sogou.jpg" style="max-width:100%; height:auto;"/></a></center>
 
-<center><a href="{{ site.baseurl }}imgs/201507/app-tencent.jpg" target="_blank"><img src="{{ site.baseurl }}imgs/201507/app-tencent.jpg" style="max-width:100%; height:auto;"/></a></center>
+<center><a href="{{ site.cdn }}imgs/201507/app-tencent.jpg" target="_blank"><img src="{{ site.cdn }}imgs/201507/app-tencent.jpg" style="max-width:100%; height:auto;"/></a></center>
