@@ -283,3 +283,7 @@ categories: [web, life]
     Sincerely,
 
     ICANN Contractual Compliance
+
+最搞笑的是163ns的后台还有我的域名，而且我还能进去管理。那么，试试修改信息会如何？Auth info失败 2333
+
+通过这次转出域名知道了个中的流程啊，域名商主要任务就是保管域名转移码，域名商和ICANN的API接口中间一个环节就是Auth-code，也就是我们说的转移密码，其实这个转移密码一方面也作为域名商和ICANN修改信息的认证。
