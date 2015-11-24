@@ -1,0 +1,20 @@
+---
+layout: main
+title: "MewX's Archive"
+---
+
+{% for category in site.categories %}
+<div class="post-preview">
+<h2 class="post-title" name="{{ category | first }}">
+    TAG: {{ category | first }} ( {{ category | last | size }} )
+</h2>
+<hr>
+    {% for posts in category %}
+        {% for post in posts %}
+            {% if post.url %}
+<a href="{{ post.url }}"><h3 class="post-subtitle">{{ post.date | date: "%Y-%m-%d" }} | {{ post.title }}</h3></a><br>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+</div>
+{% endfor %}

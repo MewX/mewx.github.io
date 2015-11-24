@@ -1,5 +1,5 @@
 ---
-layout: testpage
+layout: post
 title: "历史总是惊人的相似(app用户增长曲线)"
 date: 2015-08-07 22:43
 comments: true

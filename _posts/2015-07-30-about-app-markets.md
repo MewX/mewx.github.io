@@ -1,5 +1,5 @@
 ---
-layout: testpage
+layout: post
 title: "关于国内应用市场的吐槽"
 date: 2015-07-30 15:40
 comments: true

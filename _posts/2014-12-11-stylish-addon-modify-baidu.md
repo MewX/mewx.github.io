@@ -1,5 +1,5 @@
 ---
-layout: testpage
+layout: post
 title: "利用Stylish插件定制自己的搜索页面"
 date: 2014-12-11 16:17
 comments: true

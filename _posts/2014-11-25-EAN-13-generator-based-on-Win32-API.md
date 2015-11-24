@@ -1,5 +1,5 @@
 ---
-layout: testpage
+layout: post
 title: "用Win32 API写的EAN-13条形码生成器"
 date: 2014-11-25 19:30
 comments: true

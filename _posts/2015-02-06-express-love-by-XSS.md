@@ -1,5 +1,5 @@
 ---
-layout: testpage
+layout: post
 title: "XSS让每个人都帮我表白 (无对象技术测试)"
 date: 2015-02-06 09:22
 comments: true

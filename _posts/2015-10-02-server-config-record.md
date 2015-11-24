@@ -1,5 +1,5 @@
 ---
-layout: testpage
+layout: post
 title: "网站搭建小记：ECS+LNMP+SSL"
 date: 2015-10-02 22:26
 comments: true

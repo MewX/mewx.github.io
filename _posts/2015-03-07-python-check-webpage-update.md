@@ -1,5 +1,5 @@
 ---
-layout: testpage
+layout: post
 title: "Python脚本监视网站是否发布了新帖"
 date: 2015-03-07 17:00
 comments: true

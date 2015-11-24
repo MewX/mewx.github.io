@@ -1,21 +1,23 @@
 #
-#   <  MewX's Blog - 7/28/2014 >
+#   <  MewX's Homepage - 11/23/2015 >
 # This yml file refers serveral yml files, thanks to all open-source website projects.
 #
 
 # General setting
-markdown: kramdown
+#markdown: kramdown
 encoding: utf-8
 
 # Site info
 baseurl: http://www.mewx.org/
 #baseurl: /
-paginate: 8
+paginate: 5
 permalink: blog/:year:month/:title
 exclude: ["README.md", "changelog.md", "Gemfile.lock"]
+gems: [jekyll-paginate]
 
 # Blog info
-title : MewX的个人主页，孜孜求索中的MewX……
+title : MewX's Homepage
 author: MewX
 email : mewx(at)mewx(dot)org
 cdn   : http://7xn9yq.com1.z0.glb.clouddn.com/mewx/
+#cdn   : http://127.0.0.1:4000/

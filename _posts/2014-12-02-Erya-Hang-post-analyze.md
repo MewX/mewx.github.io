@@ -1,5 +1,5 @@
 ---
-layout: testpage
+layout: post
 title: "尔雅通识课题库的抓包研究"
 date: 2014-12-02 20:40
 comments: true

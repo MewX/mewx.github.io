@@ -1,42 +1,43 @@
 ---
-layout: MutiDivPage
-title: "首页"
+layout: main
+title: "MewX's Homepage"
 ---
-
-			<div id="OutlineFramework">
 {% for post in paginator.posts %}
-				<div class="OutlineBorder">
-					<a href="{{ post.url }}" target="_parent"><h1 class="myh1">{{ post.title }}</h1></a>
-					<div class="InlineBorder">{{ post.date | date: "%b %d, %Y" }}<br><br><article class="markdown-body">{{ post.content | truncatewords:5 }}</article></div>
-				</div>
-				<div class="spaceline"></div>
+<div class="post-preview">
+    <a href="{{ post.url }}">
+        <h2 class="post-title">
+            {{ post.title }}
+        </h2>
+        <h3 class="post-subtitle">
+            {{ post.subtitle }}
+        </h3>
+    </a>
+    <p class="post-meta">Posted by {{ post.author }} on {{ post.date | date: "%b %d, %Y" }}</p>
+</div>
+<hr>
 {% endfor %}
 
-				<!-- Add paginator button here -->
-{% if paginator.previous_page_path == nil %}
-				<div class="PageButtonDisable">First</div>
-				<div class="PageButtonDisable">Previous</div>
-{% else %}
-	{% if paginator.page == 1 %}
-				<div class="PageButtonDisable">First</div>
-	{% else %}
-				<a href="{{ site.baseurl }}"><div class="PageButton">First</div></a>
-	{% endif %}
-				<a href="{{ paginator.previous_page_path }}"><div class="PageButton">Previous</div></a>
-{% endif %}
-				{{ paginator.page }} / {{ paginator.total_pages }}
-{% if paginator.next_page_path == nil %}
-				<div class="PageButtonDisable">Next</div>
-				<div class="PageButtonDisable">Last</div>
-{% else %}
-				<a href="{{ paginator.next_page_path }}"><div class="PageButton">Next</div></a>
-	{% if paginator.page == paginator.total_pages %}
-				<div class="PageButtonDisable">Last</div>
-	{% else %}
-				<a href="{{ site.baseurl }}page{{ paginator.total_pages }}"><div class="PageButton">Last</div></a>
-	{% endif %}
-{% endif %}
-				<br style="clear:both;" /> <!-- Refresh float view -->
-				<div class="spaceline"></div>
-
-			</div>
+<!-- Pager -->
+<ul class="pager">
+    {% if paginator.previous_page %}
+    <li class="previous">
+        <a href="{{ paginator.previous_page_path }}">&larr; Prev Posts</a>
+    </li>
+    {% else %}
+    <li class="previous disabled">
+        <a>&larr; Prev Posts</a>
+    </li>
+    {% endif %}
+    <li style="text-align: center;">
+        {{ paginator.page }} / {{ paginator.total_pages }}
+    </li>
+    {% if paginator.next_page %}
+    <li class="next">
+        <a href="{{ paginator.next_page_path }}">Older Posts &rarr;</a>
+    </li>
+    {% else %}
+    <li class="next disabled">
+        <a>Older Posts &rarr;</a>
+    </li>
+    {% endif %}
+</ul>

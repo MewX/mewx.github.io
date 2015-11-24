@@ -1,0 +1,47 @@
+---
+layout: main
+title: "MewX's Timeline"
+---
+
+{% assign count = 0 %}
+{% for post in site.posts %}
+    {% if forloop.first %}
+        {% capture saved_month %}{{ post.date | date: "%Y-%m" }}{% endcapture %}
+        {% assign count = 1 %}
+<div class="post-preview">
+    {% else %}
+        {% capture this_month %}{{ post.date | date: "%Y-%m" }}{% endcapture %}
+        {% if this_month == saved_month %}
+            {% assign count = count | plus: 1 %}
+        {% else %}
+    <h2 class="post-title" name="{{ saved_month }}">
+        {{ saved_month }} ( {{ count }} )
+    </h2>
+    <hr>
+            {% for post2 in site.posts %}
+                {% capture this_month2 %}{{ post2.date | date: "%Y-%m" }}{% endcapture %}
+                {% if this_month2 == saved_month %}
+    <a href="{{ post2.url }}"><h3 class="post-subtitle">{{ post2.date | date: "%Y-%m-%d" }} | {{ post2.title }}</h3></a><br>
+                {% endif %}
+            {% endfor %}
+</div>
+            {% assign count = 1 %}
+            {% capture saved_month %}{{ post.date | date: "%Y-%m" }}{% endcapture %}
+<div class="post-preview">
+        {% endif %}
+    {% endif %}
+
+    {% if forloop.last %}
+    <h2 class="post-title" name="{{ saved_month }}">
+        {{ saved_month }} ( {{ count }} )
+    </h2>
+    <hr>
+        {% for post2 in site.posts %}
+            {% capture this_month2 %}{{ post2.date | date: "%Y-%m" }}{% endcapture %}
+            {% if this_month2 == saved_month %}
+    <a href="{{ post2.url }}"><h3 class="post-subtitle">{{ post2.date | date: "%Y-%m-%d" }} | {{ post2.title }}</h3></a><br>
+            {% endif %}
+        {% endfor %}
+</div>
+    {% endif %}
+{% endfor %}

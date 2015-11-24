@@ -1,5 +1,5 @@
 ---
-layout: testpage
+layout: post
 title: "Laravel在Apache中网站路径的设置"
 date: 2015-09-13 19:27
 comments: true

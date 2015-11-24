@@ -1,5 +1,5 @@
 ---
-layout: testpage
+layout: post
 title: "动手维修机械键盘（键轴脱焊）"
 date: 2014-12-16 12:50
 comments: true

@@ -1,5 +1,5 @@
 ---
-layout: testpage
+layout: post
 title: "Hello, World!"
 date: 2014-07-28 10:00
 comments: true

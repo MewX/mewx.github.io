@@ -1,5 +1,5 @@
 ---
-layout: testpage
+layout: post
 title: "ActionScript3.0的SWF文件的破解与修改研究"
 date: 2014-11-02 12:00
 comments: true

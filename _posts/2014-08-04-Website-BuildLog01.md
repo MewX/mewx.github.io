@@ -1,5 +1,5 @@
 ---
-layout: testpage
+layout: post
 title: "网站建成报告"
 date: 2014-08-04 14:00
 comments: true

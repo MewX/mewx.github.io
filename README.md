@@ -1,4 +1,4 @@
-mewx.github.io
-==============
+# MewX's blog reworked
 
-MewX's blog site.
+[Clean Blog](http://startbootstrap.com/template-overviews/clean-blog/) template modified with my Liquid template.
+

@@ -1,5 +1,5 @@
 ---
-layout: testpage
+layout: post
 title: "Liquid在Jekyll中的应用例"
 date: 2014-08-12 23:00
 comments: true

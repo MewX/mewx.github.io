@@ -1,5 +1,5 @@
 ---
-layout: testpage
+layout: post
 title: "基于微信订阅号的教务管理系统"
 date: 2015-05-29 23:27
 comments: true
