@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "ActionScript3.0的SWF文件的破解与修改研究"
+subtitle: "《輪舞曲Duo -夜明けのフォルテシモ- ぷにゅぷりFF》的汉化与破解研究"
 date: 2014-11-02 12:00
 comments: true
 author: MewX

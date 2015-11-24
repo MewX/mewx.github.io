@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Liquid在Jekyll中的应用例"
+subtitle: "在Github-pages中通过Liquid脚本加入程序计算，动态生成页面！"
 date: 2014-08-12 23:00
 comments: true
 author: MewX

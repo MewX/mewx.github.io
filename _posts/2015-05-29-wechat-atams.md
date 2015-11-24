@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "基于微信订阅号的教务管理系统"
+subtitle: "参加某比赛花了3天时间写的微信公众号，算是初识公众号的安全通信"
 date: 2015-05-29 23:27
 comments: true
 author: MewX

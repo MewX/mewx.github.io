@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "历史总是惊人的相似(app用户增长曲线)"
+title: "历史总是惊人的相似"
+subtitle: "统计的App的用户增长曲线总是那么地相似"
 date: 2015-08-07 22:43
 comments: true
 author: MewX

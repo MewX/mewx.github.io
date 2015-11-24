@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "SWF文件的破解与修改研究（续）"
+subtitle: "《輪舞曲Duo -夜明けのフォルテシモ- ぷにゅぷりFF》的汉化与破解研究（续）"
 date: 2014-11-05 14:00
 comments: true
 author: MewX

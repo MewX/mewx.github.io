@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "关于国内应用市场的吐槽"
+subtitle: "发个app好难啊！！！"
 date: 2015-07-30 15:40
 comments: true
 author: MewX

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "网站建成报告"
+subtitle: "本个人主页的首建报告！包括做网页的“历史”~"
 date: 2014-08-04 14:00
 comments: true
 author: MewX

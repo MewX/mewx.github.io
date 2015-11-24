@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Laravel在Apache中网站路径的设置"
+subtitle: "破除网上各种误人子弟的设置谣言！"
 date: 2015-09-13 19:27
 comments: true
 author: MewX
