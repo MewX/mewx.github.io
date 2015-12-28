@@ -49,11 +49,11 @@ categories: [web, life]
 
 （点击可以查看高清大图）
 
-<center><a href="{{ site.cdn }}imgs/201510/icann-complaint-big.jpg" target="_blank"><img src="{{ site.cdn }}imgs/201510/icann-complaint.jpg" style="max-width:100%; height:auto;"/></a></center>  
+<center><a href="{{ site.cdn }}imgs/201510/icann-complaint-big.jpg" target="_blank"><img src="{{ site.cdn }}imgs/201510/icann-complaint.jpg" style="max-width:100%;"/></a></center>  
 
 提交完毕后就等邮件就好了：
 
-<center><img src="{{ site.cdn }}imgs/201510/icann-received.jpg" style="max-width:100%; height:auto;"/></center>
+<center><img src="{{ site.cdn }}imgs/201510/icann-received.jpg" style="max-width:100%;"/></center>
 
 据说域名代理商如果被投诉会被罚款，所以不用多说，等邮件就好~
 

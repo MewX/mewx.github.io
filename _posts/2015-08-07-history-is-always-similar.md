@@ -15,18 +15,18 @@ categories: [android, app, life]
 
 好了，来说说重点，友盟的数据统计真的很有趣，图表数据并存。今天是发布后8天，用户量达到了9000，内测用户是2000。
 
-<center><img src="{{ site.cdn }}imgs/201508/statistics-new1.jpg"/></center>
+<center><img src="{{ site.cdn }}imgs/201508/statistics-new1.jpg" style="max-width:100%;"/></center>
 
-<center><img src="{{ site.cdn }}imgs/201508/statistics-new2.jpg"/></center>
+<center><img src="{{ site.cdn }}imgs/201508/statistics-new2.jpg" style="max-width:100%;"/></center>
 
-<center><img src="{{ site.cdn }}imgs/201508/statistics-new3.jpg"/></center>
+<center><img src="{{ site.cdn }}imgs/201508/statistics-new3.jpg" style="max-width:100%;"/></center>
 
-<center><img src="{{ site.cdn }}imgs/201508/statistics-new4.jpg"/></center>
+<center><img src="{{ site.cdn }}imgs/201508/statistics-new4.jpg" style="max-width:100%;"/></center>
 
 上面是新版的app统计，“历史总是惊人的相似啊”！下面的是旧版app典藏版的用户量（上次复活性维护我加了友盟统计）：
 
-<center><img src="{{ site.cdn }}imgs/201508/statistics-old1.jpg"/></center>
+<center><img src="{{ site.cdn }}imgs/201508/statistics-old1.jpg" style="max-width:100%;"/></center>
 
-<center><img src="{{ site.cdn }}imgs/201508/statistics-old2.jpg"/></center>
+<center><img src="{{ site.cdn }}imgs/201508/statistics-old2.jpg" style="max-width:100%;"/></center>
 
 经常会觉得概率真的很神奇，看不到的事情但是却能预测结果发生的可能性。数学期望在样本容量大的时候体现得淋漓尽致，就比如说一天哪个时段下载人数最多这样的数据。为什么彼此不认识，但是却有着相同的习惯呢，彼此不认识却可以有着神同步似的行为 \_(:3」∠)\_ 等复习复习数理统计的时候好好琢磨琢磨~
