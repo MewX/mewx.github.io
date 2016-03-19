@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "大版权时代的序幕"
-subtitle: "盗版动漫、轻小说网站纷纷关闭，业界领头人纷纷入狱。"
+subtitle: "盗版动漫、轻小说网站纷纷关闭，业界领头人纷纷神隐。"
 date: 2015-12-25 19:36
 comments: true
 author: MewX

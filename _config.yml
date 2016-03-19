@@ -1,10 +1,10 @@
 #
-#   <  MewX's Homepage - 11/23/2015 >
+# <  MewX's Homepage - 11/23/2015 >
 # This yml file refers serveral yml files, thanks to all open-source website projects.
 #
 
 # General setting
-#markdown: kramdown
+markdown: kramdown
 encoding: utf-8
 
 # Site info
