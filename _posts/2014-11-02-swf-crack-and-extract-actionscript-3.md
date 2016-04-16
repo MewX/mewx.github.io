@@ -99,4 +99,4 @@ categories: [Flash, Crack, AS3, 汉化]
 
 2014.11.05 对于本篇中未解决的问题，我进行了进一步研究：
 
-**[《SWF文件的破解与修改研究（续）》]({{ site.baseurl }}blog/201411/swf-crack-and-extract-actionscript-3-then/)**
+**[《SWF文件的破解与修改研究（续）》]({{ site.baseurl }}blog/201411/swf-crack-and-extract-actionscript-3-then)**

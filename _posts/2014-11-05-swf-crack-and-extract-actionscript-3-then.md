@@ -11,7 +11,7 @@ categories: [Flash, Crack, AS3, 汉化, python]
 
 本篇是针对上一篇未完成的研究进行的补充，对于无法显示中文、改过脚本无法导入回去等问题都进行解决。
 
-上一篇：**[《ActionScript3.0的SWF文件的破解与修改研究》]({{ site.baseurl }}blog/201411/swf-crack-and-extract-actionscript-3/)**
+上一篇：**[《ActionScript3.0的SWF文件的破解与修改研究》]({{ site.baseurl }}blog/201411/swf-crack-and-extract-actionscript-3)**
 
 ## 一、那么问题来了？
 
