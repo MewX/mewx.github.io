@@ -11,7 +11,7 @@ categories: [web,life]
 
 It's been long time not writing a post, and I decide to write post in English.
 
-In this term, I have a required course called `Specilised Programming`, and this class teaches algorithms. A reference textbook is *Introduction to The Design and Analysis of Algorightm (3e.)*.
+In this term, I have a required course called `Specilised Programming`, and this class teaches algorithms. A reference textbook is *Introduction to The Design and Analysis of Algorithm (3e.)*.
 
 Well, this course needs use to submit a practise report each week. While the problems should be from `TopCoder`.
 
@@ -36,13 +36,14 @@ This folder stores all the solution codes.
 
 This folder stores all the test codes.
 
-All the test codes should be JUnit test entities. And tests are available to access common test utials functions.  
+All the test codes should be JUnit test entities. And tests are available to access common test utils functions.  
 
 ### testdata/
 
 This folder stores all the web pages containing the whole set of test cases.
 
 Sample test case:
+
     public class TheLotteryBothDivsTest {
         private final double DELTA = 1e-9;
 
