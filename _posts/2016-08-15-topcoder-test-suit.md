@@ -19,7 +19,7 @@ I found a complicated thing, we need to copy and paste all the test cases by han
 
 ## Scope of usage
 
-- Clone the repo: https://github.com/MewX/TopCoderTraining
+- Clone the repo: https://github.com/MewX/MyPracticeInOne/tree/master/TopCoder
 - Use IntelliJ IDEA to open the project
 - Find a problem in [`TopCoder Archive`](https://www.topcoder.com/tc?module=ProblemArchive)
 - Create a solution class of a problem, and download test case page file from detail page, to "testdata/"
