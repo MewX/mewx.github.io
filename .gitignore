@@ -1,4 +1,5 @@
 _site/
 _temp/
 *.lock
-.directory
+*.directory
+*.swp
