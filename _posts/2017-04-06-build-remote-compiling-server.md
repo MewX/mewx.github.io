@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Build Remote Compiling Server"
-subtitle: "Don't want to install 2GB LaTeX software, so I used GitHub, ssh, scp to make a remote compiling server"
+subtitle: "Don't want to install 2GB LaTeX compiler, so I used shell, ssh, scp to make a remote compiling server"
 date: 2017-04-06 21:37
 comments: true
 author: MewX
@@ -11,13 +11,13 @@ categories: [linux]
 
 I have a LaTeX assignment, but I don't want to install `tex live` on my own laptop because it contains thousands of small files. Maybe it can slightly protect my hard driver. Then I have to find a way to compile the LaTeX files.
 
-Firsly, I choose to use `Overleaf` - a online LaTeX toolset. It works quite good at uni, but when I get home it generally overwrites my texts with an old version because of my slow network speed. That means it's unstable in poor network environment.
+Firstly, I choose to use `Overleaf` - an online LaTeX tool set. It works quite good at uni, but when I get home it generally overrides my texts with an old version because of my slow network speed. That means it's unstable in poor network environment.
 
 So, I began to think about directly using my uni's shared server which is installed with `tex live` in the last year.
 
-## No-passwork access
+## No-password access
 
-Using `ssh` or `scp` requires password everytime, that makes one-click solution not work. So, the first step is to remove the passwork verification. So, the method is like `git push key`.
+Using `ssh` or `scp` requires password every time, that makes one-click solution not work. So, the first step is to remove the password verification. So, the method is like `git push key`.
 
     cd ~/.ssh
     cat id_rsa.pub
@@ -26,7 +26,7 @@ Using `ssh` or `scp` requires password everytime, that makes one-click solution 
 
 After this, I can see the public key. Then, copy/append them into uni's shared server, in this file: `~/.ssh/authorized_keys`. **(Note: the key only has one line)**
 
-Now, I can access that server without entering passwork any more.
+Now, I can access that server without entering password any more.
 
 ## Automatic process
 
