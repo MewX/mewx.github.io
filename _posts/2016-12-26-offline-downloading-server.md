@@ -51,4 +51,10 @@ To offline downloading, we need to start a `screen` method. Generally, I like to
 
 Then just follow the user namual, you should know how to download a file.
 
+## A quite reference for extarcting iso files
+
+You know, some times you need to extract iso files without `su` permissions. :P
+
+    xorriso -osirrox on -indev image.iso -extract / extracted_iso_image
+
 
