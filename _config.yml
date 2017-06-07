@@ -8,8 +8,8 @@ markdown: kramdown
 encoding: utf-8
 
 # Site info
-baseurl: http://www.mewx.org/
-#baseurl: /
+#baseurl: http://www.mewx.org/
+baseurl: ./
 paginate: 10
 permalink: blog/:year:month/:title
 exclude: ["README.md", "changelog.md", "Gemfile.lock"]
@@ -20,5 +20,5 @@ title : MewX's Homepage
 author: MewX
 email : mewx(at)mewx(dot)org
 #cdn   : http://7xn9yq.com1.z0.glb.clouddn.com/mewx/
-cdn   : http://mewx.org/
+cdn   : https://mewx.org/
 #cdn   : http://127.0.0.1:4000/
