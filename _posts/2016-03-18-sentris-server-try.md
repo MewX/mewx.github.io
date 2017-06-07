@@ -66,7 +66,7 @@ categories: [web,life]
 
 然后配置nginx的文件即可：
 
-*P.S. 如果要配置SSL，可以参见这篇文章[网站搭建小记：ECS+LNMP+SSL]({{ site.baseurl }}blog/201510/server-config-record/)。话说，现在有一个[letEncrypt](letsencrypt.org)项目，可以自签公共证书。*
+*P.S. 如果要配置SSL，可以参见这篇文章[网站搭建小记：ECS+LNMP+SSL]({{ site.baseurl }}blog/201510/server-config-record/)。话说，现在有一个[letsEncrypt](https://letsencrypt.org)项目，可以自签公共证书。*
 
     user www-data;
     worker_processes auto;
