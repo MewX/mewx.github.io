@@ -1,4 +1,7 @@
 # MewX's blog reworked v3
+
+**Working in progress**
+
 In this version, I plan to use Jekyll/Liquid + Vuejs + Googe Material Design UI + KotlinJS.
 
 ## Plans for current version
@@ -13,6 +16,7 @@ In this version, I plan to use Jekyll/Liquid + Vuejs + Googe Material Design UI 
 - contributes to open source repo (with issue id)
 - check all friend website links
 - emoticon support!!! That would be funny!
+- fix link address (with slash or not should work both)
 
 ## History
 All history versions are listed below.

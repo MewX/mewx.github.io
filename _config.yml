@@ -11,7 +11,7 @@ encoding: utf-8
 baseurl: https://www.mewx.org/
 #baseurl: ./
 paginate: 10
-permalink: blog/:year:month/:title
+permalink: blog/:year:month/:title/
 exclude: ["README.md", "changelog.md", "Gemfile.lock"]
 gems: [jekyll-paginate]
 
