@@ -3,10 +3,16 @@ In this version, I plan to use Jekyll/Liquid + Vuejs + Googe Material Design UI 
 
 ## Plans for current version
 
+- use svg icons
 - text searchable
 - github activities
 - social icons updated
 - copyleft and proudly using xxx :P
+- project pages with project short highlights
+- update-to-date CV
+- contributes to open source repo (with issue id)
+- check all friend website links
+- emoticon support!!! That would be funny!
 
 ## History
 All history versions are listed below.
