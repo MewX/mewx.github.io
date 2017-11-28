@@ -1,3 +1,5 @@
+.idea/
+build/
 _site/
 _temp/
 *.lock

@@ -2,7 +2,12 @@
 
 **Working in progress**
 
-In this version, I plan to use Jekyll/Liquid + Vuejs + Googe Material Design UI + KotlinJS.
+In this version, I plan to use ReactJS + Googe Material Design UI + KotlinJS.
+
+Plus, it contains two steps:
+1. v3.0 using Jekyll/Liquid + Googe Material Design UI + KotlinJS to build the prototype.
+2. v3.1+ upgrade the existing Jekyll/Liquid template using ReactJS with KotlinJS.
+   The reason why I select `ReactJS` not `VueJS` is that I might need to use ReactJS skill to find a job LOL. I've taken a look at the VueJS framework, it looks nice but normal. Therefore, I'm still going to write the website under ReactJS which is the most popular js front-end framework currently.
 
 ## Plans for current version
 
