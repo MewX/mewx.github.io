@@ -1,6 +1,6 @@
 #
-# <  MewX's Homepage - 11/23/2015 >
-# This yml file refers serveral yml files, thanks to all open-source website projects.
+# <  MewX's Homepage v3 - 12/28/2017 >
+# This yml file refers several yml files, thanks to all open-source website projects.
 #
 
 # General setting
@@ -10,6 +10,7 @@ encoding: utf-8
 # Site info
 baseurl: https://www.mewx.org/
 #baseurl: ./
+#baseurl: /
 paginate: 10
 permalink: blog/:year:month/:title/
 exclude: ["README.md", "changelog.md", "Gemfile.lock"]
