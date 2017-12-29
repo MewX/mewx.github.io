@@ -78,7 +78,7 @@
     <header class="mdl-layout__header mdl-layout__header--transparent" style="position: absolute">
         <div class="mdl-layout__header-row">
             <!-- Title -->
-            <span class="mdl-layout-title">{{ page.title }}</span>
+            <a href="{{ site.baseurl }}" style="text-decoration: none; color: white"><span class="mdl-layout-title">MewX's Homepage</span></a>
             <!-- Add spacer, to align navigation to the right -->
             <div class="mdl-layout-spacer"></div>
             <!-- Navigation -->
@@ -147,19 +147,15 @@
             <div class="mdl-layout-spacer"></div>
             <div id="main-subtitle" class="mdl-cell mdl-cell--4-col mdl-typography--text-center">
             <span class="text-wrapper">
-                <span id="main-subtitle-p" class="letters">- who is exploring new worlds!</span>
+                <span id="main-subtitle-p" class="letters">{{ page.title }}</span>
                 <span class="line"></span>
             </span>
             </div>
             <div class="mdl-layout-spacer"></div>
         </div>
 
-        <div class="mdl-grid" id="main-content" style="padding-top: 5vh; opacity: 0.5;">
-            <!--<div class="demo-card-wide mdl-card mdl-shadow&#45;&#45;2dp mdl-cell mdl-cell&#45;&#45;8-col mdl-cell&#45;&#45;2-offset">-->
-                <!--<div class="mdl-card__supporting-text">-->
-                    {{ content }}
-                <!--</div>-->
-            <!--</div>-->
+        <div class="mdl-grid" id="main-content" style="padding-top: 5vh; opacity: 0.5; min-height: 40vh">
+            {{ content }}
         </div>
 
         <!--footer-->
