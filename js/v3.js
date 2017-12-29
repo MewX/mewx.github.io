@@ -15,22 +15,12 @@ const scrollMaxRange = 30; // percent of 100vh
 function scrollMainContent() {
     let mainLayout = document.getElementById("main");
     let mainContentLayout = document.getElementById("main-content");
-    // console.log(mainLayout.scrollTop);
 
     const ratio = mainLayout.scrollTop / window.innerHeight / (scrollMaxRange / 100);
     let translucentCurrent = ratio < 1 ? translucentStart + (translucentEnd - translucentStart) * (ratio) : translucentEnd;
     if (translucentCurrent !== translucentEnd) {
         // set translucent to the main layout
-        // TODO: remove this line
-        console.log("New: " + translucentCurrent);
         mainContentLayout.style["opacity"] = "" + translucentCurrent / 100;
-
-        // an anime.js solution
-        // var easing = anime({
-        //     targets: '#main',
-        //     opacity: translucentCurrent / 100,
-        //     easing: 'easeInOutQuart'
-        // });
     }
 
 }
@@ -50,23 +40,13 @@ const lineDrawing = anime({
         document.getElementById("svg-e").style["fill"] = "#FFFFFF";
         document.getElementById("svg-w").style["fill"] = "#FFFFFF";
         document.getElementById("svg-x").style["fill"] = "#FFFFFF";
-
-        // typingSubtitle();
     }
 });
 
 
-const subtitle = '- who keeps exploring new worlds!';
 const subtitleElement = document.getElementById("main-subtitle-p");
 function typingSubtitle() {
-    if (subtitleElement.innerHTML.length < subtitle.length) {
-        subtitleElement.innerHTML += subtitle.charAt(subtitleElement.innerHTML.length);
-        setTimeout(typingSubtitle, 40);
-    }
-}
-
-
-function test() {
+    // reference codes: http://tobiasahlin.com/moving-letters/#14
     // replace each letter with a span tag
     let newHTML = "";
     for (let i = 0; i < subtitleElement.innerHTML.length; i ++) {
@@ -103,4 +83,5 @@ function test() {
         }
     });
 }
-test();
+typingSubtitle();
+
