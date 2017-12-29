@@ -36,7 +36,7 @@ function scrollMainContent() {
 }
 
 
-var lineDrawing = anime({
+const lineDrawing = anime({
     targets: '#main-logo .lines path',
     strokeDashoffset: [anime.setDashoffset, 0],
     easing: 'easeInOutSine',
@@ -50,5 +50,57 @@ var lineDrawing = anime({
         document.getElementById("svg-e").style["fill"] = "#FFFFFF";
         document.getElementById("svg-w").style["fill"] = "#FFFFFF";
         document.getElementById("svg-x").style["fill"] = "#FFFFFF";
+
+        // typingSubtitle();
     }
 });
+
+
+const subtitle = '- who keeps exploring new worlds!';
+const subtitleElement = document.getElementById("main-subtitle-p");
+function typingSubtitle() {
+    if (subtitleElement.innerHTML.length < subtitle.length) {
+        subtitleElement.innerHTML += subtitle.charAt(subtitleElement.innerHTML.length);
+        setTimeout(typingSubtitle, 40);
+    }
+}
+
+
+function test() {
+    // replace each letter with a span tag
+    let newHTML = "";
+    for (let i = 0; i < subtitleElement.innerHTML.length; i ++) {
+        let c = subtitleElement.innerHTML[i];
+        if (c === ' ') c = "&nbsp;";
+        newHTML += "<span class='letter'>" + c + "</span>";
+    }
+    subtitleElement.innerHTML = newHTML;
+
+    anime.timeline({loop: false})
+        .add({
+            targets: '#main-subtitle',
+            opacity: 1,
+            duration: 1000,
+            easing: "easeInOutExpo",
+        })
+        .add({
+            targets: '#main-subtitle .line',
+            scaleX: [0,1],
+            opacity: [0.5,1],
+            easing: "easeInOutExpo",
+            duration: 900
+        }).add({
+        targets: '#main-subtitle .letter',
+        opacity: [0,1],
+        translateX: [40,0],
+        translateZ: 0,
+        scaleX: [0.3, 1],
+        easing: "easeOutExpo",
+        duration: 800,
+        offset: '-=600',
+        delay: function(el, i) {
+            return 150 + 25 * i;
+        }
+    });
+}
+test();

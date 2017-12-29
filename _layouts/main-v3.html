@@ -38,6 +38,40 @@
         transform: scaleX(-1);
         -ms-filter: "FlipH";
     }
+
+    #main-subtitle {
+        font-weight: 200;
+        font-size: 3.2em;
+    }
+
+    #main-subtitle .text-wrapper {
+        position: relative;
+        display: inline-block;
+        padding-top: 0.1em;
+        padding-right: 0.05em;
+        padding-bottom: 0.15em;
+    }
+
+    #main-subtitle .line {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background-color: #fff;
+        transform-origin: 100% 100%;
+        bottom: 0;
+    }
+
+    #main-subtitle .letters {
+        color: white;
+    }
+
+    #main-subtitle .letter {
+        opacity: 1;
+        display: inline-block;
+        line-height: 1em;
+    }
 </style>
 
 <div class="demo-layout-transparent mdl-layout mdl-js-layout">
@@ -104,7 +138,16 @@
             </svg>
         </div>
 
-        <div class="mdl-grid" id="main-content" style="padding-top: 10vh; opacity: 0.5;">
+
+        <div id="main-subtitle" class="mdl-cell mdl-cell--4-col mdl-cell--4-offset mdl-typography--text-center">
+            <!--<h3 id="main-subtitle-p" style="color: white"> </h3>-->
+            <span class="text-wrapper">
+                <span id="main-subtitle-p" class="letters">- who keeps exploring new worlds!</span>
+                <span class="line"></span>
+            </span>
+        </div>
+
+        <div class="mdl-grid" id="main-content" style="padding-top: 5vh; opacity: 0.5;">
             <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--8-col mdl-cell--2-offset"
                  style="min-height: 80vh">
                 <div class="mdl-card__supporting-text">
