@@ -81,34 +81,8 @@
 </style>
 
 <div class="demo-layout-transparent mdl-layout mdl-js-layout">
-    <header class="mdl-layout__header mdl-layout__header--transparent" style="position: absolute">
-        <div class="mdl-layout__header-row">
-            <!-- Title -->
-            <a href="{{ site.baseurl }}" style="text-decoration: none; color: white"><span class="mdl-layout-title">MewX's Homepage</span></a>
-            <!-- Add spacer, to align navigation to the right -->
-            <div class="mdl-layout-spacer"></div>
-            <!-- Navigation -->
-            <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" href="{{ site.baseurl }}timeline/">Timeline</a>
-                <a class="mdl-navigation__link" href="{{ site.baseurl }}projects/">Projects</a>
-                <a class="mdl-navigation__link" href="{{ site.baseurl }}archive/">Archive</a>
-                <a class="mdl-navigation__link" href="{{ site.baseurl }}friends/">Friends</a>
-                <a class="mdl-navigation__link" href="{{ site.baseurl }}about/">About</a>
-            </nav>
-        </div>
-    </header>
-
-    <!--TODO: add ripple effects-->
-    <div class="mdl-layout__drawer">
-        <span class="mdl-layout-title">~~~ MENU ~~~</span>
-        <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="{{ site.baseurl }}timeline/">Timeline</a>
-            <a class="mdl-navigation__link" href="{{ site.baseurl }}projects/">Projects</a>
-            <a class="mdl-navigation__link" href="{{ site.baseurl }}archive/">Archive</a>
-            <a class="mdl-navigation__link" href="{{ site.baseurl }}friends/">Friends</a>
-            <a class="mdl-navigation__link" href="{{ site.baseurl }}about/">About</a>
-        </nav>
-    </div>
+    <!--header-->
+    {% include header-v3.html %}
 
     <!--TODO: adjust phone page-->
     <main class="mdl-layout__content" id="main" style="position: relative; padding-top: 20vh;">
@@ -172,47 +146,7 @@
         </div>
 
         <!--footer-->
-        <footer class="mdl-mega-footer">
-            <div class="mdl-mega-footer__top-section mdl-typography--text-center">
-                <a href="https://github.com/MewX" target="_blank" style="text-decoration: none; color: white">
-                    <button class="mdl-button mdl-js-button mdl-button--icon">
-                        <i class="fab fa-github-square" style="color: white; font-size: 20px"></i>
-                    </button>
-                </a>
-                <a href="https://stackoverflow.com/users/4206925/mewx" target="_blank" style="text-decoration: none; color: white">
-                    <button class="mdl-button mdl-js-button mdl-button--icon">
-                        <i class="fab fa-stack-overflow" style="color: white; font-size: 20px"></i>
-                    </button>
-                </a>
-                <a href="https://www.facebook.com/YuanzhongXia" target="_blank" style="text-decoration: none; color: white">
-                    <button class="mdl-button mdl-js-button mdl-button--icon">
-                        <i class="fab fa-facebook-square" style="color: white; font-size: 20px"></i>
-                    </button>
-                </a>
-                <a href="https://twitter.com/YuanzhongXia" target="_blank" style="text-decoration: none; color: white">
-                    <button class="mdl-button mdl-js-button mdl-button--icon">
-                        <i class="fab fa-twitter-square" style="color: white; font-size: 20px"></i>
-                    </button>
-                </a>
-                <a href="https://www.weibo.com/imewx" target="_blank" style="text-decoration: none; color: white">
-                    <button class="mdl-button mdl-js-button mdl-button--icon">
-                        <i class="fab fa-weibo" style="color: white; font-size: 20px"></i>
-                    </button>
-                </a>
-            </div>
-            <div class="mdl-mega-footer__bottom-section mdl-typography--text-center" style="margin-bottom: 0;">
-                <span class="copyright" style="color: white;">Copyleft <span class="copy-left">©</span> MewX (2014-2018) - Proudly powered by
-                    <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>,
-                    <a href="https://getmdl.io/" target="_blank">MDL</a>
-                    and <a href="http://animejs.com/" target="_blank">anime.js</a>.</span>
-                <!--TODO: enable a statistic tool-->
-                <!--<p hidden>-->
-                <!--<script type="text/javascript">-->
-                <!--document.write(unescape("%3Cspan id='cnzz_stat_icon_1256335242'%3E%3C/span%3E%3Cscript src='https://s11.cnzz.com/z_stat.php%3Fid%3D1256335242%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));-->
-                <!--</script>-->
-                <!--</p>-->
-            </div>
-        </footer>
+        {% include footer-v3.html %}
     </main>
 </div>
 
