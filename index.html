@@ -27,13 +27,10 @@ title: "- who is exploring new worlds!"
 </div>
 {% else %}
 <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--1-col-phone mdl-cell--2-col-tablet mdl-typography--text-right">
-    <div class="mdl-layout-spacer"></div>
-    <a href="{{ paginator.previous_page_path }}">
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" disabled>
-            <i class="material-icons mdl-cell--hide-tablet">arrow_back</i>
-            <span class="mdl-cell--hide-phone"> Newer Posts</span>
-        </button>
-    </a>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" disabled>
+        <i class="material-icons mdl-cell--hide-tablet">arrow_back</i>
+        <span class="mdl-cell--hide-phone"> Newer Posts</span>
+    </button>
 </div>
 {% endif %}
 
@@ -55,11 +52,9 @@ title: "- who is exploring new worlds!"
 </div>
 {% else %}
 <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--1-col-phone mdl-cell--2-col-tablet mdl-typography--text-left">
-    <a href="{{ paginator.next_page_path }}">
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" disabled>
-            <span class="mdl-cell--hide-phone">Older Posts </span>
-            <i class="material-icons mdl-cell--hide-tablet">arrow_forward</i>
-        </button>
-    </a>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" disabled>
+        <span class="mdl-cell--hide-phone">Older Posts </span>
+        <i class="material-icons mdl-cell--hide-tablet">arrow_forward</i>
+    </button>
 </div>
 {% endif %}
