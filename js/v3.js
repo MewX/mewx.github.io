@@ -18,7 +18,7 @@ function scrollMainContent() {
 
     const ratio = mainLayout.scrollTop / window.innerHeight / (scrollMaxRange / 100);
     let translucentCurrent = ratio < 1 ? translucentStart + (translucentEnd - translucentStart) * (ratio) : translucentEnd;
-    if (translucentCurrent !== translucentEnd) {
+    if (translucentCurrent !== translucentEnd || parseInt(mainContentLayout.style["opacity"] * 100) !== translucentCurrent) {
         // set translucent to the main layout
         mainContentLayout.style["opacity"] = "" + translucentCurrent / 100;
     }
