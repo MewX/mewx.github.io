@@ -6,7 +6,7 @@ date: 2014-07-28 10:00
 comments: true
 author: MewX
 published: true
-categories: [web, Test]
+categories: [web, test]
 ---
 　　{{ page.title }}
 　　  

@@ -6,7 +6,7 @@ date: 2014-08-04 14:00
 comments: true
 author: MewX
 published: true
-categories: [web, Life]
+categories: [web, life]
 ---
 
 这是本博客第一次建站的报告，也当是自己做网页历程的一个小结吧。
