@@ -25,7 +25,7 @@ categories: [web,life]
 
 ## 搭建指南
 
-默认的系统是CentOS-x86版，这个包实在是太大了，我后来换成了`	ubuntu-15.10-x86_64-minimal.tar.gz`这个包，目前看来好处在于:
+默认的系统是CentOS-x86版，这个包实在是太大了，我后来换成了`ubuntu-15.10-x86_64-minimal.tar.gz`这个包，目前看来好处在于:
 
 - Python版本在2.7以上（CentOS版本是2.6.6）
 - 没有supervisor，这个东西对于系统资源消耗还蛮大的
