@@ -84,6 +84,8 @@ Use some similar data, when in bad request mentioned in `dynamic key request cha
 The page can be a robot-generate page with information from a machine learning model or even some simple algorithms to generate interesting correct-look page.
 This method can frustrate crawler writers, AHAHAHAHAHAHA.
 
+Also, each bad request should return a certain data. Otherwise, if the crawler requests twice, it can easily find the data is dynamically generated fake data.
+
 
 ## Page Rendering after Loaded
 
@@ -213,4 +215,4 @@ Never ban an IP easily.
 ----
 
 After reCaptcher, there's not need to prevent crawler because the cost is too high.
-See what this project will finally become~
+See what this project will finally go~ Maybe this idea became a back-end framework :P idk
