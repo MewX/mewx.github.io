@@ -73,7 +73,7 @@ From the `apk` file, we can find a keystore in path `assets/transocksv1.bks`.
 But the issue is that we do not know the password for this Android keystore.
 
 So, I used Xposed framework to hook the Android system function `java.security.KeyStore.load()`.
-Here's the reference code: https://git.io/fNGtv
+Here's the reference code: [https://git.io/fNGtv](https://git.io/fNGtv).
 
 Then, I easily find out the password is 123456 which is simply stupid.
 
@@ -116,3 +116,10 @@ Here's an example:
 
 I am not posting or publishing any detailed communication protocol or API.
 As well, I will **NOT** release anything like `Transocks PC client`.
+
+BTW, the apk was encrypted by [Tencent apk protection](https://yaq.qq.com/) which was not easy to decompile or dump.
+Therefore, I used `hook`.
+
+BTW2, I found there's a PC client which simply uses a different client-side certificate,
+and they can make money by testing the certificate only.
+Thank Transocks for the service!
