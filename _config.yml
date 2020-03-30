@@ -8,9 +8,8 @@ markdown: kramdown
 encoding: utf-8
 
 # Site info
-#baseurl: https://www.mewx.org/
-#baseurl: ./
-baseurl: /
+baseurl: https://www.mewx.org/
+#baseurl: http://127.0.0.1:4000/
 paginate: 10
 permalink: blog/:year:month/:title/
 exclude: ["README.md", "changelog.md", "Gemfile.lock"]
