@@ -40,6 +40,15 @@ Everything was quite normal when I just arrived in China.
 There was no sign of the virus's spreading
 and I even caught a cold in Australian and brought it back to China LOL!
 
+I even had several nice meals in Shanghai Office on Jan 10th:
+
+<center><img src="{{ site.cdn }}imgs/202003/sha-office-lunch.jpg" style="max-width:100%;"/></center>
+
+Also, to show the comparison, here's what Shanghai Railway station looked like
+before the pandemic:
+
+<center><img src="{{ site.cdn }}imgs/202003/sha-railway-station-before.jpg" style="max-width:100%;"/></center>
+
 Then I had several trips within China
 including having a Chinese New Year in my parents' hometown.
 During the time I was in my parents' hometown,
@@ -86,7 +95,7 @@ The fact was that the travel ban was updated weekly, but it was always extended,
 ### Work from China 
 
 Even worse, my paid leave had run out and I had to request unpaid leave or work from China.
-I didn't take my Corp laptop back to China since I didn't want to work from China.
+I didn't take my Corp laptop back to China since I didn't plan to work from China.
 So, I thought I might be able to grab a loaner laptop from Shanghai Office, which was said to open from Feb 10th.
 The bad news was that the office was said to remain closed till Feb 24nd after two internal updates!
 I couldn't wait for that long.
@@ -102,13 +111,25 @@ I really appreciate this action from the Chinese government!
 
 The clearance in Shanghai Train Station was also extremely strict.
 It took me 30 mins to get off the train.
-Every subway entrance has temperature screaning.
+Every subway entrance has temperature screening.
 At that day I was very nervous and didn't have a good sleep,
 I felt like having a somewhat fever, to be honest.
 Luckily, it was winter in China, and the air was very cold which cool down my skin.
 
+_Photo I took around Shanghai Railway Station:_
+
+<center><img src="{{ site.cdn }}imgs/202003/sha-railway-station.jpg" style="max-width:100%;"/></center>
+
 I took the subway to the Office which was located in the World Finance Center.
 There was a temperature screening at every door as well.
+
+_Photo I took around Shanghai Subway Station:_
+
+<center><img src="{{ site.cdn }}imgs/202003/sha-subway-station.jpg" style="max-width:100%;"/></center>
+
+_and inside a subway:_
+
+<center><img src="{{ site.cdn }}imgs/202003/sha-railway-inside.jpg" style="max-width:50%;"/></center>
 
 I successfully badged in the office, which was the best news after the travel ban.
 I took the laptop out and back to my hometown again on the same day.
@@ -116,12 +137,18 @@ I took the laptop out and back to my hometown again on the same day.
 I had never seen Shanghai could be that empty,
 Especially around Lujiazui, which was the financial center of China.
 
+_Photos I took around Shanghai Lujiazui Area:_
+
+<center><img src="{{ site.cdn }}imgs/202003/sha-lujiazui.jpg" style="max-width:100%;"/></center>
+
+<center><img src="{{ site.cdn }}imgs/202003/sha-lujiazui-2.jpg" style="max-width:100%;"/></center>
+
 Having a laptop, I can more or less work from home.
 The network was really bad when connecting to Google service.
 Thus, the WFH experience from China was quite unpleasant,
 but it is the best thing among all the worst things.
 
-Salaries arrived normally, so I was fine, though I still had to pay my rents and gym...
+Salaries arrived normally, so I was fine, though I still had to pay my rents and gym in Sydney...
 
 ### Longer time in China
 
@@ -138,73 +165,94 @@ The only difference were that there was an additional temperature screening
 and facial mask check at the door.
 Anyone without wearing a mask was not allowed to enter the supermarket.
 
-One fact is that this enhanced lockdown started when Anhui Province started having 0 new confirmed cases.
-It was quite interesting why they enhanced the lockdown.
+One fact is that this enhanced lockdown started when Anhui Province began to have 0 new daily confirmed cases.
+It was quite interesting why they enhanced the lockdown since that.
 
 ### Lost bridging visa
 Dramatically, I received 189 PR invitation on the first day of my arrival in China.
 That invitation lasted for 2 months.
 
 To receive a bridging visa, I had to be physically in Australia.
-
 I did need the bridging visa since my current visa would expire in 6 months.
 However, the travel ban blocked me from entering Australia.
 
-I considered going to Thailand for 14 days, but my father still disallowed me to do that.
-He told me to wait for the lift of the travel ban which he thought would end soon.
+I considered going to Thailand for 14 days, but my father was still strongly against me to do that.
+He told me to wait for the lift of the travel ban which he thought would come soon.
 
-I purchased several flight tickets to cover any potential sudden ban lift.
+I purchased several flight tickets to cover any potential short sudden ban lift.
 They were all much more expensive than my orignal flight tickets bought 4 months ago.
 
 The bad news you might have already guessed:
-the ban lift didn't exist at all!
+the ban lift didn't happen at all!
 
 I lost my last opportunity to receive a bridging visa,
 which meant I would be very likely to have to leave Australia in September this year to wait for my PR if Google wouldn't sponsor me for a visa.
 Otherwise, I might have to convert to a student visa to work part-time.
 
+#### Updates from June, 2020
+I phoned Australian Home Affairs, and they were really nice and gave me two suggestions:
+- Applying for the bridging visa independently
+- If the above way failed, I should request for a judical review
+
+Usually bridging visas are not eligible for independent applications.
+They have to be applied while lodging another non-bridging visa application.
+
+Good news is that my independent application worked so I can stay in AU for anytime I want!
+Also, Google notified me that I was eligible for employer sponsorship!
+
+Australia and Google are really nice! WOOHOO!
 
 ### About to lose salaries
 
-Due to some legal tax issues, Google doesn't allow an employee to WF another country for a long time.
+Due to some legal tax issues, American companies don't allow an employee to work from another country for a long time.
 During the COVID-19 period, the number of days is 60 days in China,
 starting from the **first day of arrival** in China!
 After that, I had to take forced unpaid leaves.
 
 Considering the fact that the travel ban couldn't be lifted soon,
-I had to travel to Thailand for 14 days then travel to Australia.
+I had to travel to Thailand for 14 days then travel to Australia to keep receiving salaries.
 
-I made the decision immediately before my flight tickets' expiry
+I made the decision immediately before all my flight tickets' expiry
 as mentioned previously for countering a potential travel ban lift.
 
 So, I planned to travel to Thailand on March 3rd and stay there for 15 nights
-(1 more day as a buffer since many airline companies didn't agree N+14 days).
+(1 more day as a safety buffer since many airline companies didn't agree N+14 days).
 
 
 ## In Thailand
 
 Although the loaner laptop from Shanghai office should remain in Shanghai Office,
-I took it with me to Bangkok, Thailand.
+I took it with me to Bangkok, Thailand for working remotely.
 
 Regarding choosing Thailand, I considered many other countries.
-Thailand, to be more specific, Bangkok was the best choice I had to let me enter Australia asap.
+Thailand, to be more specific, Bangkok was the best choice I had to allow me to enter Australia asap.
 
 ### Going to Bangkok
 I left from early Morning from Hefei and transitted from Shanghai to Bangkok.
 Many people were the same as me, traveling to Thailand or Malaysia for 14 days.
+
+_Photo I took when boarding the plane, most people were students._
+_One sitting nearly me was to have IELTS test in Bangkok since all test centers in China were closed._
+
+<center><img src="{{ site.cdn }}imgs/202003/sha-boarding-to-thailand.jpg" style="max-width:100%;"/></center>
 
 Thailand was really hot and I sweated all the time which proved me not being in a fever.
 People wearing masks were everywhere which made me feel safer.
 
 I was also charged for many fees when changing currencies :-(
 Things in Thailand were more expensive than in Hefei but cheaper than in Australia.
+(That makes sense though as Bangkok is the capital city/state in Thailand.)
 
 Apart from that, people in Thailand were very friendly and I had a pretty good time there.
+
+One thing I've never seen in other country was that Monks actually were priority people:
+
+<center><img src="{{ site.cdn }}imgs/202003/bkk-monk.jpg" style="max-width:100%;"/></center>
 
 ### Working from Bangkok
 
 Working from Bangkok is like WF Australia.
-There weren't any restrictions at all.
+There weren't any restrictions at all (regarding Internet and my internal access).
 However, WF home usually means working longer.
 
 My usual daily schedule is:
@@ -218,27 +266,45 @@ My usual daily schedule is:
 
 There were many foods around the street,
 but I didn't dare to eat since the virus could be anywhere around the street.
-So, I only had meals at the big shopping mall.
+So, I only had meals at big shopping malls in which the foods were also more expensive.
+
+One fun fact was that I noticed the date in Thailand was quite different.
+Here's a receipt that I received in Thailand, which indicated the purchase
+happend in 08/03/63 (WTH???):
+
+<center><img src="{{ site.cdn }}imgs/202003/bkk-kfc.jpg" style="max-width:50%;"/></center>
+
+Then I found this LOL:
+
+<center><img src="{{ site.cdn }}imgs/202003/bkk-be-year.png" style="max-width:50%;"/></center>
 
 ### Extending my Visa on Arrival
 
-One thing that I had to do was to extend my Visa on Arrival
+One thing that I had to do was to extend my Thailand Visa on Arrival
 so that I would not receive an overstay stamp though it was written in Thai.
 
 I took that day off but still got up at around 5am.
 I took the metro then a bus to get to the Government Complex building.
+
+_Photo around bus station:_
+
+<center><img src="{{ site.cdn }}imgs/202003/bkk-bus-station.jpg" style="max-width:100%;"/></center>
 
 The traffic was quite bad since the building was in a suburb
 and the highways were around the bus station.
 I had to wait for nearly 5 minutes to be able to go across a highway.
 
 There was still a 30-min walk from the bus station to the Government building.
-Luckily I met a nursing teacher (named Aom) from an institution nearby on the same bus.
+Luckily I met a lady nursing teacher (whose English name is Aom) from an institution nearby on the same bus.
 She was really friendly and her English was pretty well!
 
 I didn't recognise the name of the institution
 but basically, there was an internal shuttle bus between buildings of a hospital.
 And she took me to take the shuttle bus for free LOL which saved me a 2-km walking.
+
+_Photo of the institution:_
+
+<center><img src="{{ site.cdn }}imgs/202003/bkk-ins.jpg" style="max-width:100%;"/></center>
 
 Then, I walked to a super-crowded building to do the visa extension.
 I was quite lucky to finish everything in the morning.
@@ -247,10 +313,17 @@ had to wait for an appointment scheduled in the afternoon.
 The queue was also amazingly long.
 Also, one of my uni mates who arrived in the afternoon finished his extension at 9pm!
 
+_Photo inside Immigration building:_
+
+<center><img src="{{ site.cdn }}imgs/202003/bkk-immi.jpg" style="max-width:100%;"/></center>
 
 ### Leaving Bangkok
-After checking out and finishing lunch, I went to the airport directly
+After checking out and finishing lunch - again Pinapple rice, I went to the airport directly
 which was 4 hours ahead of check-in open.
+
+_One of the pineapple rice I had in Bangkok:_
+
+<center><img src="{{ site.cdn }}imgs/202003/bkk-pineapple-rice.jpg" style="max-width:100%;"/></center>
 
 Most travelers were American. I could barely see Chinese people then.
 There were also lockdown news from Australia urging people to travel to Australia asap.
@@ -260,7 +333,10 @@ The first flight from Bangkok to Hong Kong was quite full.
 Lots of people were going to Aukland via Thailand as well.
 
 By the time I arrived in Hong Kong,
-there was roughly no one at the airport.
+there was roughly no one at the airport as it was late night.
+
+<center><img src="{{ site.cdn }}imgs/202003/hkg-airport.jpg" style="max-width:50%;"/></center>
+
 Also, the flight back to Sydney had very few people,
 which was quite empty - each row had only one person.
 
@@ -270,7 +346,7 @@ So, the flight back was quite safe.
 
 When I arrived in Sydney, I was "scammed" by a taxi driver.
 It usually took 25 AUD for me back home, he charged me 70 AUD.
-I am exposing the name and the mobile number: Viki 0404210744.
+I am exposing the name and the mobile number here: Viki 0404210744.
 
 When I arrived home, I received messages from my friends
 saying Australia was going to lock down the next day.
@@ -290,6 +366,6 @@ But Google is going to start mandatory WFH during my self-isolation,
 which means I still cannot have a chance to grab my corp laptop.
 Probably I will need my colleague to grab for me, phew~
 
-The whole world is experiencing the same thing happened in China in February.
-And I experienced this thing both in China and in Australia.
-I am feeling lucky aww!
+The whole world is experiencing the same virus in China in February now.
+And I experienced them both in China and in Australia.
+I am feeling _lucky_ aww!
