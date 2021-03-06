@@ -1,5 +1,9 @@
 # MewX's blog reworked v3
 
+The site is now hosted on [Cloudflare Pages](https://pages.cloudflare.com/).
+
+The [fallback link](https://www2.mewx.org/) is still hosted on GitHub pages.
+
 **Working in progress**
 
 In this version, I plan to use ReactJS + Googe Material Design UI + KotlinJS.

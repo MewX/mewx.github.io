@@ -9,7 +9,6 @@ encoding: utf-8
 
 # Site info
 baseurl: https://www.mewx.org/
-#baseurl: https://www.mewx.org/
 #baseurl: http://127.0.0.1:4000/
 paginate: 10
 permalink: blog/:year:month/:title/
