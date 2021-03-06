@@ -8,7 +8,7 @@ markdown: kramdown
 encoding: utf-8
 
 # Site info
-baseurl: https://www2.mewx.org/
+baseurl: https://www.mewx.org/
 #baseurl: https://www.mewx.org/
 #baseurl: http://127.0.0.1:4000/
 paginate: 10
@@ -20,5 +20,5 @@ gems: [jekyll-paginate]
 title : MewX's Homepage
 author: MewX
 email : mewx(at)mewx(dot)org
-cdn   : https://www2.mewx.org/
+cdn   : https://www.mewx.org/
 #cdn   : http://127.0.0.1:4000/
