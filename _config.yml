@@ -20,5 +20,6 @@ gems: [jekyll-paginate]
 title : MewX's Homepage
 author: MewX
 email : mewx(at)mewx(dot)org
-cdn   : https://www2.mewx.org/
+cdn   : https://www.mewx.org/
+# cdn   : https://www2.mewx.org/
 #cdn   : http://127.0.0.1:4000/
