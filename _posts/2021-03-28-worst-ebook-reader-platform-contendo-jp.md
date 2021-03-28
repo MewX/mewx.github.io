@@ -158,6 +158,8 @@ $ convert Snipaste/Snipaste_2021-03-27_22-19-18.png -crop 985x1394+787+3 "New Sy
 ...
 ```
 
+At last, use any PDF generation tool (e.g. ImageMagick, Adobe Acrobat, etc.).
+
 ## Analysis
 
 ### General
@@ -211,8 +213,8 @@ On top of each file, there seemed to have some key texts:
 
 The first thing I could think of the encryption definitely was related to some key exchange algorithms.
 
-So, I set up Fiddler on Windows to capture the texts.
-However, the packages could not be captured as experimented.
+So, I set up Fiddler on Windows to capture the key texts.
+However, the packages could not be captured as expected.
 
 Therefore, I looked deeper into the installed files.
 There was a JDK directory inside!
