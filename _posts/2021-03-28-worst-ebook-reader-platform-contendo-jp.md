@@ -20,8 +20,8 @@ Please feel free to leave a comment and I think I can help you.
 
 I might consider releasing a dedicated tool for this platform,
 which entirely depends on my spare time, unfortunately.
-Here's the proof-of-concept codes I used to decrypt my purchased books:
-https://github.com/MewX/contendo-viewer-decryptor. **(Please understand before using.)**
+Here's the [**proof-of-concept codes**](https://github.com/MewX/contendo-viewer-decryptor)
+I used to decrypt my purchased books. **(Please understand before using.)**
 
 The apps are made of:
 - Desktop apps (Windows/Linux/MacOS v1.6.3): Java 12 + JavaFX.
@@ -132,7 +132,7 @@ And as you can imagine, they said a refund was impossible at all.
 
 So, I was not happy and I wanted to get my book back digitally.
 
-## How to get your book back?
+## How to get your books back?
 
 Screenshots!!!
 
@@ -274,12 +274,12 @@ One interesting is that, Play Store reviews were the same as I thought:
 
 <center><img src="{{ site.cdn }}imgs/202103/play-store-reviews.png" style="max-width:80%;"/></center>
 
-### How the encryption work
+### How the encryption works
 
 As I mentioned previously, there are two parts of the saved files encrypted.
 
 The PoC (Proof of Concept) codes and decryption tools can be found here:
-https://github.com/MewX/contendo-viewer-decryptor.
+[https://github.com/MewX/contendo-viewer-decryptor](https://github.com/MewX/contendo-viewer-decryptor).
 
 #### info file
 
