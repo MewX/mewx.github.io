@@ -74,7 +74,7 @@ After digging around, I found another book that looked more suitable for me:
 These books teach Japanese in a _new system_ obviously,
 mainly focusing on teaching the verbs more practically
 which are said to be the most difficult part in learning Japanese.
-The author is 海老原 峰子, who is a Japanese educator teaching in Singapore.
+The author is Minoko Ebihara (海老原 峰子), who is a Japanese educator teaching in Singapore.
 
 ### Looking for sample pages and purchase
 
@@ -82,7 +82,8 @@ Since I have the target, I tried to look for some sample pages
 so that I can double-check if it was the one I was looking for.
 However, these books are not as popular as the other two books.
 
-Checking the price on Amazon, they sell JPY ¥3080 and do not support international delivery.
+Checking the price on [Amazon](https://www.amazon.co.jp/gp/product/4877986367/),
+they sell JPY ¥3080 and do not support international delivery.
 Apparently, I cannot use Amazon Japan this time.
 
 <center><img src="{{ site.cdn }}imgs/202103/amazon-co-jp.png" style="max-width:100%;"/></center>
