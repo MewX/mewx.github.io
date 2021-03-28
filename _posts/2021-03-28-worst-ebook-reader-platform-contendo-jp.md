@@ -20,6 +20,8 @@ Please feel free to leave a comment and I think I can help you.
 
 I might consider releasing a dedicated tool for this platform,
 which entirely depends on my spare time, unfortunately.
+Here's the proof-of-concept codes I used to decrypt my purchased books:
+https://github.com/MewX/contendo-viewer-decryptor. **(Please understand before using.)**
 
 The apps are made of:
 - Desktop apps (Windows/Linux/MacOS v1.6.3): Java 12 + JavaFX.
@@ -129,6 +131,31 @@ All these reasons made me very unhappy. So, I tried to get a refund.
 And as you can imagine, they said a refund was impossible at all.
 
 So, I was not happy and I wanted to get my book back digitally.
+
+## How to get your book back?
+
+Screenshots!!!
+
+Yes, it worked for me.
+I spent 10 minutes using [Snapaste](https://www.snipaste.com/) to take screenshots for each page.
+I set up the shortcuts:
+
+1. F1 - start screenshot
+2. Enter - full screen screenshot
+3. RightArrow - Next page
+
+<center><img src="{{ site.cdn }}imgs/202103/screenshot-approach.png" style="max-width:100%;"/></center>
+
+and then use ImageMagick to crop the screenshots:
+
+``` shell
+$ convert Snipaste/Snipaste_2021-03-27_22-15-37.png -crop 985x1394+787+3 "New System English (English + Chinese)/Snipaste_2021-03-27_22-15-37.png"
+$ convert Snipaste/Snipaste_2021-03-27_22-19-17.png -crop 985x1394+787+3 "New System English (English + Chinese)/Snipaste_2021-03-27_22-19-17.png"
+$ convert Snipaste/Snipaste_2021-03-27_22-21-08_0.png -crop 985x1394+787+3 "New System English (English + Chinese)/Snipaste_2021-03-27_22-21-08_0.png"
+$ convert Snipaste/Snipaste_2021-03-27_22-15-42.png -crop 985x1394+787+3 "New System English (English + Chinese)/Snipaste_2021-03-27_22-15-42.png"
+$ convert Snipaste/Snipaste_2021-03-27_22-19-18.png -crop 985x1394+787+3 "New System English (English + Chinese)/Snipaste_2021-03-27_22-19-18.png"
+...
+```
 
 ## Analysis
 
