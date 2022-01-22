@@ -6,7 +6,7 @@ date: 2016-12-26 23:39
 comments: true
 author: MewX
 published: true
-categories: [linux,life]
+categories: [linux]
 ---
 
 Offline-downloading is very well-known word in China. It's a service to allow you to set downloading tasks and a server will prepare the downloaded file for you to fetch at a high speed.

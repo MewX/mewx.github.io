@@ -6,7 +6,7 @@ date: 2016-10-08 22:50
 comments: true
 author: MewX
 published: true
-categories: [teamwork,life]
+categories: [life, algorithm]
 ---
 
 Today is my first time participating ACM/ICPC, which is really a cruel competition.

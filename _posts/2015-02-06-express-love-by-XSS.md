@@ -6,7 +6,7 @@ date: 2015-02-06 09:22
 comments: true
 author: MewX
 published: true
-categories: [life, python]
+categories: [web, python]
 ---
 
 最近觉得学校的表白墙很好玩，而且人气也挺不错。有表白排行之类的有趣功能，经常能看到人刷屏、刷排行之类的。

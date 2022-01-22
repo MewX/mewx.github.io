@@ -6,7 +6,7 @@ date: 2014-12-16 12:50
 comments: true
 author: MewX
 published: true
-categories: [life]
+categories: [hardware]
 ---
 
 几个月前看到淘宝上有卖二手机械键盘的PCB+键轴的，型号是Cherry G80-3850（这个我不懂 = =、），售价110。这个价格相当低，然后就入手了。买之前店家说不保证能用，但是通过看PCB的照片和评论，基本上可以确定PCB不会有问题，于是就冒险入手了第一个机械键盘，权当入门。

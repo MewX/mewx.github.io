@@ -6,7 +6,7 @@ date: 2016-08-15 23:11
 comments: true
 author: MewX
 published: true
-categories: [web,life]
+categories: [algorithm]
 ---
 
 It's been long time not writing a post, and I decide to write post in English.

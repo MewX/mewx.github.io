@@ -6,7 +6,7 @@ date: 2014-11-05 14:00
 comments: true
 author: MewX
 published: true
-categories: [Flash, Crack, AS3, 汉化, python]
+categories: [flash, crack, 汉化, python]
 ---
 
 本篇是针对上一篇未完成的研究进行的补充，对于无法显示中文、改过脚本无法导入回去等问题都进行解决。

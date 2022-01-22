@@ -6,7 +6,7 @@ date: 2014-08-12 23:00
 comments: true
 author: MewX
 published: true
-categories: [Liquid, Jekyll, web]
+categories: [jekyll, web]
 ---
 
 Liquid官方解释是一种模板语言，Jekyll中的网页模板支持插入[Liquid](http://docs.shopify.com/themes/liquid-documentation/basics/)模板语言(Templating Language)实现更加强大的效果。下面用几段本网站的源码来介绍Liquid的一些[高级用法（点这查看全部）](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers)。

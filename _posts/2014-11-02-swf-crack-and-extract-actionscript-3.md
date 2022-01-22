@@ -6,7 +6,7 @@ date: 2014-11-02 12:00
 comments: true
 author: MewX
 published: true
-categories: [Flash, Crack, AS3, 汉化]
+categories: [flash, crack, 汉化]
 ---
 
 最近受某人委托研究一下某个游戏的汉化，发现这游戏完全是用Flash写的，主程序也是Adobe Flash导出的exe程序，其他的资源也都是在swf中。

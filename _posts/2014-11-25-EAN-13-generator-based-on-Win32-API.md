@@ -6,7 +6,7 @@ date: 2014-11-25 19:30
 comments: true
 author: MewX
 published: true
-categories: [Win32, barcode]
+categories: [win32, barcode]
 ---
 
 EAN-13是商品中广泛使用的条码，今天上条码课（汗——）布置这个任务，咱就用Win32 API写了个简单的条码生成器，代码分享一下，如果有需要请自取。
