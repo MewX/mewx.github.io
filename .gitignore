@@ -2,6 +2,7 @@
 build/
 _site/
 _temp/
+.vscode/
 *.lock
 *.directory
 *.swp
