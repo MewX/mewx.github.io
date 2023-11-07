@@ -15,6 +15,7 @@ paginate: 10
 permalink: blog/:year:month/:title/
 exclude: ["README.md", "changelog.md", "Gemfile.lock"]
 gems: [jekyll-paginate]
+future: true
 
 # Blog info
 title : MewX's Homepage
