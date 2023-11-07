@@ -9,7 +9,7 @@ published: false
 categories: [life]
 ---
 
-<!-- Two days ago (Nov 5, 2023), Hayato Sumino had his first concert in Australia. -->
+Two days ago (Nov 5, 2023), Hayato Sumino had his first concert in Australia.
 
 TODO: update time
 
@@ -17,9 +17,25 @@ TODO: update time
 
 
 
+Outside town hall:
 
+<center><img src="{{ site.cdn }}imgs/202311/PXL_20231105_074344779.jpg" style="max-width:100%;"/></center>
 
-Motion picture test:
+Looking at the Steinway & Sons piano at the out-most door (motion):
+
+<center><img src="{{ site.cdn }}imgs/202311/PXL_20231105_075802371.live.jpg" data-live-photo="{{ site.cdn }}imgs/202311/PXL_20231105_075802371.live.mp4" style="max-width:100%;"/></center>
+
+Inside town hall:
+
+<center><img src="{{ site.cdn }}imgs/202311/PXL_20231105_080255845.jpg" style="max-width:100%;"/></center>
+
+The piano:
+
+<center><img src="{{ site.cdn }}imgs/202311/PXL_20231105_091144583.jpg" style="max-width:100%;"/></center>
+
+Motion picture tests for the performance:
+
+<center><img src="{{ site.cdn }}imgs/202311/PXL_20231105_082444897.live.jpg" data-live-photo="{{ site.cdn }}imgs/202311/PXL_20231105_082444897.live.mp4" style="max-width:100%;"/></center>
 
 <center><img src="{{ site.cdn }}imgs/202311/PXL_20231105_094250953.live.jpg" data-live-photo="{{ site.cdn }}imgs/202311/PXL_20231105_094250953.live.mp4" style="max-width:100%;"/></center>
 
