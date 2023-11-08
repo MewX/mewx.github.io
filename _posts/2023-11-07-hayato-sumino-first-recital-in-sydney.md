@@ -112,10 +112,13 @@ I'll make sure to refresh the website multiple times a day to make sure I won't 
 
 Note that initially I thought Yiruma was the reason I joined [Jpopsuki](https://web.archive.org/web/20231102202218/https://wiki.installgentoo.com/index.php/Private_trackers)
 when I was looking for a complete lossless album containing _River Flows in You_.
-Then, I realized the album covers didn't match.
-After further searches and recalls, I found it was from _July (줄라이) - Beyond the Memory_.
-Here's the cover of the first album I downloaded from PT world (I should probably write another post about it):
+Then, I realized the album covers didn't match my memory.
 
-<center><img src="{{ site.cdn }}imgs/202311/july-beyond-the-memory-cover.jpg" style="max-width:50%;"/></center>
+<center><img src="{{ site.cdn }}imgs/202311/yiruma-best-of-album-cover.jpg" style="max-width:50%;"/></center>
+
+After further searches and recalls, I found it was from _July (줄라이) - Beyond the Memory_.
+Here's the cover of the first album I downloaded from PT world (I should probably write another post about it 👻):
+
+<center><img src="{{ site.cdn }}imgs/202311/july-beyond-the-memory-album-cover.jpg" style="max-width:50%;"/></center>
 
 
