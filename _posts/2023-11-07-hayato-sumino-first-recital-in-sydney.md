@@ -68,12 +68,13 @@ here are the differences between the two types of VIP tickets:
 > - SVIP Tickets include a group photo with Mr Hayato
 > - EACH VIP Ticket includes an autographed merchandise
 
-and the ticket prices are:
+and the ticket prices are (when I purchased):
 - SVIP: A$209.29
 - VIP: ~A$176 (couldn't find any references)
 - Tier 1: A$146.51
 - Tier 2: A$115.13
 - Tier 3: A$83.74
+- Tier 4: A$56.64
 - Disabled: A$62.82
 
 <center><img src="{{ site.cdn }}imgs/202311/hayato-sumino-venue-map.png" style="max-width:50%;"/></center>
@@ -115,6 +116,8 @@ The piano STEINWAY D-274 (MSRP of US$175,700):
 <center><img src="{{ site.cdn }}imgs/202311/PXL_20231105_091144583.jpg" style="max-width:100%;"/></center>
 
 ## During the Recital
+
+TODO: The list of pieces
 
 Motion picture tests for the performance:
 
