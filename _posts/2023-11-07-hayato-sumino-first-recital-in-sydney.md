@@ -54,9 +54,10 @@ Apart from that, I also quite like his logo and net name - Cateen because I'm a 
 My net name - MewX is actually from `Cat + X`.
 
 I also found that he studied IT in Tokyo University.
-It was the same industry with me, so I thought that was really impressive to have such great skill in piano performance.
+It was the same industry with me, and we were in similar age,
+so I thought that was really impressive to have such great skill in piano performance.
 
-When I accidentally heard he was going to Sydney, it was already Sept 5.
+When I accidentally heard he was going to perform in Sydney for the first time ever, it was already Sept 5.
 The ticket was on public sale a month before that day, and the early bird sale had ended.
 The good seats were all taken, and I really didn't want to seat at the back if possible based on my experience for the Candlelight concert (same venue).
 After a few refreshes, I saw there were exactly two SVIP (highest tier) tickets left.
@@ -68,7 +69,7 @@ here are the differences between the two types of VIP tickets:
 > - SVIP Tickets include a group photo with Mr Hayato
 > - EACH VIP Ticket includes an autographed merchandise
 
-and the ticket prices are (when I purchased):
+and the ticket prices are (when I purchased, and the prices did reduce slightly later):
 - SVIP: A$209.29
 - VIP: ~A$176 (couldn't find any references)
 - Tier 1: A$146.51
@@ -91,39 +92,83 @@ However, I ended up thinking twice because I'm not really a big fan of Yundi tbh
 
 ## Before the Recital
 
-Two days ago (Nov 5, 2023), Hayato Sumino had his first concert in Australia.
+The organizer sent all SVIPs & VIPs an email about how it's going to work for the merchandises and photography session.
+They specifically mentioned we should arrive 30min in advance and they wrote down 19:30 in the email.
+That really confused me because the ticket said 19:00 - 21:30 were the show time.
+So, I assumed 19:00 should be the time and I should arrive before that.
 
-TODO: update time
-
-<center><img src="{{ site.cdn }}imgs/202311/PXL_20231105_103035341.jpg" style="max-width:100%;"/></center>
-
-
-
-Outside town hall:
+Then, that was two days ago (Nov 5, 2023), a cloudy Sunday with a bit showering.
+Since I live in the T4 train line, I took the train to Town Hall station pretty easily.
+There were full of people in front of the Town Hall building and there wasn't any VIP entry. 😂
+As you can might not see from the picture, there are 20 meters long queue hidden inside the picture.
 
 <center><img src="{{ site.cdn }}imgs/202311/PXL_20231105_074344779.jpg" style="max-width:100%;"/></center>
 
-Looking at the Steinway & Sons piano at the out-most door (motion):
+Given my experience for the Candlelight performance, there will always be many people not queueing.
+I become one of them this time with my SVIP hat on. 🤠
 
-<center><img src="{{ site.cdn }}imgs/202311/PXL_20231105_075802371.live.jpg" data-live-photo="{{ site.cdn }}imgs/202311/PXL_20231105_075802371.live.mp4" style="max-width:100%;"/></center>
+There were lots of Japanese people around me and I almost spoke out こんにちは to them. 👻
+First time knowing such many Japanese people in Sydney actually.
+After around 15 minutes, I _squeezed_ into the entry corridor, and the Steinway & Sons piano is right in the center and visible from outside:
 
-Inside town hall:
+<center><img src="{{ site.cdn }}imgs/202311/PXL_20231105_075802371.live.jpg" data-live-photo="{{ site.cdn }}imgs/202311/PXL_20231105_075802371.live.mp4" style="max-width:60%;"/></center>
+
+Here's the biggest poster in the foyer.
+A fun story is that people who went to Yundi Li's recital a few days ago saw the same flower baskets.
+So, it might be indeed reused. 💐
+
+<center><img src="{{ site.cdn }}imgs/202311/PXL_20231105_103035341.jpg" style="max-width:100%;"/></center>
+
+The whole process did not verify tickets at all, which means anyone can sneak in.
+Inside the Town Hall, it was still quite empty.
 
 <center><img src="{{ site.cdn }}imgs/202311/PXL_20231105_080255845.jpg" style="max-width:100%;"/></center>
 
-The piano STEINWAY D-274 (MSRP of US$175,700):
+Here's the close look at the STEINWAY & SONS D-274 piano (MSRP of US$175,700).
+It's noticeably big! Excited for the sounds! 😛
 
 <center><img src="{{ site.cdn }}imgs/202311/PXL_20231105_091144583.jpg" style="max-width:100%;"/></center>
 
 ## During the Recital
 
-TODO: The list of pieces
+The performance officially started at 19:30, which meant it took 30 more minutes for audiences to be seated.
+Even after the recital began, I still saw some people entering (including SVIPs), which could really distract the performer IMO.
+This should be on the organizer. 🤦
 
-Motion picture tests for the performance:
+Here's the list of pieces:
+- Chopin: Scherzo in B Minor, Op. 20, No. 1
+- Chopin: Nocturne in C minor, Op. 48,  No. 1
+- Sumino: [Recollection](https://www.youtube.com/watch?v=NFbgo8ACSrs)
+- Sumino: [New Birth](https://www.youtube.com/watch?v=btqHrVYO3KI)
+- Sumino: [Big Cat Waltz](https://www.youtube.com/watch?v=VmKin2xhKNk)
+- Chopin: Waltz in E-flat Major, Op. 18, No. 1
+- Chopin: Polonaise in A-flat Major, Op. 53, No. 6
+- _(INTERVAL)_
+- J.S. Bach: Italian Concerto BWV 971
+- Gershwin: 3 Preludes
+- Gershwin: Rhapsody in Blue
+
+Here are some live photos during the two sections.
+You can always feel joys from his performance, which I really love!
 
 <center><img src="{{ site.cdn }}imgs/202311/PXL_20231105_082444897.live.jpg" data-live-photo="{{ site.cdn }}imgs/202311/PXL_20231105_082444897.live.mp4" style="max-width:100%;"/></center>
 
 <center><img src="{{ site.cdn }}imgs/202311/PXL_20231105_094250953.live.jpg" data-live-photo="{{ site.cdn }}imgs/202311/PXL_20231105_094250953.live.mp4" style="max-width:100%;"/></center>
+
+This one was during the _Rhapsody in Blue_. Nice atmosphere with blue lights.
+
+<center><img src="{{ site.cdn }}imgs/202311/PXL_20231105_094609926.jpg" style="max-width:100%;"/></center>
+
+After the two sessions, the staff presented bouquet on the stage.
+Hayato Sumino didn't seem to know that was staff, and tried to dodge the bouquet. 😂
+After that, he also had three encores because audiences kept clapping!
+- An Études from Chopin
+- His Big Cat Waltz
+- His [7 levels of _Twinkle Twinkle Little Star_](https://www.youtube.com/watch?v=L2f6Mi7I5lY)
+
+For the 4th encore, he closed the piano lid as the end! 😂😂😂 OMG this is definitely a meme!
+
+<center><video src="{{ site.cdn }}imgs/202311/PXL_20231105_101210820.LS.5s.mp4" type="video/mp4" style="max-width:60%;" autoplay loop muted controls></video></center>
 
 ## After and After-Story
 
