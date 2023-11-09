@@ -111,7 +111,7 @@ There were lots of Japanese people around me and I almost spoke out こんにち
 First time knowing such many Japanese people in Sydney actually.
 After around 15 minutes, I _squeezed_ into the entry corridor, and the Steinway & Sons piano is right in the center and visible from outside:
 
-<center><img src="{{ site.cdn }}imgs/202311/PXL_20231105_075802371.live.jpg" data-live-photo="{{ site.cdn }}imgs/202311/PXL_20231105_075802371.live.mp4" style="max-width:60%;"/></center>
+<center><div style="max-width:50%;"><img src="{{ site.cdn }}imgs/202311/PXL_20231105_075802371.live.jpg" data-live-photo="{{ site.cdn }}imgs/202311/PXL_20231105_075802371.live.mp4"/></div></center>
 
 Here's the biggest poster in the foyer.
 A fun story is that people who went to Yundi Li's recital a few days ago saw the same flower baskets.
@@ -153,9 +153,11 @@ Here's the list of pieces:
 All those piece picks are really classical! They are very pleasant to listen to!
 
 Here are some live photos during the two sections.
-You can always feel joys from his performance, which I really love!
+You can always feel joys from his performance!
 
 <center><img src="{{ site.cdn }}imgs/202311/PXL_20231105_082444897.live.jpg" data-live-photo="{{ site.cdn }}imgs/202311/PXL_20231105_082444897.live.mp4" style="max-width:100%;"/></center>
+
+This feels like me when I'm coding XD
 
 <center><img src="{{ site.cdn }}imgs/202311/PXL_20231105_094250953.live.jpg" data-live-photo="{{ site.cdn }}imgs/202311/PXL_20231105_094250953.live.mp4" style="max-width:100%;"/></center>
 
