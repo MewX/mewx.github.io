@@ -5,7 +5,7 @@ subtitle: "My first time attending live piano concert! :-)"
 date: 2023-11-07 21:46
 comments: true
 author: MewX
-published: false
+published: true
 categories: [life]
 ---
 
@@ -120,6 +120,7 @@ So, it might be indeed reused. 💐
 <center><img src="{{ site.cdn }}imgs/202311/PXL_20231105_103035341.jpg" style="max-width:100%;"/></center>
 
 The whole process did not verify tickets at all, which means anyone can sneak in.
+Actually, there was one lady sneaked into the SVIP seat. 🥲
 Inside the Town Hall, it was still quite empty.
 
 <center><img src="{{ site.cdn }}imgs/202311/PXL_20231105_080255845.jpg" style="max-width:100%;"/></center>
@@ -133,7 +134,8 @@ It's noticeably big! Excited for the sounds! 😛
 
 The performance officially started at 19:30, which meant it took 30 more minutes for audiences to be seated.
 Even after the recital began, I still saw some people entering (including SVIPs), which could really distract the performer IMO.
-This should be on the organizer. 🤦
+There were also 5 missing seats in SVIP area. I can't really blame those rich guys because I was able to switch seats in the second session. 😛
+Overall, this should be on the organizer. 🤦
 
 Here's the list of pieces:
 - Chopin: Scherzo in B Minor, Op. 20, No. 1
@@ -147,6 +149,8 @@ Here's the list of pieces:
 - J.S. Bach: Italian Concerto BWV 971
 - Gershwin: 3 Preludes
 - Gershwin: Rhapsody in Blue
+
+All those piece picks are really classical! They are very pleasant to listen to!
 
 Here are some live photos during the two sections.
 You can always feel joys from his performance, which I really love!
@@ -162,7 +166,7 @@ This one was during the _Rhapsody in Blue_. Nice atmosphere with blue lights.
 After the two sessions, the staff presented bouquet on the stage.
 Hayato Sumino didn't seem to know that was staff, and tried to dodge the bouquet. 😂
 After that, he also had three encores because audiences kept clapping!
-- An Études from Chopin
+- Kapustin's [Eight Concert Etudes Op. 40 No. 3 - "Toccatina"](https://www.youtube.com/watch?v=EmcEQwvEw6g)
 - His Big Cat Waltz
 - His [7 levels of _Twinkle Twinkle Little Star_](https://www.youtube.com/watch?v=L2f6Mi7I5lY)
 
@@ -172,27 +176,53 @@ For the 4th encore, he closed the piano lid as the end! 😂😂😂 OMG this is
 
 ## After and After-Story
 
+After the play, SVIPs (yes that's me!) got the chance to take photo with Hayato Sumino, which was really nice!
+OMG but I forgot to request for a signature. Next time I will! 😭
 
-Speaking of audiences (comparing betwene candlelight, Yundi Li's)
-etiquette
+Even two days later, I still hear the lingering piano sounds from his performance from time to time.
+It was so unforgettable!
+I also kept searching for other audiences' reviews on 小红书,
+and I saw so many comparison reviews with Yundi's recital a few days before.
 
-Speaking of the pricing
+### Audience Etiquette
 
+People complained a lot about flash lights, long-time recording, speakings/talkings/coughings, etc. in Yundi's performance.
+The organizer had to use laser lights to stop them. LOL
+After the first session, the organizer had to announce taking photos/videos were not allowed.
 
-Speaking of the location
+During Sumino's performance, there wasn't any requirements on photos/videos during the performance.
+Since it's my first time attending recitals, I'm not sure what are not allowed.
+So, my personal guidelines was just not distracting others & not distracting the performer.
 
-Speaking of the organizer
+Later I realized there might be copyright issue for recording videos.
+So, I wouldn't share any videos during the two main sessions.
 
-comparisons with other recitals from the same organizer
+I guess other reasons why the audience etiquette for Hayato Sumino's is better than Yundi's are:
+- More Japanese audiences than Chinese audiences 😂
+- Smaller hall (~1000 seats) compared with 2700 seats for Yundi's
 
+### Ticket Pricing
 
+Top Tier: Hayato Sumino's (~A$210) is more expensive than Yundi's (~A$200)
 
-TODO: add swag pictures (without Geo location)
+Lowest Tier: Hayato's is cheaper than Yundi's.
 
-Concerto 协奏曲
+### Venue
 
-Sonata 奏鸣曲
+The Opera House is definitely better. I hope one day I can go to Hayato's live performance there!
+The Sydney Town Hall doesn't really have good seats that have proper view on the performer's hands unfortunately.
 
+As I watched lots of videos from him, looking at hand performance was also very satisfying.
+For example, this [_Rhapsody in Blue_](https://www.youtube.com/watch?v=TDZWLP7TgBM&t=131s) official recording.
+
+### Concerto (协奏曲) and Sonata (奏鸣曲)
+
+Surprisingly he performed both Concerto and Sonata. 😛😛
+That reminded me to re-learn music foundations.
+
+His _real_ Concerto performance - ([Chopin: Piano Concerto No. 1 in E minor, Op. 11](https://www.youtube.com/watch?v=iYhUtZWsCQg&t=1889s)) was also very impressive.
+
+### The Organizer and Other Performances
 
 After looking at the organizer - Harmonie International's [YouTube channel](https://www.youtube.com/@harmonietube),
 I realized the composer of _River Flows in You_ - Yiruma (이루마 / 李閏珉 / 李闰珉) also would have a live recital in the Sydney Opera House on Dec 3rd this year (i.e. next month).
@@ -212,4 +242,11 @@ Here's the cover of the first album I downloaded from PT world (I should probabl
 
 <center><img src="{{ site.cdn }}imgs/202311/july-beyond-the-memory-album-cover.jpg" style="max-width:50%;"/></center>
 
+### Swags
 
+Got a shopping bag (quality is pretty good) and a poster (fully of black ink). 😂
+I also laminated the printed-out tickets for my collection.
+
+<center><img src="{{ site.cdn }}imgs/202311/PXL_20231109_143901164.jpg" style="max-width:50%;"/></center>
+
+**_The End._**
