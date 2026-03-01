@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MewX's Homepage (Blog, Projects, and Related sites.)">
+    <meta name="author" content="MewX">
+    {% include webmastermeta.html %}
+
+    <title>MewX's Homepage - Love learning and learn my love!</title>
+
+    <!-- Modern Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Anime.js for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7333757578973883" crossorigin="anonymous"></script>
+</head>
+<body>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    :root {
+        --primary: #2196F3;
+        --primary-dark: #1976D2;
+        --primary-light: #64B5F6;
+        --accent: #03A9F4;
+        --text-dark: #1e293b;
+        --text-light: #64748b;
+        --bg-light: #f0f9ff;
+        --bg-white: #ffffff;
+        --shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        --shadow-md: 0 4px 6px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.06);
+        --shadow-lg: 0 10px 25px rgba(0,0,0,0.15), 0 5px 10px rgba(0,0,0,0.05);
+        --shadow-xl: 0 20px 40px rgba(0,0,0,0.2), 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        color: var(--text-dark);
+        overflow-x: hidden;
+        background: var(--bg-light);
+    }
+
+    /* Navigation */
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        padding: 1.5rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.3s ease;
+        background: transparent;
+    }
+
+    .navbar.scrolled {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: var(--shadow-sm);
+        padding: 1rem 2rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .navbar.scrolled .navbar-brand {
+        color: var(--primary);
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+    }
+
+    .nav-link {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+    .navbar.scrolled .nav-link {
+        color: var(--text-dark);
+    }
+
+    .nav-link:hover {
+        color: var(--accent);
+    }
+
+    .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .navbar.scrolled .mobile-menu-btn {
+        color: var(--text-dark);
+    }
+
+    /* Hero Section */
+    .hero {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #42a5f5 0%, #2196F3 50%, #1976D2 100%);
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('{{ site.cdn }}imgs/site/home-title-v3.jpg') center/cover fixed;
+        opacity: 0.15;
+        z-index: 0;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        max-width: 1200px;
+    }
+
+    .logo-container {
+        max-width: 500px;
+        margin: 0 auto 3rem;
+    }
+
+    .logo-container svg {
+        width: 100%;
+        height: auto;
+        filter: drop-shadow(0 10px 30px rgba(0,0,0,0.3));
+    }
+
+    .hero-subtitle {
+        font-size: 2.5rem;
+        font-weight: 300;
+        color: white;
+        margin-bottom: 2rem;
+        opacity: 0;
+        letter-spacing: -0.02em;
+    }
+
+    .hero-subtitle .letter {
+        display: inline-block;
+    }
+
+    .scroll-indicator {
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
+        animation: bounce 2s infinite;
+        opacity: 0.8;
+        transition: opacity 0.3s;
+    }
+
+    .scroll-indicator:hover {
+        opacity: 1;
+    }
+
+    .scroll-indicator i {
+        color: white;
+        font-size: 2rem;
+    }
+
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+        40% { transform: translateX(-50%) translateY(-15px); }
+        60% { transform: translateX(-50%) translateY(-7px); }
+    }
+
+    /* Content Section */
+    .content-section {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 6rem 2rem 8rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 4rem;
+        color: var(--text-dark);
+    }
+
+    /* Post Grid */
+    .posts-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+        margin-bottom: 5rem;
+    }
+
+    .post-card {
+        background: var(--bg-white);
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: var(--shadow-md);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        opacity: 0;
+        transform: translateY(30px);
+        position: relative;
+        min-height: 280px;
+    }
+
+    .post-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, var(--primary), var(--accent));
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.4s ease;
+    }
+
+    .post-card:hover::before {
+        transform: scaleX(1);
+    }
+
+    .post-card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-xl);
+    }
+
+    .post-card-link {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        padding: 2.5rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .post-title {
+        font-size: 1.625rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: var(--text-dark);
+        line-height: 1.4;
+        transition: color 0.3s ease;
+    }
+
+    .post-card:hover .post-title {
+        color: var(--primary);
+    }
+
+    .post-subtitle {
+        font-size: 1.0625rem;
+        color: var(--text-light);
+        margin-bottom: 2rem;
+        line-height: 1.7;
+        flex-grow: 1;
+    }
+
+    .post-meta {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        font-size: 0.9375rem;
+        color: var(--text-light);
+        padding-top: 1.5rem;
+        margin-top: auto;
+        border-top: 1px solid #e2e8f0;
+    }
+
+    .post-meta i {
+        color: var(--primary);
+    }
+
+    /* Pagination */
+    .pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+        margin-top: 5rem;
+    }
+
+    .pagination a {
+        text-decoration: none;
+    }
+
+    .pagination-btn {
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .pagination-btn:not(:disabled) {
+        background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+        color: white;
+        box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+    }
+
+    .pagination-btn:not(:disabled):hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(33, 150, 243, 0.4);
+    }
+
+    .pagination-btn:disabled {
+        background: #e2e8f0;
+        color: #94a3b8;
+        cursor: not-allowed;
+    }
+
+    .pagination-info {
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: var(--primary);
+        padding: 0.75rem 2rem;
+        background: white;
+        border-radius: 50px;
+        box-shadow: var(--shadow-sm);
+        border: 2px solid var(--primary-light);
+    }
+
+    /* Footer */
+    .footer {
+        background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #1d4ed8 100%);
+        color: white;
+        padding: 4rem 2rem 2.5rem;
+        text-align: center;
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .social-link {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.15);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-decoration: none;
+        font-size: 1.375rem;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+    }
+
+    .social-link:hover {
+        background: rgba(255, 255, 255, 0.25);
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .copy-left {
+        display: inline-block;
+        transform: scaleX(-1);
+    }
+
+    .footer-text {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.9rem;
+        line-height: 1.8;
+    }
+
+    .footer-text a {
+        color: #93c5fd;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .footer-text a:hover {
+        color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .nav-links {
+            display: none;
+        }
+
+        .mobile-menu-btn {
+            display: block;
+        }
+
+        .hero-subtitle {
+            font-size: 1.75rem;
+        }
+
+        .posts-grid {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+        }
+
+        .pagination {
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .content-section {
+            padding: 4rem 1.5rem 6rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .navbar {
+            padding: 1rem;
+        }
+
+        .content-section {
+            padding: 3rem 1rem 5rem;
+        }
+
+        .post-card-link {
+            padding: 2rem;
+        }
+
+        .post-title {
+            font-size: 1.375rem;
+        }
+
+        .posts-grid {
+            gap: 1.5rem;
+        }
+    }
+</style>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="{{ site.baseurl }}" class="navbar-brand">MewX</a>
+        <ul class="nav-links">
+            <li><a href="{{ site.baseurl }}timeline/" class="nav-link">Timeline</a></li>
+            <li><a href="{{ site.baseurl }}projects/" class="nav-link">Projects</a></li>
+            <li><a href="{{ site.baseurl }}archive/" class="nav-link">Archive</a></li>
+            <li><a href="{{ site.baseurl }}friends/" class="nav-link">Friends</a></li>
+            <li><a href="{{ site.baseurl }}about/" class="nav-link">About</a></li>
+        </ul>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="logo-container">
+                <svg viewBox="0 0 481 142">
+                    <g class="lines">
+                        <path id="svg-m" fill="none" stroke="#EA5252" stroke-width="2" stroke-miterlimit="10" d="M13.405,16.514h23.021l47.853,96.066
+                l48.033-96.066h26.101v2.537c-16.856,1.631-18.489,3.444-17.764,21.57l1.27,64.346c0.543,18.67,1.269,21.027,18.307,22.476v2.539
+                h-44.409v-2.539c15.95-1.269,16.495-3.625,16.313-22.476l-0.725-76.129h-0.724l-49.123,99.149h-1.63L35.337,35.002h-0.363
+                l-2.356,48.939c-0.543,8.52-0.726,14.683-0.726,19.577c0,17.401,1.813,22.294,18.669,23.925v2.539H6.879v-2.539
+                c11.238-0.906,15.044-3.987,16.495-11.238c1.269-5.438,2.719-16.313,3.988-34.982L29.9,48.052c0.18-4.894,0.363-8.882,0.363-12.144
+                c0-12.87-3.082-15.227-16.858-16.858V16.514z"></path>
+                        <path id="svg-e" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M234.525,116.205
+                c-10.695,12.326-23.02,15.77-27.188,15.77c-21.39,0-34.621-17.038-34.621-36.252c0-26.645,21.752-43.139,36.433-43.139
+                c15.589,0,26.827,12.688,26.827,25.557c0,3.625-0.183,4.169-3.081,4.712c-2.901,0.545-26.102,2.538-51.115,3.263
+                c-0.182,27.551,16.313,37.339,28.819,37.339c6.163,0,12.688-1.269,21.934-9.97L234.525,116.205z M182.867,80.317
+                c4.168,0,29.726-0.362,37.521-0.544c4.53,0,4.53-1.813,4.53-2.9c0-10.151-7.611-19.214-20.663-19.214
+                C195.191,57.659,185.586,65.635,182.867,80.317z"></path>
+                        <path id="svg-w" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M323.696,131.975
+                c-7.25-21.389-15.226-40.24-22.656-60.54c-7.613,19.938-15.408,39.514-23.021,60.54h-3.444
+                c-6.344-20.663-13.051-41.69-20.301-60.54c-3.988-10.695-4.713-13.051-14.138-14.32v-2.538h32.444v2.538
+                c-7.613,1.631-10.331,2.537-10.331,6.344c0,4.712,10.514,36.252,17.038,52.565h0.362c6.525-17.764,14.501-38.427,23.02-60.542
+                h2.537c6.889,18.852,14.139,39.333,22.839,60.542h0.363c5.257-15.951,10.513-30.089,14.863-46.947
+                c0.726-2.537,1.088-4.531,1.088-5.981c0-4.169-3.444-4.35-12.145-5.981v-2.538h31.72v2.538
+                c-8.882,1.449-10.149,4.168-14.138,13.232c-4.531,10.513-14.138,38.789-22.839,61.627H323.696z"></path>
+                        <path id="svg-x" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M363.743,16.514h40.24v2.537
+                c-9.063,0.906-12.508,1.813-12.508,4.35c0,1.27,0.906,3.081,2.537,5.438c6.346,10.332,14.865,21.752,23.746,33.896
+                c10.695-15.045,22.657-32.264,22.657-37.701c0-3.444-3.625-4.895-12.506-5.982v-2.537h41.325v2.537
+                c-13.956,1.631-16.856,5.257-25.193,15.408c-2.538,3.262-8.52,11.057-23.927,32.263c11.057,15.77,22.839,32.265,30.632,42.959
+                c8.158,11.601,13.231,16.676,26.104,17.944v2.356h-41.873v-2.356c7.251-0.906,11.238-2.176,11.238-5.438
+                c0-1.269-0.544-2.539-1.449-4.351c-5.075-7.976-18.851-27.37-29.364-41.508c-11.057,16.495-18.669,29.546-25.194,40.602
+                c-1.088,2.176-1.813,3.807-1.813,5.075c0,3.264,3.444,4.714,11.963,5.438v2.539h-40.24v-2.539
+                c10.694-1.269,15.408-4.893,20.846-10.875c1.812-1.449,9.788-12.325,31.72-44.408c-10.332-15.225-20.302-29.907-24.65-35.345
+                c-9.063-13.05-10.333-16.132-24.29-17.763V16.514z"></path>
+                    </g>
+                </svg>
+            </div>
+            <h1 class="hero-subtitle" id="heroSubtitle">{{ page.title }}</h1>
+        </div>
+        <div class="scroll-indicator" id="scrollIndicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        {{ content }}
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="social-links">
+            <a href="https://github.com/MewX" target="_blank" class="social-link" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://stackoverflow.com/users/4206925/mewx" target="_blank" class="social-link" title="Stack Overflow">
+                <i class="fab fa-stack-overflow"></i>
+            </a>
+            <a href="https://www.facebook.com/YuanzhongXia" target="_blank" class="social-link" title="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com/YuanzhongXia" target="_blank" class="social-link" title="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.weibo.com/imewx" target="_blank" class="social-link" title="Sina Weibo">
+                <i class="fab fa-weibo"></i>
+            </a>
+        </div>
+        <p class="footer-text">
+            Copyleft <span class="copy-left">©</span> MewX (2014-2026) - Proudly powered by
+            <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> and
+            <a href="http://animejs.com/" target="_blank">anime.js</a>
+        </p>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7WDGSLHY89"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-7WDGSLHY89');
+        </script>
+    </footer>
+
+    <script src="{{ site.cdn }}js/v4.js"></script>
+</body>
+</html>

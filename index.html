@@ -1,60 +1,53 @@
 ---
-layout: main-v3
+layout: main-v4
 title: "- who is exploring new worlds!"
 ---
+
+<div class="posts-grid">
 {% for post in paginator.posts %}
-<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--6-col-desktop mdl-cell--3-offset-desktop mdl-cell--4-col-phone mdl-cell--0-offset-phone mdl-cell--6-col-tablet mdl-cell--1-offset-tablet" style="min-height: 152px;">
-    <a href="{{ post.url }}" style="text-decoration: none; margin: 32px; color: black">
-        <div>
-            <h2>{{ post.title }}</h2>
-        </div>
-        <h4 style="color: rgb(33, 150, 243);">{{ post.subtitle }}</h4>
-        <hr>
-        <p>Posted by {{ post.author }} on {{ post.date | date: "%b %d, %Y" }}</p>
-    </a>
-</div>
+    <article class="post-card">
+        <a href="{{ post.url }}" class="post-card-link">
+            <h2 class="post-title">{{ post.title }}</h2>
+            <p class="post-subtitle">{{ post.subtitle }}</p>
+            <div class="post-meta">
+                <span><i class="far fa-user"></i> {{ post.author }}</span>
+                <span><i class="far fa-calendar"></i> {{ post.date | date: "%b %d, %Y" }}</span>
+            </div>
+        </a>
+    </article>
 {% endfor %}
+</div>
 
-
-{% if paginator.previous_page %}
-<div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--1-col-phone mdl-cell--2-col-tablet mdl-typography--text-right">
+<nav class="pagination">
+    {% if paginator.previous_page %}
     <a href="{{ paginator.previous_page_path }}">
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
-            <i class="material-icons mdl-cell--hide-tablet">arrow_back</i>
-            <span class="mdl-cell--hide-phone"> Newer Posts</span>
+        <button class="pagination-btn btn-prev">
+            <i class="fas fa-arrow-left"></i>
+            <span>Newer Posts</span>
         </button>
     </a>
-</div>
-{% else %}
-<div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--1-col-phone mdl-cell--2-col-tablet mdl-typography--text-right">
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" disabled>
-        <i class="material-icons mdl-cell--hide-tablet">arrow_back</i>
-        <span class="mdl-cell--hide-phone"> Newer Posts</span>
+    {% else %}
+    <button class="pagination-btn" disabled>
+        <i class="fas fa-arrow-left"></i>
+        <span>Newer Posts</span>
     </button>
-</div>
-{% endif %}
+    {% endif %}
 
-<!-- TODO: change text style -->
-<div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--2-col-phone mdl-cell--4-col-tablet mdl-cell--middle mdl-typography--text-center">
-    <div>
+    <div class="pagination-info">
         {{ paginator.page }} / {{ paginator.total_pages }}
     </div>
-</div>
 
-{% if paginator.next_page %}
-<div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--1-col-phone mdl-cell--2-col-tablet mdl-typography--text-left">
+    {% if paginator.next_page %}
     <a href="{{ paginator.next_page_path }}">
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
-            <span class="mdl-cell--hide-phone">Older Posts </span>
-            <i class="material-icons mdl-cell--hide-tablet">arrow_forward</i>
+        <button class="pagination-btn btn-next">
+            <span>Older Posts</span>
+            <i class="fas fa-arrow-right"></i>
         </button>
     </a>
-</div>
-{% else %}
-<div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--1-col-phone mdl-cell--2-col-tablet mdl-typography--text-left">
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" disabled>
-        <span class="mdl-cell--hide-phone">Older Posts </span>
-        <i class="material-icons mdl-cell--hide-tablet">arrow_forward</i>
+    {% else %}
+    <button class="pagination-btn" disabled>
+        <span>Older Posts</span>
+        <i class="fas fa-arrow-right"></i>
     </button>
-</div>
-{% endif %}
+    {% endif %}
+</nav>
