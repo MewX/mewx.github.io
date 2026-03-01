@@ -50,8 +50,8 @@ const lineDrawing = anime({
     targets: '.lines path',
     strokeDashoffset: [anime.setDashoffset, 0],
     easing: 'easeInOutSine',
-    duration: 1500,
-    delay: (el, i) => i * 250,
+    duration: 1000,
+    delay: (el, i) => i * 150,
     direction: 'alternate',
     loop: false,
     complete: () => {
@@ -59,9 +59,9 @@ const lineDrawing = anime({
         anime({
             targets: ['#svg-m', '#svg-e', '#svg-w', '#svg-x'],
             fill: ['rgba(255,255,255,0)', '#FFFFFF'],
-            duration: 800,
+            duration: 500,
             easing: 'easeInOutQuad',
-            delay: (el, i) => i * 100
+            delay: (el, i) => i * 60
         });
     }
 });
