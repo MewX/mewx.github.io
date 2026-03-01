@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-v4
 title: "Cracking the worst ebook platform - ConTenDo.jp"
 subtitle: "I purchased a book, but I can't use other apps to read it! So I hacked the reader app - ConTenDo Viewer."
 date: 2021-03-31 01:56

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-v4
 title: "Havests from ICPC"
 subtitle: "First time participating in ACM/ICPC, gaining lots of thoughts."
 date: 2016-10-08 22:50

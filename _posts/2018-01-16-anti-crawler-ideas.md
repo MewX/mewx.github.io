@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-v4
 title: "Thoughts on anti-crawler framework"
 subtitle: "Working on a website and wanting to protect its data."
 date: 2018-01-16 20:34

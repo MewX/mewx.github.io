@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-v4
 title: "网站搭建小记：ECS+LNMP+SSL"
 subtitle: "初次接触SSL，果然好好地把我调教了一番"
 date: 2015-10-02 22:26

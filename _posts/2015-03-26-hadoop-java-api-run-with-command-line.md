@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-v4
 title: "命令行编译运行Hadoop接口的Java的程序"
 subtitle: "才不要什么臃肿的Eclipse或者IDEA呢！"
 date: 2015-03-26 23:56

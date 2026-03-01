@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-v4
 title: "Build a test suite for TopCoder"
 subtitle: "Arena performs really awful, and I prefer to practise on my own"
 date: 2016-08-15 23:11

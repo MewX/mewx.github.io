@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-v4
 title: "ICANN申诉域名转出（从中国互联163ns）"
 subtitle: "记录从国内无良域名商转出域名的各种麻烦，申诉ICANN以及不得不提交个人身份信息，最终艰难转到了超实惠域名商NameSilo的辛酸历程（误）！"
 date: 2015-10-03 11:03

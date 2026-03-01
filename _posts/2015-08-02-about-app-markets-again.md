@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-v4
 title: "关于国内应用市场的吐槽（续）"
 subtitle: "发个app真的好难啊！！！"
 date: 2015-08-03 00:22

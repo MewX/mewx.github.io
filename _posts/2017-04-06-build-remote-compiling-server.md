@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-v4
 title: "Build Remote Compiling Server"
 subtitle: "Don't want to install 2GB LaTeX compiler, so I used shell, ssh, scp to make a remote compiling server"
 date: 2017-04-06 21:37

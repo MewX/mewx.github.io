@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-v4
 title: "Sentris袖珍VPS配置手记（3年75RMB）"
 subtitle: "配置很low，但价格良心：1G硬盘；1核CPU；128M内存；每月250GB流量！"
 date: 2016-03-18 18:36

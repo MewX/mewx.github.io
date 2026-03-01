@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-v4
 title: "Python脚本监视网站是否发布了新帖"
 subtitle: "检测某个页面是否有新帖，并发出嗡鸣提示"
 date: 2015-03-07 17:00

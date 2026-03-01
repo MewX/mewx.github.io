@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MewX's Blog | {{ page.title }} - {{ page.subtitle }}">
+    <meta name="author" content="MewX">
+    {% include webmastermeta.html %}
+
+    <title>MewX's Blog | {{ page.title }}</title>
+
+    <!-- Modern Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:wght@300;400;700;900&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Framework CSS -->
+    <link rel="stylesheet" href="{{ site.cdn }}css/framework-v4.css">
+
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7333757578973883" crossorigin="anonymous"></script>
+</head>
+<body>
+<style>
+    /* Post-specific navbar styles with purple theme */
+    .navbar {
+        padding: 1.5rem 2rem;
+        background: transparent;
+        backdrop-filter: none;
+        box-shadow: none;
+    }
+
+    .navbar.scrolled {
+        padding: 1rem 2rem;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: var(--shadow-sm);
+    }
+
+    .navbar-brand {
+        color: white;
+    }
+
+    .navbar.scrolled .navbar-brand {
+        color: #9c27b0;
+    }
+
+    .nav-link {
+        color: white;
+    }
+
+    .nav-link::after {
+        background: white;
+    }
+
+    .nav-link:hover {
+        color: white;
+    }
+
+    .navbar.scrolled .nav-link {
+        color: var(--text-dark);
+    }
+
+    .navbar.scrolled .nav-link::after {
+        background: #9c27b0;
+    }
+
+    .navbar.scrolled .nav-link:hover {
+        color: #9c27b0;
+    }
+
+    .mobile-menu-btn {
+        color: white;
+    }
+
+    .navbar.scrolled .mobile-menu-btn {
+        color: var(--text-dark);
+    }
+
+    /* Post-specific styles with purple theme */
+    .post-header {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #9c27b0 0%, #7b1fa2 50%, #6a1b9a 100%);
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-start;
+        padding-top: 15vh;
+    }
+
+    .post-header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('{{ site.cdn }}imgs/site/post-title-v3.jpg') center/cover fixed;
+        opacity: 0.2;
+        z-index: 0;
+    }
+
+    .post-header-content {
+        position: relative;
+        z-index: 1;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem;
+        text-align: center;
+        color: white;
+        width: 100%;
+    }
+
+    .post-title {
+        font-family: 'Merriweather', serif;
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+    }
+
+    .post-subtitle {
+        font-family: 'Lora', serif;
+        font-size: 1.5rem;
+        font-weight: 300;
+        margin-bottom: 2rem;
+        opacity: 0.95;
+        font-style: italic;
+    }
+
+    .post-meta {
+        font-family: 'Inter', sans-serif;
+        font-size: 1rem;
+        opacity: 0.9;
+    }
+
+    .post-meta i {
+        margin-right: 0.5rem;
+    }
+
+    /* Content Section */
+    .post-content-section {
+        max-width: 1000px;
+        margin: -50vh auto 0;
+        padding: 0 2rem 6rem;
+        position: relative;
+        z-index: 10;
+    }
+
+    .post-content {
+        background: white;
+        border-radius: 20px;
+        padding: 4rem 3rem;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        line-height: 1.8;
+    }
+
+    /* Post content typography */
+    .post-content h2 {
+        font-family: 'Merriweather', serif;
+        font-size: 2rem;
+        color: var(--text-dark);
+        margin-top: 3rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 3px solid #9c27b0;
+    }
+
+    .post-content h3 {
+        font-family: 'Merriweather', serif;
+        font-size: 1.5rem;
+        color: var(--text-dark);
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .post-content p {
+        margin-bottom: 1.5rem;
+        color: var(--text-dark);
+    }
+
+    .post-content a {
+        color: #9c27b0;
+        text-decoration: none;
+        border-bottom: 1px solid #9c27b0;
+        transition: all 0.3s ease;
+    }
+
+    .post-content a:hover {
+        color: #6a1b9a;
+        border-bottom-color: #6a1b9a;
+    }
+
+    .post-content img,
+    .post-content video {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin: 2rem 0;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .post-content blockquote {
+        border-left: 4px solid #9c27b0;
+        padding-left: 1.5rem;
+        margin: 2rem 0;
+        color: var(--text-light);
+        font-style: italic;
+    }
+
+    .post-content code {
+        background: var(--bg-light);
+        padding: 0.2rem 0.5rem;
+        border-radius: 4px;
+        font-family: 'JetBrains Mono', 'Courier New', monospace;
+        font-size: 0.9em;
+    }
+
+    .post-content pre {
+        background: var(--bg-light);
+        padding: 1.5rem;
+        border-radius: 10px;
+        overflow-x: auto;
+        margin: 2rem 0;
+    }
+
+    .post-content pre code {
+        background: none;
+        padding: 0;
+    }
+
+    .post-content ul,
+    .post-content ol {
+        margin-bottom: 1.5rem;
+        padding-left: 2rem;
+    }
+
+    .post-content li {
+        margin-bottom: 0.5rem;
+    }
+
+    .post-content hr {
+        border: none;
+        border-top: 2px solid #e2e8f0;
+        margin: 3rem 0;
+    }
+
+    .post-content center {
+        margin: 2rem 0;
+    }
+
+    /* Comments section */
+    .comments-section {
+        margin-top: 4rem;
+        padding-top: 3rem;
+        border-top: 2px solid #e2e8f0;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .post-header {
+            padding-top: 20vh;
+        }
+
+        .post-header-content {
+            padding: 2rem 1.5rem;
+        }
+
+        .post-title {
+            font-size: 2rem;
+        }
+
+        .post-subtitle {
+            font-size: 1.25rem;
+        }
+
+        .post-content-section {
+            margin-top: -45vh;
+            padding: 0 1.5rem 5rem;
+        }
+
+        .post-content {
+            padding: 3rem 2rem;
+        }
+
+        .post-content h2 {
+            font-size: 1.75rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .post-header {
+            padding-top: 18vh;
+        }
+
+        .post-header-content {
+            padding: 2rem 1rem;
+        }
+
+        .post-title {
+            font-size: 1.75rem;
+        }
+
+        .post-subtitle {
+            font-size: 1.125rem;
+        }
+
+        .post-content-section {
+            margin-top: -40vh;
+            padding: 0 1rem 4rem;
+        }
+
+        .post-content {
+            padding: 2rem 1.5rem;
+            border-radius: 15px;
+        }
+    }
+</style>
+
+<body>
+    {% include navigation-v4.html %}
+
+    <!-- Post Header -->
+    <header class="post-header">
+        <div class="post-header-content">
+            <h1 class="post-title">{{ page.title }}</h1>
+            {% if page.subtitle %}
+            <h2 class="post-subtitle">{{ page.subtitle }}</h2>
+            {% endif %}
+            <div class="post-meta">
+                <i class="fas fa-user"></i> {{ page.author }}
+                <span style="margin: 0 1rem;">•</span>
+                <i class="fas fa-calendar"></i> {{ page.date | date: "%b %d, %Y" }}
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Content Section -->
+    <section class="post-content-section">
+        <article class="post-content">
+            {{ content }}
+
+            <div class="comments-section">
+                <!-- Disqus Board -->
+                <div id="disqus_thread"></div>
+                <script type="text/javascript">
+                    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                    var disqus_shortname = 'mewx'; // required: replace example with your forum shortname
+
+                    /* * * DON'T EDIT BELOW THIS LINE * * */
+                    (function() {
+                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                    })();
+
+                    // Remove the annoying disqus Ads.
+                    // Copied from https://stackoverflow.com/a/78583202/4206925
+                    document.addEventListener("DOMContentLoaded", function() {
+                      const disqus = document.getElementById('disqus_thread');
+
+                      const observer = new MutationObserver(function(mutations) {
+                        mutations.forEach(function(mutation) {
+                          const iframes = disqus.getElementsByTagName('iframe');
+                          if (iframes.length > 1) {
+                            const commentsIframe = iframes[1];
+                            while (disqus.firstChild) {
+                              disqus.removeChild(disqus.firstChild);
+                            }
+                            disqus.appendChild(commentsIframe);
+                            observer.disconnect();
+                          }
+                        });
+                      });
+                      observer.observe(disqus, { childList: true, subtree: true });
+                    });
+                </script>
+                <noscript>Please enable JavaScript to view <a href="https://disqus.com/?ref_noscript">MewX comments powered by Disqus.</a></noscript>
+            </div>
+        </article>
+    </section>
+
+    {% include footer-v4.html %}
+
+    <!-- Main JavaScript (includes mobile menu and navbar scroll) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="{{ site.cdn }}js/v4.js"></script>
+
+    <!-- Live Photos support -->
+    <script src="{{ site.cdn }}js/laphs.min.js"></script>
+    <script type="text/javascript">LivePhotos.initialize();</script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-v4
 title: "利用Stylish插件定制自己的搜索页面"
 subtitle: "萌萌哒搜索引擎还让人怎么好好搜索！"
 date: 2014-12-11 16:17

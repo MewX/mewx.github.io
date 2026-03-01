@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-v4
 title: "Hello, World!"
 subtitle: "Just a general 'hello world' post!"
 date: 2014-07-28 10:00

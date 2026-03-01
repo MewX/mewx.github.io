@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-v4
 title: "用Win32 API写的EAN-13条形码生成器"
 subtitle: "用WM_PAINT搭配TextOut和drawLine写的EAN-13国际商品条码计算器"
 date: 2014-11-25 19:30

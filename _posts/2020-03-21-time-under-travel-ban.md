@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-v4
 title: "Hardest time for Chinese citizens"
 subtitle: "How I got back to Australia from China under the most strict travel ban ever."
 date: 2020-03-30 01:26

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-v4
 title: "Xposed in practice"
 subtitle: "Hijacking the Android keystore password, thereby building Transocks PC client."
 date: 2018-07-18 07:04

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-v4
 title: "Building My Offline Downloading Server"
 subtitle: "Uni's accademy VPS doesn't provide root access, but I can bypass it :P"
 date: 2016-12-26 23:39

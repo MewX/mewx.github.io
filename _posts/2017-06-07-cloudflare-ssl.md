@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-v4
 title: "CloudFlare free plan supports lovely HTTPS now"
 subtitle: "There must be something like Let'sEncrypt evolved in this welfare"
 date: 2017-06-07 15:16
