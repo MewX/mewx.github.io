@@ -35,6 +35,11 @@
         background: url('{{ site.cdn }}imgs/site/home-title-v3.jpg') center/cover fixed;
         overflow: hidden;
         z-index: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 15vh 2rem 2rem;
     }
 
     .page-header::before {
@@ -44,38 +49,90 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: linear-gradient(to bottom, transparent 0%, rgba(33, 150, 243, 0.0) 50%, rgba(25, 118, 210, 0.6) 100%);
+        background: linear-gradient(to bottom, transparent 0%, rgba(33, 150, 243, 0.3) 50%, rgba(25, 118, 210, 0.6) 100%);
         z-index: 0;
     }
 
     .page-header-content {
         position: relative;
         z-index: 1;
-        max-width: 1400px;
+        max-width: 1000px;
         margin: 0 auto;
         padding: 0 2rem;
         text-align: center;
+        color: white;
+    }
+
+    .page-header-content h1 {
+        font-family: 'Merriweather', serif;
+        font-size: 5rem;
+        font-weight: 900;
+        margin-bottom: 1.5rem;
+        color: white;
+        line-height: 1.2;
+    }
+
+    .page-header-content p {
+        font-family: 'Lora', serif;
+        font-size: 2.25rem;
+        font-weight: 600;
+        opacity: 0.95;
+        color: white;
     }
 
     /* Content Section */
     .content-section {
         max-width: 1400px;
         margin: 0 auto;
-        padding: 12rem 2rem 6rem;
+        padding: 3rem 2rem 6rem;
         position: relative;
         z-index: 10;
+        padding-top: 50vh;
     }
 
     /* Responsive */
     @media (max-width: 768px) {
+        .page-header {
+            padding: 2rem;
+            justify-content: center;
+        }
+
+        .page-header-content {
+            position: absolute;
+            top: 25vh;
+            transform: translateY(-50%);
+        }
+
+        .page-header-content h1 {
+            font-size: 3rem;
+        }
+
+        .page-header-content p {
+            font-size: 1.5rem;
+        }
+
         .content-section {
-            padding: 8rem 1.5rem 5rem;
+            padding: 2rem 1.5rem 5rem;
+            padding-top: 50vh;
         }
     }
 
     @media (max-width: 480px) {
+        .page-header {
+            padding: 1rem;
+        }
+
+        .page-header-content h1 {
+            font-size: 2.25rem;
+        }
+
+        .page-header-content p {
+            font-size: 1.25rem;
+        }
+
         .content-section {
-            padding: 7rem 1rem 4rem;
+            padding: 2rem 1rem 4rem;
+            padding-top: 50vh;
         }
     }
 </style>
@@ -86,7 +143,10 @@
     <!-- Page Header -->
     <header class="page-header">
         <div class="page-header-content">
-            <!-- Empty header for background only -->
+            <h1>{{ page.title }}</h1>
+            {% if page.description %}
+            <p>{{ page.description }}</p>
+            {% endif %}
         </div>
     </header>
 
