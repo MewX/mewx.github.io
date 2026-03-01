@@ -90,7 +90,7 @@ if (subtitleElement) {
             translateZ: 0,
             easing: 'easeOutExpo',
             duration: 1200,
-            delay: (el, i) => 50 * i,
+            delay: (el, i) => 25 * i,
             offset: '-=800'
         });
 }
