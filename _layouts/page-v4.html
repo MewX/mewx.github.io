@@ -82,34 +82,7 @@
 </style>
 
 <body>
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
-
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <ul class="mobile-nav-links">
-            <li><a href="{{ site.baseurl }}timeline/" class="mobile-nav-link">Timeline</a></li>
-            <li><a href="{{ site.baseurl }}projects/" class="mobile-nav-link">Projects</a></li>
-            <li><a href="{{ site.baseurl }}archive/" class="mobile-nav-link">Archive</a></li>
-            <li><a href="{{ site.baseurl }}friends/" class="mobile-nav-link">Friends</a></li>
-            <li><a href="{{ site.baseurl }}about/" class="mobile-nav-link">About</a></li>
-        </ul>
-    </div>
-
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <a href="{{ site.baseurl }}" class="navbar-brand">MewX</a>
-        <ul class="nav-links">
-            <li><a href="{{ site.baseurl }}timeline/" class="nav-link">Timeline</a></li>
-            <li><a href="{{ site.baseurl }}projects/" class="nav-link">Projects</a></li>
-            <li><a href="{{ site.baseurl }}archive/" class="nav-link">Archive</a></li>
-            <li><a href="{{ site.baseurl }}friends/" class="nav-link">Friends</a></li>
-            <li><a href="{{ site.baseurl }}about/" class="nav-link">About</a></li>
-        </ul>
-        <button class="mobile-menu-btn" id="mobileMenuBtn">
-            <i class="fas fa-bars"></i>
-        </button>
-    </nav>
+    {% include navigation-v4.html %}
 
     <!-- Page Header -->
     <header class="page-header">
@@ -124,35 +97,5 @@
     </section>
 
     {% include footer-v4.html %}
-
-    <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
-
-        if (mobileMenuBtn && mobileMenu && mobileMenuOverlay) {
-            mobileMenuBtn.addEventListener('click', () => {
-                mobileMenu.classList.add('active');
-                mobileMenuOverlay.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            });
-
-            mobileMenuOverlay.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                mobileMenuOverlay.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-
-            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-            mobileNavLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.remove('active');
-                    mobileMenuOverlay.classList.remove('active');
-                    document.body.style.overflow = '';
-                });
-            });
-        }
-    </script>
 </body>
 </html>
