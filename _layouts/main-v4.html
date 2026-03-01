@@ -86,7 +86,7 @@
     /* Hero Section */
     .hero {
         min-height: 100vh;
-        background: linear-gradient(135deg, #42a5f5 0%, #2196F3 50%, #1976D2 100%);
+        background: url('{{ site.cdn }}imgs/site/home-title-v3.jpg') center/cover fixed;
         position: relative;
         overflow: hidden;
         display: flex;
@@ -94,18 +94,6 @@
         justify-content: center;
         align-items: center;
         padding: 2rem;
-    }
-
-    .hero::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: url('{{ site.cdn }}imgs/site/home-title-v3.jpg') center/cover fixed;
-        opacity: 0.15;
-        z-index: 0;
     }
 
     .hero-content {

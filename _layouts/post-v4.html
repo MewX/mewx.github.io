@@ -83,24 +83,12 @@
     /* Post-specific styles with purple theme */
     .post-header {
         min-height: 100vh;
-        background: linear-gradient(135deg, #9c27b0 0%, #7b1fa2 50%, #6a1b9a 100%);
+        background: url('{{ site.cdn }}imgs/site/post-title-v3.jpg') center/cover fixed;
         position: relative;
         overflow: hidden;
         display: flex;
         align-items: flex-start;
         padding-top: 15vh;
-    }
-
-    .post-header::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: url('{{ site.cdn }}imgs/site/post-title-v3.jpg') center/cover fixed;
-        opacity: 0.2;
-        z-index: 0;
     }
 
     .post-header-content {
@@ -178,6 +166,7 @@
     }
 
     .post-content p {
+        margin-top: 0;
         margin-bottom: 1.5rem;
         color: var(--text-dark);
     }
