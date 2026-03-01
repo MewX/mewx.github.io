@@ -1,11 +1,219 @@
 ---
-layout: main-v3
+layout: page-v4
 title: "About MewX"
 ---
 
-<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--6-col-desktop mdl-cell--3-offset-desktop mdl-cell--4-col-phone mdl-cell--0-offset-phone mdl-cell--6-col-tablet mdl-cell--1-offset-tablet">
-    <div style="margin: 32px">
-        <p>This is MewX.</p>
-        <p>More info will be open in the future.</p>
+<style>
+    .about-container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .about-card {
+        background: white;
+        border-radius: 20px;
+        padding: 3rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        margin-bottom: 2rem;
+    }
+
+    .about-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .about-header h1 {
+        font-family: 'Merriweather', serif;
+        font-size: 2.5rem;
+        color: var(--text-dark);
+        margin-bottom: 1rem;
+    }
+
+    .about-header p {
+        font-size: 1.25rem;
+        color: var(--text-light);
+        font-style: italic;
+    }
+
+    .about-section {
+        margin-bottom: 2.5rem;
+    }
+
+    .about-section h2 {
+        font-family: 'Merriweather', serif;
+        font-size: 1.75rem;
+        color: var(--primary);
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid var(--primary-light);
+    }
+
+    .about-section p {
+        line-height: 1.8;
+        color: var(--text-dark);
+        margin-bottom: 1rem;
+    }
+
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .skill-tag {
+        background: linear-gradient(135deg, var(--primary-light), var(--primary));
+        color: white;
+        padding: 0.75rem 1.25rem;
+        border-radius: 50px;
+        text-align: center;
+        font-weight: 500;
+        font-family: 'Inter', sans-serif;
+        box-shadow: 0 2px 4px rgba(33, 150, 243, 0.3);
+    }
+
+    .contact-links {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+    }
+
+    .contact-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        background: white;
+        border: 2px solid var(--primary);
+        color: var(--primary);
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 600;
+        font-family: 'Inter', sans-serif;
+        transition: all 0.3s ease;
+    }
+
+    .contact-link:hover {
+        background: var(--primary);
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
+    }
+
+    .timeline-item {
+        padding-left: 2rem;
+        border-left: 3px solid var(--primary-light);
+        margin-bottom: 2rem;
+        position: relative;
+    }
+
+    .timeline-item::before {
+        content: '';
+        position: absolute;
+        left: -8px;
+        top: 0;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background: var(--primary);
+    }
+
+    .timeline-item h3 {
+        font-family: 'Merriweather', serif;
+        color: var(--text-dark);
+        margin-bottom: 0.5rem;
+    }
+
+    .timeline-item .date {
+        color: var(--text-light);
+        font-size: 0.9rem;
+        font-family: 'Inter', sans-serif;
+        margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+        .about-card {
+            padding: 2rem;
+        }
+
+        .about-header h1 {
+            font-size: 2rem;
+        }
+
+        .skills-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<div class="about-container">
+    <div class="about-card">
+        <div class="about-header">
+            <h1>MewX</h1>
+            <p>Software Engineer & Open Source Enthusiast</p>
+        </div>
+
+        <div class="about-section">
+            <h2>About Me</h2>
+            <p>
+                Hi there! I'm MewX, a passionate software engineer with expertise in full-stack development, 
+                mobile applications, and system architecture. I love learning new technologies and sharing knowledge through 
+                open-source contributions.
+            </p>
+            <p>
+                Based in Australia, I've been actively developing software since 2010, with a focus on creating 
+                user-friendly applications and contributing to the developer community. My work spans across various domains 
+                including Android development, web technologies, and cross-platform solutions.
+            </p>
+        </div>
+
+        <div class="about-section">
+            <h2>Experience</h2>
+            <div class="timeline-item">
+                <h3>Software Engineer</h3>
+                <div class="date">Current Position</div>
+                <p>Working on full-stack development, system design, and cloud infrastructure.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Open Source Contributor</h3>
+                <div class="date">2010 - Present</div>
+                <p>Maintaining several open-source projects including the popular Wenku8 Android app with 2.5k+ stars on GitHub.</p>
+            </div>
+        </div>
+
+        <div class="about-section">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-tag">Java / Kotlin</div>
+                <div class="skill-tag">Android Development</div>
+                <div class="skill-tag">JavaScript / TypeScript</div>
+                <div class="skill-tag">Python</div>
+                <div class="skill-tag">C / C++</div>
+                <div class="skill-tag">Go</div>
+                <div class="skill-tag">Web Development</div>
+                <div class="skill-tag">Cloud Services</div>
+                <div class="skill-tag">System Design</div>
+            </div>
+        </div>
+
+        <div class="about-section">
+            <h2>Get in Touch</h2>
+            <div class="contact-links">
+                <a href="https://github.com/MewX" target="_blank" class="contact-link">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://stackoverflow.com/users/4206925/mewx" target="_blank" class="contact-link">
+                    <i class="fab fa-stack-overflow"></i> Stack Overflow
+                </a>
+                <a href="https://www.linkedin.com/in/yuanzhong-xia" target="_blank" class="contact-link">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="mailto:mewx@mewx.org" class="contact-link">
+                    <i class="fas fa-envelope"></i> Email
+                </a>
+            </div>
+        </div>
     </div>
 </div>
