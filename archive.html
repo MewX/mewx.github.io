@@ -3,174 +3,27 @@ layout: page-v4
 title: "Archive"
 ---
 
-<style>
-    .archive-container {
-        max-width: 1000px;
-        margin: 0 auto;
-        background: white;
-        border-radius: 20px;
-        padding: 4rem 3rem;
-        box-shadow: 0 10px 40px rgba(0,0,0,0.15);
-    }
-
-    .archive-header {
-        text-align: center;
-        margin-bottom: 4rem;
-    }
-
-    .archive-header h1 {
-        font-family: 'Merriweather', serif;
-        font-size: 2.5rem;
-        color: var(--text-dark);
-        margin-bottom: 1rem;
-    }
-
-    .archive-header p {
-        font-size: 1.125rem;
-        color: var(--text-light);
-        line-height: 1.8;
-    }
-
-    .category-section {
-        margin-bottom: 3rem;
-    }
-
-    .category-header {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        margin-bottom: 1.5rem;
-        padding-bottom: 1rem;
-        border-bottom: 3px solid var(--primary);
-    }
-
-    .category-title {
-        font-family: 'Merriweather', serif;
-        font-size: 1.75rem;
-        color: var(--primary);
-        margin: 0;
-    }
-
-    .category-count {
-        background: var(--primary);
-        color: white;
-        padding: 0.25rem 0.75rem;
-        border-radius: 50px;
-        font-size: 0.875rem;
-        font-weight: 600;
-        font-family: 'Inter', sans-serif;
-    }
-
-    .posts-list {
-        display: grid;
-        gap: 1rem;
-    }
-
-    .post-item {
-        padding: 1rem 1.5rem;
-        background: var(--bg-light);
-        border-radius: 10px;
-        transition: all 0.3s ease;
-        border-left: 3px solid transparent;
-    }
-
-    .post-item:hover {
-        background: white;
-        border-left-color: var(--primary);
-        transform: translateX(8px);
-        box-shadow: 0 2px 8px rgba(33, 150, 243, 0.15);
-    }
-
-    .post-link {
-        text-decoration: none;
-        color: inherit;
-        display: flex;
-        align-items: baseline;
-        gap: 1rem;
-        flex-wrap: wrap;
-    }
-
-    .post-date {
-        font-family: 'JetBrains Mono', 'Courier New', monospace;
-        font-size: 0.875rem;
-        color: var(--text-light);
-        min-width: 100px;
-        flex-shrink: 0;
-    }
-
-    .post-item-title {
-        font-family: 'Lora', serif;
-        font-size: 1.0625rem;
-        color: var(--text-dark);
-        margin: 0;
-        flex-grow: 1;
-        transition: color 0.3s ease;
-    }
-
-    .post-item:hover .post-item-title {
-        color: var(--primary);
-    }
-
-    @media (max-width: 768px) {
-        .archive-container {
-            padding: 3rem 2rem;
-        }
-
-        .archive-header h1 {
-            font-size: 2rem;
-        }
-
-        .category-title {
-            font-size: 1.5rem;
-        }
-
-        .post-link {
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .post-date {
-            min-width: auto;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .archive-container {
-            padding: 2rem 1.5rem;
-            border-radius: 15px;
-        }
-
-        .post-item {
-            padding: 1rem;
-        }
-
-        .post-item-title {
-            font-size: 1rem;
-        }
-    }
-</style>
-
-<div class="archive-container">
-    <div class="archive-header">
+<div class="page-container">
+    <div class="page-header-section">
         <h1>Blog Archive</h1>
         <p>All posts organized by category</p>
     </div>
 
     {% for category in site.categories %}
-    <div class="category-section">
-        <div class="category-header">
-            <h2 class="category-title">{{ category | first }}</h2>
-            <span class="category-count">{{ category | last | size }}</span>
+    <div class="content-section-block">
+        <div class="section-header">
+            <h2 class="section-title">{{ category | first }}</h2>
+            <span class="section-badge">{{ category | last | size }}</span>
         </div>
         
-        <div class="posts-list">
+        <div class="content-list">
             {% for posts in category %}
                 {% for post in posts %}
                     {% if post.url %}
-                    <div class="post-item">
-                        <a href="{{ post.url }}" class="post-link">
-                            <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
-                            <h3 class="post-item-title">{{ post.title }}</h3>
+                    <div class="list-item">
+                        <a href="{{ post.url }}" class="list-item-link">
+                            <span class="list-item-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
+                            <h3 class="list-item-title">{{ post.title }}</h3>
                         </a>
                     </div>
                     {% endif %}

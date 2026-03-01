@@ -4,37 +4,6 @@ title: "About MewX"
 ---
 
 <style>
-    .about-container {
-        max-width: 1000px;
-        margin: 0 auto;
-    }
-
-    .about-card {
-        background: white;
-        border-radius: 20px;
-        padding: 3rem;
-        box-shadow: 0 10px 40px rgba(0,0,0,0.15);
-        margin-bottom: 2rem;
-    }
-
-    .about-header {
-        text-align: center;
-        margin-bottom: 3rem;
-    }
-
-    .about-header h1 {
-        font-family: 'Merriweather', serif;
-        font-size: 2.5rem;
-        color: var(--text-dark);
-        margin-bottom: 1rem;
-    }
-
-    .about-header p {
-        font-size: 1.25rem;
-        color: var(--text-light);
-        font-style: italic;
-    }
-
     .about-section {
         margin-bottom: 2.5rem;
     }
@@ -56,7 +25,7 @@ title: "About MewX"
 
     .skills-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
         margin-top: 1.5rem;
     }
@@ -134,28 +103,25 @@ title: "About MewX"
     }
 
     @media (max-width: 768px) {
-        .about-card {
-            padding: 2rem;
+        .skills-grid {
+            grid-template-columns: repeat(2, 1fr);
         }
+    }
 
-        .about-header h1 {
-            font-size: 2rem;
-        }
-
+    @media (max-width: 480px) {
         .skills-grid {
             grid-template-columns: 1fr;
         }
     }
 </style>
 
-<div class="about-container">
-    <div class="about-card">
-        <div class="about-header">
-            <h1>MewX</h1>
-            <p>Software Engineer & Open Source Enthusiast</p>
-        </div>
+<div class="page-container">
+    <div class="page-header-section">
+        <h1>MewX</h1>
+        <p style="font-size: 1.25rem; font-style: italic;">Software Engineer & Open Source Enthusiast</p>
+    </div>
 
-        <div class="about-section">
+    <div class="about-section">
             <h2>About Me</h2>
             <p>
                 Hi there! I'm MewX, a passionate software engineer with expertise in full-stack development, 
@@ -215,5 +181,4 @@ title: "About MewX"
                 </a>
             </div>
         </div>
-    </div>
 </div>
