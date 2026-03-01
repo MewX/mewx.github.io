@@ -187,12 +187,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Mobile menu toggle (placeholder for future implementation)
+// Mobile menu toggle
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-if (mobileMenuBtn) {
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+
+if (mobileMenuBtn && mobileMenu && mobileMenuOverlay) {
+    // Open menu
     mobileMenuBtn.addEventListener('click', () => {
-        // TODO: Implement mobile menu
-        console.log('Mobile menu clicked');
+        mobileMenu.classList.add('active');
+        mobileMenuOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+    });
+
+    // Close menu when clicking overlay
+    mobileMenuOverlay.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        mobileMenuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+
+    // Close menu when clicking a link
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            mobileMenuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
     });
 }
 
