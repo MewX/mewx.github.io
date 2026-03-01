@@ -1,47 +1,53 @@
 ---
-layout: main
-title: "MewX's Timeline"
+layout: page-v4
+title: "Timeline"
 ---
 
-{% assign count = 0 %}
-{% for post in site.posts %}
-    {% if forloop.first %}
-        {% capture saved_month %}{{ post.date | date: "%Y-%m" }}{% endcapture %}
-        {% assign count = 1 %}
-<div class="post-preview">
-    {% else %}
+<div class="page-container">
+    <div class="page-header-section">
+        <h1>Blog Timeline</h1>
+        <p>All posts organized by month</p>
+    </div>
+
+    {% assign count = 0 %}
+    {% assign months = "" | split: "" %}
+    
+    {% for post in site.posts %}
         {% capture this_month %}{{ post.date | date: "%Y-%m" }}{% endcapture %}
-        {% if this_month == saved_month %}
-            {% assign count = count | plus: 1 %}
-        {% else %}
-    <h2 class="post-title" name="{{ saved_month }}">
-        {{ saved_month }} ( {{ count }} )
-    </h2>
-    <hr>
-            {% for post2 in site.posts %}
-                {% capture this_month2 %}{{ post2.date | date: "%Y-%m" }}{% endcapture %}
-                {% if this_month2 == saved_month %}
-    <a href="{{ post2.url }}"><h3 class="post-subtitle">{{ post2.date | date: "%Y-%m-%d" }} | {{ post2.title }}</h3></a><br>
+        {% unless months contains this_month %}
+            {% assign months = months | push: this_month %}
+        {% endunless %}
+    {% endfor %}
+
+    {% for month in months %}
+    <div class="content-section-block">
+        <div class="section-header">
+            <h2 class="section-title">{{ month }}</h2>
+            <span class="section-badge">
+                {% assign month_count = 0 %}
+                {% for post in site.posts %}
+                    {% capture post_month %}{{ post.date | date: "%Y-%m" }}{% endcapture %}
+                    {% if post_month == month %}
+                        {% assign month_count = month_count | plus: 1 %}
+                    {% endif %}
+                {% endfor %}
+                {{ month_count }}
+            </span>
+        </div>
+        
+        <div class="content-list">
+            {% for post in site.posts %}
+                {% capture post_month %}{{ post.date | date: "%Y-%m" }}{% endcapture %}
+                {% if post_month == month %}
+                <div class="list-item">
+                    <a href="{{ post.url }}" class="list-item-link">
+                        <span class="list-item-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
+                        <h3 class="list-item-title">{{ post.title }}</h3>
+                    </a>
+                </div>
                 {% endif %}
             {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
 </div>
-            {% assign count = 1 %}
-            {% capture saved_month %}{{ post.date | date: "%Y-%m" }}{% endcapture %}
-<div class="post-preview">
-        {% endif %}
-    {% endif %}
-
-    {% if forloop.last %}
-    <h2 class="post-title" name="{{ saved_month }}">
-        {{ saved_month }} ( {{ count }} )
-    </h2>
-    <hr>
-        {% for post2 in site.posts %}
-            {% capture this_month2 %}{{ post2.date | date: "%Y-%m" }}{% endcapture %}
-            {% if this_month2 == saved_month %}
-    <a href="{{ post2.url }}"><h3 class="post-subtitle">{{ post2.date | date: "%Y-%m-%d" }} | {{ post2.title }}</h3></a><br>
-            {% endif %}
-        {% endfor %}
-</div>
-    {% endif %}
-{% endfor %}
