@@ -1,7 +1,7 @@
 ---
 layout: post-v4
 title: "Website v4: AI-Powered Redesign with Kiro"
-subtitle: "How I rebuilt my entire website in a single day using Claude Sonnet 4.5 and Kiro IDE"
+subtitle: "How I rebuilt my entire website within two hours using Claude Sonnet 4.5 and Kiro IDE"
 date: 2026-03-01 23:30
 comments: true
 author: MewX
@@ -13,17 +13,17 @@ Today marks a significant milestone for this website - the launch of version 4! 
 
 ## Why Today?
 
-Three things aligned perfectly to make today the day to make this upgrade:
+Three things aligned perfectly to make today the day to start this upgrade:
 
 1. **Kiro's free 500 credits**: I wanted to try out Kiro's AI-powered development experience, and they offer 500 free credits to start
 2. **End of month**: Use it or lose it - those credits expire at the end of the month
 3. **Material Design Lite is dead**: The final push came when I discovered that Google's Material Design Lite (which powered v3) now returns 403 Forbidden errors. All official CDNs are down, and even [getmdl.io](https://web.archive.org/web/20260216004907/https://getmdl.io/) is completely gone. It was time to move on.
 
-The funny thing is, I had already planned this redesign years ago when working on v3. I even prepared the background images back then! But I was too lazy to hand-code everything. Now, with AI assistance, what would have taken weeks of manual work was done in a single day.
+The funny thing is, I had already planned this redesign years ago when working on v3. I even prepared the background images back then! But I was too lazy to hand-code everything. Now, with AI assistance, what would have taken weeks of manual work was done in two hours.
 
 ## The AI Development Experience
 
-I used [Kiro](https://kiro.dev/), an AI-powered IDE, with Claude Sonnet 4.5 to redesign and rebuild the entire website in just two hours. This wasn't about AI writing code while I watched - it was a true collaborative process where I provided design direction and feedback, and the AI handled the implementation details.
+I used [Kiro](https://kiro.dev/), an AI-powered IDE, with Claude Sonnet 4.5 to redesign and rebuild the entire website in just two hours. This wasn't about AI writing code while I watched - it was a true collaborative process where I provided design direction and feedback as a PM, and the AI handled the implementation details.
 
 The workflow was remarkably smooth:
 1. I'd describe what I wanted (e.g., "move the logo to the top half and let content start from the bottom half")
