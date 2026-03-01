@@ -443,39 +443,7 @@
         {{ content }}
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="social-links">
-            <a href="https://github.com/MewX" target="_blank" class="social-link" title="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://stackoverflow.com/users/4206925/mewx" target="_blank" class="social-link" title="Stack Overflow">
-                <i class="fab fa-stack-overflow"></i>
-            </a>
-            <a href="https://www.facebook.com/YuanzhongXia" target="_blank" class="social-link" title="Facebook">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://twitter.com/YuanzhongXia" target="_blank" class="social-link" title="Twitter">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://www.weibo.com/imewx" target="_blank" class="social-link" title="Sina Weibo">
-                <i class="fab fa-weibo"></i>
-            </a>
-        </div>
-        <p class="footer-text">
-            Copyleft <span class="copy-left">©</span> MewX (2014-2026) - Proudly powered by
-            <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> and
-            <a href="http://animejs.com/" target="_blank">anime.js</a>
-        </p>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7WDGSLHY89"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
-            gtag('config', 'G-7WDGSLHY89');
-        </script>
-    </footer>
+    {% include footer-v4.html %}
 
     <script src="{{ site.cdn }}js/v4.js"></script>
 </body>
