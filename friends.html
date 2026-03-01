@@ -1,14 +1,192 @@
 ---
-layout: main
-title: "MewX's Friends"
+layout: page-v4
+title: "Friends"
 ---
 
-<div class="post-preview"><a href="http://www.kiwee.me" target="_blank"><h2 class="post-subtitle">Absolute Zero</h2></a></div><hr>
-<div class="post-preview"><a href="http://www.cnblogs.com/alan-forever" target="_blank"><h2 class="post-subtitle">Alan-forever</h2></a></div><hr>
-<div class="post-preview"><a href="https://morz.org/" target="_blank"><h2 class="post-subtitle">冰酱</h2></a></div><hr>
-<div class="post-preview"><a href="http://www.desgard.com" target="_blank"><h2 class="post-subtitle">冬瓜</h2></a></div><hr>
-<div class="post-preview"><a href="http://geniuze.com" target="_blank"><h2 class="post-subtitle">geniuze</h2></a></div><hr>
-<div class="post-preview"><a href="http://phonzia.com" target="_blank"><h2 class="post-subtitle">Phonzia</h2></a></div><hr>
-<div class="post-preview"><a href="http://foursking.github.io" target="_blank"><h2 class="post-subtitle">Setsuna F.Seiei</h2></a></div><hr>
-<div class="post-preview"><a href="http://youngerfary.github.io" target="_blank"><h2 class="post-subtitle">YoungerFary</h2></a></div><hr>
-<div class="post-preview"><a href="http://www.zcmyworld.com" target="_blank"><h2 class="post-subtitle">志聪</h2></a></div><hr>
+<style>
+    .friends-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 20px;
+        padding: 4rem 3rem;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+    }
+
+    .friends-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .friends-header h1 {
+        font-family: 'Merriweather', serif;
+        font-size: 2.5rem;
+        color: var(--text-dark);
+        margin-bottom: 1rem;
+    }
+
+    .friends-header p {
+        font-size: 1.125rem;
+        color: var(--text-light);
+        line-height: 1.8;
+    }
+
+    .friends-list {
+        display: grid;
+        gap: 1.5rem;
+    }
+
+    .friend-card {
+        background: var(--bg-light);
+        border-radius: 15px;
+        padding: 1.5rem 2rem;
+        transition: all 0.3s ease;
+        border-left: 4px solid var(--primary);
+    }
+
+    .friend-card:hover {
+        transform: translateX(8px);
+        box-shadow: 0 4px 12px rgba(33, 150, 243, 0.2);
+        background: white;
+    }
+
+    .friend-link {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+    }
+
+    .friend-name {
+        font-family: 'Merriweather', serif;
+        font-size: 1.375rem;
+        color: var(--text-dark);
+        margin: 0;
+        transition: color 0.3s ease;
+    }
+
+    .friend-card:hover .friend-name {
+        color: var(--primary);
+    }
+
+    .friend-icon {
+        display: inline-block;
+        margin-right: 0.75rem;
+        color: var(--primary);
+        font-size: 1.25rem;
+    }
+
+    @media (max-width: 768px) {
+        .friends-container {
+            padding: 3rem 2rem;
+        }
+
+        .friends-header h1 {
+            font-size: 2rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .friends-container {
+            padding: 2rem 1.5rem;
+            border-radius: 15px;
+        }
+
+        .friend-card {
+            padding: 1.25rem 1.5rem;
+        }
+
+        .friend-name {
+            font-size: 1.25rem;
+        }
+    }
+</style>
+
+<div class="friends-container">
+    <div class="friends-header">
+        <h1>My Friends</h1>
+        <p>Amazing people I've met along the way</p>
+    </div>
+
+    <div class="friends-list">
+        <div class="friend-card">
+            <a href="http://www.kiwee.me" target="_blank" class="friend-link">
+                <h2 class="friend-name">
+                    <i class="fas fa-link friend-icon"></i>
+                    Absolute Zero
+                </h2>
+            </a>
+        </div>
+
+        <div class="friend-card">
+            <a href="http://www.cnblogs.com/alan-forever" target="_blank" class="friend-link">
+                <h2 class="friend-name">
+                    <i class="fas fa-link friend-icon"></i>
+                    Alan-forever
+                </h2>
+            </a>
+        </div>
+
+        <div class="friend-card">
+            <a href="https://morz.org/" target="_blank" class="friend-link">
+                <h2 class="friend-name">
+                    <i class="fas fa-link friend-icon"></i>
+                    冰酱
+                </h2>
+            </a>
+        </div>
+
+        <div class="friend-card">
+            <a href="http://www.desgard.com" target="_blank" class="friend-link">
+                <h2 class="friend-name">
+                    <i class="fas fa-link friend-icon"></i>
+                    冬瓜
+                </h2>
+            </a>
+        </div>
+
+        <div class="friend-card">
+            <a href="http://geniuze.com" target="_blank" class="friend-link">
+                <h2 class="friend-name">
+                    <i class="fas fa-link friend-icon"></i>
+                    geniuze
+                </h2>
+            </a>
+        </div>
+
+        <div class="friend-card">
+            <a href="http://phonzia.com" target="_blank" class="friend-link">
+                <h2 class="friend-name">
+                    <i class="fas fa-link friend-icon"></i>
+                    Phonzia
+                </h2>
+            </a>
+        </div>
+
+        <div class="friend-card">
+            <a href="http://foursking.github.io" target="_blank" class="friend-link">
+                <h2 class="friend-name">
+                    <i class="fas fa-link friend-icon"></i>
+                    Setsuna F.Seiei
+                </h2>
+            </a>
+        </div>
+
+        <div class="friend-card">
+            <a href="http://youngerfary.github.io" target="_blank" class="friend-link">
+                <h2 class="friend-name">
+                    <i class="fas fa-link friend-icon"></i>
+                    YoungerFary
+                </h2>
+            </a>
+        </div>
+
+        <div class="friend-card">
+            <a href="http://www.zcmyworld.com" target="_blank" class="friend-link">
+                <h2 class="friend-name">
+                    <i class="fas fa-link friend-icon"></i>
+                    志聪
+                </h2>
+            </a>
+        </div>
+    </div>
+</div>
