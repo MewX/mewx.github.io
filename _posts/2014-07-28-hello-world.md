@@ -32,7 +32,7 @@ categories: [web, test]
 **Code** *Here*
 <br>
 
-<?prettify lang=c?>
+```c
     #include <stdio.h>
     #include <math.h>
 
@@ -68,6 +68,6 @@ categories: [web, test]
 
         return 0;
     }
+```
 
-<br>
 Code End

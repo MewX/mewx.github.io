@@ -79,8 +79,7 @@ categories: [php, web]
 
 **注：写的时候已经发现数据库grade表设计不合理了，但是懒得改了ㄟ(▔，▔)ㄏ**
 
-<?prettify lang=sql?>
-
+```sql
     create table student(
     	stuid bigint not null primary key,
         wxid varchar(50),
@@ -185,6 +184,7 @@ categories: [php, web]
         constraint fk_grd_stuid foreign key (stuid) references student(stuid),
         constraint fk_grd_corid foreign key (corid) references course(corid)
     );
+```
 
 # 代码段组成
 
