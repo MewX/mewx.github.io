@@ -102,14 +102,34 @@
         transition: all 0.3s ease;
         position: relative;
         font-family: 'Inter', sans-serif;
+        padding-bottom: 0.25rem;
+    }
+
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background: white;
+        transition: width 0.3s ease;
     }
 
     .navbar.scrolled .nav-link {
         color: var(--text-dark);
     }
 
+    .navbar.scrolled .nav-link::after {
+        background: var(--primary);
+    }
+
     .nav-link:hover {
         color: var(--accent);
+    }
+
+    .nav-link:hover::after {
+        width: 100%;
     }
 
     .mobile-menu-btn {

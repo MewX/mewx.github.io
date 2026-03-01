@@ -91,10 +91,26 @@
         transition: all 0.3s ease;
         position: relative;
         font-family: 'Inter', sans-serif;
+        padding-bottom: 0.25rem;
+    }
+
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background: var(--primary);
+        transition: width 0.3s ease;
     }
 
     .nav-link:hover {
-        color: var(--accent);
+        color: var(--primary);
+    }
+
+    .nav-link:hover::after {
+        width: 100%;
     }
 
     .mobile-menu-btn {
