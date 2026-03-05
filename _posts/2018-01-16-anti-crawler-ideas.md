@@ -19,7 +19,7 @@ Easy to implement.
 
 Usually the URL patter looks like:
 
-```
+```text
 https://xxxx/id=123
 ```
 
@@ -31,7 +31,7 @@ The encryption and decryption algorithms can vary,
 but basically it can be any secure symmetric or asymmetric encryption algorithm.
 Therefore the URL will look like:
 
-```
+```text
 https://xxxx/id=3d030632fb3c9653
 ```
 
@@ -45,14 +45,14 @@ Also, do not leave database related info on the web page. This can secure the al
 
 BTW, I saw an interesting one:
 
-```
+```text
 http://xxx/pm/ZGphbmdvIOWPjeeIrOiZqw==.html
 ```
 
 The URL is too obvious to use Base64, and I can easily decode it. It's not recommended to encrypt ID.
 However, using it to encrypt key is fine, since `3d030632fb3c9653` is coded to `PQMGMvs8llM=` which is shorter:
 
-```
+```text
 https://xxxx/id=PQMGMvs8llM=
 ```
 
@@ -64,7 +64,7 @@ Hard to implement.
 Define a rule that how pages can jump from one to another, each jump requires a key provided by server.
 For example:
 
-```
+```text
 https://xxxx/id=3d030632fb3c9653&key=a817f6s9
 ```
 
@@ -96,7 +96,7 @@ This is like some [`email encoders`](http://hivelogic.com/enkoder/index.php) use
 
 The web page will contain such codes:
 
-```
+```javascript
 <script type="text/javascript">
 //<![CDATA[
 <!--
@@ -154,7 +154,7 @@ Easy to implement.
 Some known user agents of crawlers should be obviously blocked or return with fake data.
 These user agents should be blocked:
 
-```
+```text
 FeedDemon
 Indy Library
 Alexa Toolbar
