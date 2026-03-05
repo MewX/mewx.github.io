@@ -149,7 +149,7 @@ I set up the shortcuts:
 
 and then use ImageMagick to crop the screenshots:
 
-``` shell
+```shell
 $ convert Snipaste/Snipaste_2021-03-27_22-15-37.png -crop 985x1394+787+3 "New System English (English + Chinese)/Snipaste_2021-03-27_22-15-37.png"
 $ convert Snipaste/Snipaste_2021-03-27_22-19-17.png -crop 985x1394+787+3 "New System English (English + Chinese)/Snipaste_2021-03-27_22-19-17.png"
 $ convert Snipaste/Snipaste_2021-03-27_22-21-08_0.png -crop 985x1394+787+3 "New System English (English + Chinese)/Snipaste_2021-03-27_22-21-08_0.png"
@@ -174,7 +174,7 @@ Since I was using Windows 10, I looked for:
 
 So, the dir was `<user_dir>/.ConTenDoViewer/`. The file structure is like:
 
-```
+```text
 .ConTenDoViewer/
 ├── books
 │   ├── user
@@ -304,7 +304,7 @@ HashMap<String, String> bookIdToDecryptionKeyMap;
 ```
 
 The book ID is from 0x1C to 0x3B (included):
-```
+```text
 # Example 1 ID: 3c9b6643958814859e22aef293d807ec
 0000h: 43 44 45 46 01 00 00 00 00 00 00 00 63 36 38 30  CDEF........c680 
 0010h: 66 66 35 64 63 36 38 30 66 66 35 64 33 63 39 62  ff5dc680ff5d3c9b 

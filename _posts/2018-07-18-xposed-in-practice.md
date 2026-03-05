@@ -99,7 +99,7 @@ Using `sslocal -c configuration.json` where the `configuration.json` is the resp
 
 Here's an example:
 
-```
+```json
 {
   "local_address":"127.0.0.1",
   "method":"aes-128-cfb",
