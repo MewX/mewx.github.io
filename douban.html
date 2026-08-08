@@ -1,0 +1,303 @@
+---
+layout: page-v4
+title: "Douban"
+description: "Twelve years of what I read, watched and played — kept as my own archive rather than a platform's"
+---
+
+<style>
+    .db-intro p {
+        font-size: 1.0625rem;
+        color: var(--text-light);
+        line-height: 1.9;
+        margin-bottom: 1.25rem;
+    }
+
+    .db-intro strong {
+        color: var(--text-dark);
+    }
+
+    .db-numbers {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+
+    .db-number {
+        background: var(--bg-light);
+        border-radius: 15px;
+        padding: 1.5rem 1.25rem;
+        text-align: center;
+    }
+
+    .db-number-value {
+        display: block;
+        font-family: 'Inter', sans-serif;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.1;
+        color: var(--primary);
+    }
+
+    .db-number-label {
+        display: block;
+        margin-top: 0.5rem;
+        font-family: 'Inter', sans-serif;
+        font-size: 0.875rem;
+        color: var(--text-light);
+    }
+
+    /* Section cards reuse .card-item from the framework; this is the count line
+       underneath each title, which friends.html has no equivalent of */
+    .db-meta {
+        margin: 0.5rem 0 0;
+        font-family: 'Inter', sans-serif;
+        font-size: 0.9rem;
+        color: var(--text-light);
+    }
+
+    .db-cta {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+    }
+
+    .db-cta a {
+        flex: 1;
+        min-width: 200px;
+        text-align: center;
+        padding: 0.75rem 1.25rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        font-family: 'Inter', sans-serif;
+        transition: all 0.3s ease;
+    }
+
+    .db-cta-primary {
+        background: var(--primary);
+        color: white;
+    }
+
+    .db-cta-primary:hover {
+        background: var(--primary-dark);
+        transform: translateY(-2px);
+    }
+
+    .db-cta-secondary {
+        background: white;
+        color: var(--primary);
+        border: 2px solid var(--primary);
+    }
+
+    .db-cta-secondary:hover {
+        background: var(--primary);
+        color: white;
+    }
+
+    .db-note {
+        background: var(--bg-light);
+        border-left: 4px solid var(--primary);
+        border-radius: 10px;
+        padding: 1.25rem 1.5rem;
+        margin-top: 2rem;
+        font-size: 0.9375rem;
+        color: var(--text-light);
+        line-height: 1.8;
+    }
+
+    .db-note strong {
+        color: var(--text-dark);
+    }
+</style>
+
+<div class="page-container">
+
+    <div class="content-section-block db-intro">
+        <p>
+            I have been on <a href="https://www.douban.com/" target="_blank">Douban</a> since 2014,
+            marking almost everything I read, watched, listened to and played. Twelve years later
+            that adds up to a fairly complete record of what I have paid attention to —
+            and all of it lived on someone else's servers, in a country whose internet I no longer live in.
+        </p>
+        <p>
+            So I built a tool to take it back. Everything below was captured from Douban page by page,
+            stored as WARC files, and rendered into a static site — <strong>offline, with zero network
+            requests at build or render time</strong>. Nothing here needs Douban to be online, and
+            nothing here needs me to be online either.
+        </p>
+        <p>
+            The archive is proof rather than a demo. Eight of the marks in it point at works Douban has
+            since deleted: the pages are gone upstream, but <strong>my rating, tags and review are still
+            there</strong>, because they were mine and I had a copy. That is the whole argument for doing this.
+        </p>
+    </div>
+
+    <div class="content-section-block">
+        <div class="section-header">
+            <h2 class="section-title">What's in it</h2>
+            <span class="section-badge">2014 – 2026</span>
+        </div>
+        <div class="db-numbers">
+            <div class="db-number">
+                <span class="db-number-value">2,940</span>
+                <span class="db-number-label">things marked</span>
+            </div>
+            <div class="db-number">
+                <span class="db-number-value">3,394</span>
+                <span class="db-number-label">status posts</span>
+            </div>
+            <div class="db-number">
+                <span class="db-number-value">2,921</span>
+                <span class="db-number-label">cover images</span>
+            </div>
+            <div class="db-number">
+                <span class="db-number-value">124</span>
+                <span class="db-number-label">photos I uploaded</span>
+            </div>
+            <div class="db-number">
+                <span class="db-number-value">4,695</span>
+                <span class="db-number-label">pages generated</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section-block">
+        <div class="section-header">
+            <h2 class="section-title">Browse the archive</h2>
+            <span class="section-badge">in Chinese</span>
+        </div>
+        <div class="card-list">
+
+            <div class="card-item">
+                <a href="https://sample.doubak.com/movie/" target="_blank" class="card-item-link">
+                    <h2 class="card-item-title">
+                        <i class="fas fa-film card-item-icon"></i>
+                        Film &amp; TV <span style="color: var(--text-light); font-weight: 400;">影视</span>
+                    </h2>
+                    <p class="db-meta">1,336 watched · 19 watching · 747 to watch</p>
+                </a>
+            </div>
+
+            <div class="card-item">
+                <a href="https://sample.doubak.com/game/" target="_blank" class="card-item-link">
+                    <h2 class="card-item-title">
+                        <i class="fas fa-gamepad card-item-icon"></i>
+                        Games <span style="color: var(--text-light); font-weight: 400;">游戏</span>
+                    </h2>
+                    <p class="db-meta">306 played · 39 playing · 259 to play</p>
+                </a>
+            </div>
+
+            <div class="card-item">
+                <a href="https://sample.doubak.com/book/" target="_blank" class="card-item-link">
+                    <h2 class="card-item-title">
+                        <i class="fas fa-book card-item-icon"></i>
+                        Books <span style="color: var(--text-light); font-weight: 400;">书</span>
+                    </h2>
+                    <p class="db-meta">45 read · 18 reading · 82 to read</p>
+                </a>
+            </div>
+
+            <div class="card-item">
+                <a href="https://sample.doubak.com/music/" target="_blank" class="card-item-link">
+                    <h2 class="card-item-title">
+                        <i class="fas fa-music card-item-icon"></i>
+                        Music <span style="color: var(--text-light); font-weight: 400;">音乐</span>
+                    </h2>
+                    <p class="db-meta">84 listened</p>
+                </a>
+            </div>
+
+            <div class="card-item">
+                <a href="https://sample.doubak.com/drama/" target="_blank" class="card-item-link">
+                    <h2 class="card-item-title">
+                        <i class="fas fa-masks-theater card-item-icon"></i>
+                        Theatre <span style="color: var(--text-light); font-weight: 400;">舞台剧</span>
+                    </h2>
+                    <p class="db-meta">3 seen · 2 to see</p>
+                </a>
+            </div>
+
+            <div class="card-item">
+                <a href="https://sample.doubak.com/broadcast/" target="_blank" class="card-item-link">
+                    <h2 class="card-item-title">
+                        <i class="fas fa-comments card-item-icon"></i>
+                        Status posts <span style="color: var(--text-light); font-weight: 400;">广播</span>
+                    </h2>
+                    <p class="db-meta">3,394 posts across 152 months · 804 with something written</p>
+                </a>
+            </div>
+
+            <div class="card-item">
+                <a href="https://sample.doubak.com/note/" target="_blank" class="card-item-link">
+                    <h2 class="card-item-title">
+                        <i class="fas fa-pen-nib card-item-icon"></i>
+                        Journals <span style="color: var(--text-light); font-weight: 400;">日记</span>
+                    </h2>
+                    <p class="db-meta">3 entries, full text and inline images</p>
+                </a>
+            </div>
+
+            <div class="card-item">
+                <a href="https://sample.doubak.com/review/" target="_blank" class="card-item-link">
+                    <h2 class="card-item-title">
+                        <i class="fas fa-feather card-item-icon"></i>
+                        Reviews <span style="color: var(--text-light); font-weight: 400;">评论</span>
+                    </h2>
+                    <p class="db-meta">2 long reviews, full text</p>
+                </a>
+            </div>
+
+            <div class="card-item">
+                <a href="https://sample.doubak.com/search.html" target="_blank" class="card-item-link">
+                    <h2 class="card-item-title">
+                        <i class="fas fa-magnifying-glass card-item-icon"></i>
+                        Search <span style="color: var(--text-light); font-weight: 400;">搜索</span>
+                    </h2>
+                    <p class="db-meta">Runs entirely in the browser — the index ships with the page</p>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="db-note">
+            <strong>A note on language.</strong> The archive is a faithful copy of my Douban account,
+            so its interface and all of its content are in Chinese. I have not translated it and
+            do not intend to — a translated archive is no longer an archive.
+        </div>
+    </div>
+
+    <div class="content-section-block">
+        <div class="section-header">
+            <h2 class="section-title">How it was made</h2>
+            <span class="section-badge">Open source</span>
+        </div>
+        <div class="db-intro">
+            <p>
+                The tool is <strong>Doubak (豆备)</strong>, a browser extension plus an offline pipeline:
+                capture runs in my own browser at my own pace, so no credentials ever leave my machine;
+                the captures are plain WARC files that any web-archive reader can open; a parser turns
+                them into NDJSON; and a generator renders the static site you see above. Every step after
+                capture is a pure function, so the whole site can be rebuilt from the captures with the
+                network switched off.
+            </p>
+            <p>
+                It is open source and free to use on your own account. If you have a Douban account you
+                would rather not lose, that is what it is for.
+            </p>
+        </div>
+        <div class="db-cta">
+            <a href="https://sample.doubak.com" target="_blank" class="db-cta-primary">
+                <i class="fas fa-box-archive"></i> Open my archive
+            </a>
+            <a href="https://doubak.com" target="_blank" class="db-cta-secondary">
+                <i class="fas fa-globe"></i> About the tool
+            </a>
+            <a href="https://github.com/Doubak" target="_blank" class="db-cta-secondary">
+                <i class="fab fa-github"></i> Source on GitHub
+            </a>
+        </div>
+    </div>
+
+</div>
