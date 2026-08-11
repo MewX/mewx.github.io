@@ -118,7 +118,7 @@ Here's an example:
 As well, I will **NOT** release anything like `Transocks PC client`.~~
 
 Since the tooling no longer works after all these 9 years, I've made the repository public:
-https://github.com/MewX/Transocks-PC just for future reference.
+[https://github.com/MewX/Transocks-PC](https://github.com/MewX/Transocks-PC) just for future reference.
 
 BTW, the apk was encrypted by [Tencent apk protection](https://yaq.qq.com/) which was not easy to decompile or dump.
 Therefore, I used `hook`.
