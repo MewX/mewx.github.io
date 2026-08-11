@@ -252,6 +252,61 @@
         margin-bottom: 0.5rem;
     }
 
+    /* Tables */
+    .post-content table {
+        width: 100%;
+        margin: 2rem 0;
+        border-collapse: collapse;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .post-content thead th {
+        font-family: 'Merriweather', serif;
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: #6a1b9a;
+        text-align: left;
+        vertical-align: bottom;
+        padding: 0 1rem 0.75rem;
+        border-bottom: 3px solid #9c27b0;
+    }
+
+    .post-content tbody td {
+        padding: 1rem;
+        vertical-align: top;
+        border-bottom: 1px solid #e2e8f0;
+        overflow-wrap: break-word;
+    }
+
+    /* First column reads as the label/lookup key */
+    .post-content tbody td:first-child {
+        width: 38%;
+        font-weight: 600;
+        color: var(--text-dark);
+    }
+
+    .post-content tbody tr:nth-child(even) {
+        background: rgba(156, 39, 176, 0.035);
+    }
+
+    .post-content tbody tr:hover {
+        background: rgba(156, 39, 176, 0.08);
+    }
+
+    .post-content tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+    /* Keep inline code from bloating row height */
+    .post-content td code,
+    .post-content th code {
+        font-size: 0.85em;
+        padding: 0.1rem 0.35rem;
+    }
+
     .post-content hr {
         border: none;
         border-top: 2px solid #e2e8f0;
@@ -299,6 +354,22 @@
         .post-content h2 {
             font-size: 1.75rem;
         }
+
+        .post-content table {
+            font-size: 0.875rem;
+        }
+
+        .post-content thead th {
+            padding: 0 0.6rem 0.6rem;
+        }
+
+        .post-content tbody td {
+            padding: 0.75rem 0.6rem;
+        }
+
+        .post-content tbody td:first-child {
+            width: 40%;
+        }
     }
 
     @media (max-width: 480px) {
@@ -326,6 +397,42 @@
         .post-content {
             padding: 2rem 1.5rem;
             border-radius: 15px;
+        }
+
+        /* Two columns are too cramped on a phone - stack each row as a card */
+        .post-content thead {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            white-space: nowrap;
+        }
+
+        .post-content tbody tr,
+        .post-content tbody tr:nth-child(even),
+        .post-content tbody tr:hover {
+            display: block;
+            margin-bottom: 1rem;
+            padding: 0.25rem 0;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            background: transparent;
+        }
+
+        .post-content tbody td,
+        .post-content tbody tr:last-child td {
+            display: block;
+            width: auto;
+            padding: 0.6rem 1rem;
+            border-bottom: none;
+        }
+
+        .post-content tbody td:first-child {
+            width: auto;
+            color: #6a1b9a;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 0.75rem;
         }
     }
 </style>
