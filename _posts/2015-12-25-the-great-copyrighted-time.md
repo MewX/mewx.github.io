@@ -409,14 +409,14 @@ categories: [life]
 
 全部下载完毕之后是2011个zip图包，拿WinRAR检测一下是否有误（如果是异常中止的话是无法测试通过的）：
 
-<center><img src="{{ site.baseurl }}imgs/201512/dltest.png" style="max-width:100%;"/></center>
+<center><img src="{{ site.baseurl }}/imgs/201512/dltest.png" style="max-width:100%;"/></center>
 
 2000多个包测试完真是长吁一口气，总共10G。
 
-<center><img src="{{ site.baseurl }}imgs/201512/dlfinish.png" style="max-width:100%;"/></center>
+<center><img src="{{ site.baseurl }}/imgs/201512/dlfinish.png" style="max-width:100%;"/></center>
 
 以及服务器帮我下载的一些包，直接SCP拷贝（这边Git自带的SCP一启动就crash，只得寻求他法）：
 
-<center><a href="{{ site.baseurl }}imgs/201512/scp.png" target="_blank"><img src="{{ site.baseurl }}imgs/201512/scp.png" style="max-width:100%;"/></a></center>
+<center><a href="{{ site.baseurl }}/imgs/201512/scp.png" target="_blank"><img src="{{ site.baseurl }}/imgs/201512/scp.png" style="max-width:100%;"/></a></center>
 
 这文章大概烂尾了 23333

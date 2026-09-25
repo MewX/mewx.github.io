@@ -11,7 +11,7 @@ categories: [flash, crack, 汉化, python]
 
 本篇是针对上一篇未完成的研究进行的补充，对于无法显示中文、改过脚本无法导入回去等问题都进行解决。
 
-上一篇：**[《ActionScript3.0的SWF文件的破解与修改研究》]({{ site.baseurl }}blog/201411/swf-crack-and-extract-actionscript-3)**
+上一篇：**[《ActionScript3.0的SWF文件的破解与修改研究》]({{ site.baseurl }}/blog/201411/swf-crack-and-extract-actionscript-3)**
 
 ## 一、那么问题来了？
 
@@ -33,7 +33,7 @@ categories: [flash, crack, 汉化, python]
 
 软件运行界面如下：
 
-<center><a href="{{ site.baseurl }}imgs/201411/09-jpexs-free-flash-decompiler.png" target="_blank"><img src="{{ site.baseurl }}imgs/201411/09-jpexs-free-flash-decompiler.png" style="max-width:100%;"/></a></center>
+<center><a href="{{ site.baseurl }}/imgs/201411/09-jpexs-free-flash-decompiler.png" target="_blank"><img src="{{ site.baseurl }}/imgs/201411/09-jpexs-free-flash-decompiler.png" style="max-width:100%;"/></a></center>
 
 这款强大的工具被埋没的原因大概是和商业软件的推广有关吧，之前使用的商业软件完全不及这款**自由软件**的功能。（于是又要扯到《大教堂与市集》了……）
 
@@ -51,7 +51,7 @@ categories: [flash, crack, 汉化, python]
 
 这里我在找提取工具的过程中发现了一个[小工具](http://hp.vector.co.jp/authors/VA020429/ffmpeg/swf_comp.html)，于是用它把所有脚本都解压了，文件头变成“FWS”（SWF反过来）了。现在文件内的内容全是明文，令人心情愉悦啊。如图：
 
-<center><a href="{{ site.baseurl }}imgs/201411/10-raw-content.png" target="_blank"><img src="{{ site.baseurl }}imgs/201411/10-raw-content.png" style="max-width:100%;"/></a></center>
+<center><a href="{{ site.baseurl }}/imgs/201411/10-raw-content.png" target="_blank"><img src="{{ site.baseurl }}/imgs/201411/10-raw-content.png" style="max-width:100%;"/></a></center>
 
 ### 2. 提取swf文件中的脚本
 
@@ -146,7 +146,7 @@ categories: [flash, crack, 汉化, python]
 
 但是替换之后发现没法运行，是白屏，于是可以想到是程序作了什么检查，搜索原来bytes的偏移或者大小，果然看到存储大小的地方了，是文件的最后4字节，可以猜到exe运行后是从文件末尾开始读取文件的。修改文件末尾的大小即可成功运行，显示中文！
 
-<center><img src="{{ site.baseurl }}imgs/201411/11-game-support-chinese.png" style="max-width:100%;"/></center>
+<center><img src="{{ site.baseurl }}/imgs/201411/11-game-support-chinese.png" style="max-width:100%;"/></center>
 
 ----
 

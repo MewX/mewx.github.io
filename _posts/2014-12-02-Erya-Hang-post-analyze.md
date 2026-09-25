@@ -19,7 +19,7 @@ categories: [web]
 
 **先来看看很久以前抓包弄出来的小库吧：**
 
-<center><a href="{{ site.baseurl }}imgs/201412/01-erya-db-old.png" target="_blank"><img src="{{ site.baseurl }}imgs/201412/01-erya-db-old.png" style="max-width:100%;"/></a></center>
+<center><a href="{{ site.baseurl }}/imgs/201412/01-erya-db-old.png" target="_blank"><img src="{{ site.baseurl }}/imgs/201412/01-erya-db-old.png" style="max-width:100%;"/></a></center>
 
 准备有空弄个汉语词典来抓取整个库。没事，可以通过多个云计算平台作为跳板的。
 
@@ -121,6 +121,6 @@ categories: [web]
 
 我可不像那个某站长啊，我直接无偿放出来了，**希望对大家有用的话能留下点评论**，带来一点小小的流量就好。。。
 
-数据库在此：<a href="{{ site.baseurl }}downloads/erya.csv" target="_blank">erya.csv</a>
+数据库在此：<a href="{{ site.baseurl }}/downloads/erya.csv" target="_blank">erya.csv</a>
 
 题库绝对不全，因为我压根当时就没想去抓。
