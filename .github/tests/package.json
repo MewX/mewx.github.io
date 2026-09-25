@@ -1,0 +1,15 @@
+{
+  "name": "mewx-disqus-tests",
+  "version": "1.0.0",
+  "description": "Tests for Disqus comments rendering and ad pruning",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "npm run test:unit && npm run test:e2e",
+    "test:unit": "node --test disqus-pruner.test.mjs",
+    "test:e2e": "node test-disqus-e2e.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.49.0"
+  }
+}

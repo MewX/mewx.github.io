@@ -1,0 +1,41 @@
+name: Test Disqus Comments
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * 0' # Weekly run on Sundays at 00:00 UTC
+
+jobs:
+  test:
+    name: Unit & E2E Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        working-directory: .github/tests
+        run: npm ci
+
+      - name: Run Unit Tests
+        working-directory: .github/tests
+        run: npm run test:unit
+
+      - name: Install Playwright Chromium
+        working-directory: .github/tests
+        run: npx playwright install --with-deps chromium
+
+      - name: Run Disqus E2E Tests
+        working-directory: .github/tests
+        run: npm run test:e2e
