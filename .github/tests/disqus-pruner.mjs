@@ -6,6 +6,39 @@ import path from 'node:path';
  */
 
 /**
+ * Extracts the actual MutationObserver callback function directly from _layouts/post-v4.html.
+ * This guarantees that unit tests exercise the exact production script deployed to the site,
+ * ensuring tests fail if production layout code breaks or regresses.
+ *
+ * @param {string} [layoutPath] - Optional path to post-v4.html
+ * @returns {(container: HTMLElement) => void}
+ */
+export function getPrunerFromLayout(layoutPath) {
+  const resolvedPath = layoutPath || path.resolve(import.meta.dirname, '../../_layouts/post-v4.html');
+  if (!fs.existsSync(resolvedPath)) {
+    throw new Error(`Layout file not found at ${resolvedPath}`);
+  }
+  const content = fs.readFileSync(resolvedPath, 'utf8');
+  const match = content.match(/new MutationObserver\((function\s*\([^)]*\)\s*\{[\s\S]*?\n\s*\}\s*)\)/);
+  if (!match) {
+    throw new Error(`Could not find MutationObserver callback in ${resolvedPath}`);
+  }
+  return new Function('disqus', `(${match[1]})();`);
+}
+
+/**
+ * Runs the production pruning logic from _layouts/post-v4.html against a container element.
+ *
+ * @param {HTMLElement} container - The container element (e.g., #disqus_thread)
+ * @param {string} [layoutPath] - Optional custom path to post-v4.html
+ */
+export function pruneDisqusAds(container, layoutPath) {
+  if (!container || !container.getElementsByTagName) return;
+  const pruner = getPrunerFromLayout(layoutPath);
+  pruner(container);
+}
+
+/**
  * Discovers published blog post URLs with comments enabled by inspecting Markdown front matter.
  *
  * @param {string} postsDir - Path to _posts directory
@@ -42,32 +75,6 @@ export function getPostUrls(postsDir, baseUrl = 'https://www.mewx.org') {
     }
   }
   return results;
-}
-
-/**
- * Prunes ad iframes from a Disqus container without removing
- * the main comments iframe or notification indicators.
- *
- * @param {HTMLElement} container - The container element (e.g., #disqus_thread)
- * @returns {Array<HTMLElement>} List of removed iframes
- */
-export function pruneDisqusAds(container) {
-  if (!container || !container.getElementsByTagName) return [];
-  const removed = [];
-  const iframes = Array.from(container.getElementsByTagName('iframe'));
-  for (let i = 0; i < iframes.length; i++) {
-    const iframe = iframes[i];
-    const src = iframe.src || (iframe.getAttribute && iframe.getAttribute('src')) || '';
-    if (src.includes('ads-iframe') || src.includes('disqusads') || src.includes('taboola')) {
-      if (typeof iframe.remove === 'function') {
-        iframe.remove();
-      } else if (iframe.parentNode) {
-        iframe.parentNode.removeChild(iframe);
-      }
-      removed.push(iframe);
-    }
-  }
-  return removed;
 }
 
 /**
