@@ -86,7 +86,7 @@ Checking the price on [Amazon](https://www.amazon.co.jp/gp/product/4877986367/),
 they sell JPY ¥3080 and do not support international delivery.
 Apparently, I cannot use Amazon Japan this time.
 
-<center><img src="{{ site.cdn }}imgs/202103/amazon-co-jp.png" style="max-width:100%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202103/amazon-co-jp.png" style="max-width:100%;"/></center>
 
 Heard from a [YouTuber](https://www.youtube.com/watch?v=UYOnEsBg2hQ)
 saying they also sold digital versions.
@@ -111,7 +111,7 @@ The good news was that they accepted my visa card.
 That was how everything began. Their website said the size of the book,
 so I thought I should at least be able to download the book.
 
-<center><img src="{{ site.cdn }}imgs/202103/contendo-shop.png" style="max-width:100%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202103/contendo-shop.png" style="max-width:100%;"/></center>
 
 However, they did not allow me to download my ebook.
 Instead, I had to use their apps to read.
@@ -126,7 +126,7 @@ For me, the app was very useless:
 
 Look at the UI:
 
-<center><img src="{{ site.cdn }}imgs/202103/contendo-viewer.png" style="max-width:100%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202103/contendo-viewer.png" style="max-width:100%;"/></center>
 
 All these reasons made me very unhappy. So, I tried to get a refund.
 And as you can imagine, they said a refund was impossible at all.
@@ -145,7 +145,7 @@ I set up the shortcuts:
 2. Enter - full screen screenshot
 3. RightArrow - Next page
 
-<center><img src="{{ site.cdn }}imgs/202103/screenshot-approach.png" style="max-width:100%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202103/screenshot-approach.png" style="max-width:100%;"/></center>
 
 and then use ImageMagick to crop the screenshots:
 
@@ -207,7 +207,7 @@ So, I unzipped the EPUB file and looked into each file.
 I saw the single files were encrypted.
 On top of each file, there seemed to have some key texts:
 
-<center><img src="{{ site.cdn }}imgs/202103/encrypted-header.png" style="max-width:100%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202103/encrypted-header.png" style="max-width:100%;"/></center>
 
 ### Network capturing
 
@@ -253,13 +253,13 @@ as JD-GUI was really hard to use for finding cross-references.
 I essentially debugged the function call stack on my brain LMAO.
 Here's how it looked like:
 
-<center><img src="{{ site.cdn }}imgs/202103/jd-gui-debugging.png" style="max-width:100%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202103/jd-gui-debugging.png" style="max-width:100%;"/></center>
 
 One thing I would like to note here was that JD-GUI sometimes decompiled wrongly.
 So, I used another tool called [CFR](https://github.com/leibnitz27/cfr) as an N+1 reference.
 That was how CFR look like when using VSCode:
 
-<center><img src="{{ site.cdn }}imgs/202103/vs-code-while-debugging.png" style="max-width:100%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202103/vs-code-while-debugging.png" style="max-width:100%;"/></center>
 
 ### Mobile debugging
 
@@ -275,7 +275,7 @@ So, I ended up giving up this approach.
 
 One interesting is that, Play Store reviews were the same as I thought:
 
-<center><img src="{{ site.cdn }}imgs/202103/play-store-reviews.png" style="max-width:80%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202103/play-store-reviews.png" style="max-width:80%;"/></center>
 
 ### How the encryption works
 
@@ -380,15 +380,15 @@ to decrypt encrypted files, we can verify if it actually works.
 
 I tried the book I purchased. Before:
 
-<center><img src="{{ site.cdn }}imgs/202103/new-system-book-encrypted.png" style="max-width:80%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202103/new-system-book-encrypted.png" style="max-width:80%;"/></center>
 
 After:
 
-<center><img src="{{ site.cdn }}imgs/202103/new-system-book-decrypted.png" style="max-width:100%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202103/new-system-book-decrypted.png" style="max-width:100%;"/></center>
 
 Note: the texts are encoded in UTF-8. Thus, don't panic if you see weird texts.
 
-<center><img src="{{ site.cdn }}imgs/202103/charset-settings.png" style="max-width:100%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202103/charset-settings.png" style="max-width:100%;"/></center>
 
 Here's another example (with a different decryption key):
 
@@ -396,7 +396,7 @@ Here's another example (with a different decryption key):
 $ java Decrypt /mnt/r/comic.S /mnt/r/asdf2
 ```
 
-<center><img src="{{ site.cdn }}imgs/202103/another-decryption.png" style="max-width:100%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202103/another-decryption.png" style="max-width:100%;"/></center>
 
 ## Some takeaways
 

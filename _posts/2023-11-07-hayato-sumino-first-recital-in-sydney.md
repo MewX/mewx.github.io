@@ -34,7 +34,7 @@ That was my first time realizing they actually didn't need any speakers or any a
 The experience was superb, and OMG I started liking Sydney.
 Below was the live photo taken during the initial preparation ~~last piece - _Departures_ (from Movie _Departures_ 2008)~~ at Tier 2 seat:
 
-<center><img src="{{ site.cdn }}imgs/202311/PXL_20230317_092926800.live.jpg" data-live-photo="{{ site.cdn }}imgs/202311/PXL_20230317_092926800.live.mp4" style="max-width:100%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202311/PXL_20230317_092926800.live.jpg" data-live-photo="{{ site.baseurl }}imgs/202311/PXL_20230317_092926800.live.mp4" style="max-width:100%;"/></center>
 
 ## Knowing Hayato Sumino (角野 隼斗 / Cateen / かてぃん)
 
@@ -78,7 +78,7 @@ and the ticket prices are (when I purchased, and the prices did reduce slightly 
 - Tier 4: A$56.64
 - Disabled: A$62.82
 
-<center><img src="{{ site.cdn }}imgs/202311/hayato-sumino-venue-map.png" style="max-width:50%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202311/hayato-sumino-venue-map.png" style="max-width:50%;"/></center>
 
 I'm okay with VIP tickets. However, there's not much good spots left.
 Since it's my first time, I decided to get the best seat. So, SVIP it is! 😁
@@ -102,7 +102,7 @@ Since I live in the T4 train line, I took the train to Town Hall station pretty 
 There were full of people in front of the Town Hall building and there wasn't any VIP entry. 😂
 As you can might not see from the picture, there are 20 meters long queue hidden inside the picture.
 
-<center><img src="{{ site.cdn }}imgs/202311/PXL_20231105_074344779.jpg" style="max-width:100%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202311/PXL_20231105_074344779.jpg" style="max-width:100%;"/></center>
 
 Given my experience for the Candlelight performance, there will always be many people not queueing.
 I become one of them this time with my SVIP hat on. 🤠
@@ -111,24 +111,24 @@ There were lots of Japanese people around me and I almost spoke out こんにち
 First time knowing such many Japanese people in Sydney actually.
 After around 15 minutes, I _squeezed_ into the entry corridor, and the Steinway & Sons piano is right in the center and visible from outside:
 
-<center><div style="max-width:50%;"><img src="{{ site.cdn }}imgs/202311/PXL_20231105_075802371.live.jpg" data-live-photo="{{ site.cdn }}imgs/202311/PXL_20231105_075802371.live.mp4"/></div></center>
+<center><div style="max-width:50%;"><img src="{{ site.baseurl }}imgs/202311/PXL_20231105_075802371.live.jpg" data-live-photo="{{ site.baseurl }}imgs/202311/PXL_20231105_075802371.live.mp4"/></div></center>
 
 Here's the biggest poster in the foyer.
 A fun story is that people who went to Yundi Li's recital a few days ago saw the same flower baskets.
 So, it might be indeed reused. 💐
 
-<center><img src="{{ site.cdn }}imgs/202311/PXL_20231105_103035341.jpg" style="max-width:100%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202311/PXL_20231105_103035341.jpg" style="max-width:100%;"/></center>
 
 The whole process did not verify tickets at all, which means anyone can sneak in.
 Actually, there was one lady sneaked into the SVIP seat. 🥲
 Inside the Town Hall, it was still quite empty.
 
-<center><img src="{{ site.cdn }}imgs/202311/PXL_20231105_080255845.jpg" style="max-width:100%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202311/PXL_20231105_080255845.jpg" style="max-width:100%;"/></center>
 
 Here's the close look at the STEINWAY & SONS D-274 piano (MSRP of US$175,700).
 It's noticeably big! Excited for the sounds! 😛
 
-<center><img src="{{ site.cdn }}imgs/202311/PXL_20231105_091144583.jpg" style="max-width:100%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202311/PXL_20231105_091144583.jpg" style="max-width:100%;"/></center>
 
 ## During the Recital
 
@@ -155,15 +155,15 @@ All those piece picks are really classical! They are very pleasant to listen to!
 Here are some live photos during the two sections.
 You can always feel joys from his performance!
 
-<center><img src="{{ site.cdn }}imgs/202311/PXL_20231105_082444897.live.jpg" data-live-photo="{{ site.cdn }}imgs/202311/PXL_20231105_082444897.live.mp4" style="max-width:100%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202311/PXL_20231105_082444897.live.jpg" data-live-photo="{{ site.baseurl }}imgs/202311/PXL_20231105_082444897.live.mp4" style="max-width:100%;"/></center>
 
 This feels like me when I'm coding XD
 
-<center><img src="{{ site.cdn }}imgs/202311/PXL_20231105_094250953.live.jpg" data-live-photo="{{ site.cdn }}imgs/202311/PXL_20231105_094250953.live.mp4" style="max-width:100%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202311/PXL_20231105_094250953.live.jpg" data-live-photo="{{ site.baseurl }}imgs/202311/PXL_20231105_094250953.live.mp4" style="max-width:100%;"/></center>
 
 This one was during the _Rhapsody in Blue_. Nice atmosphere with blue lights.
 
-<center><img src="{{ site.cdn }}imgs/202311/PXL_20231105_094609926.jpg" style="max-width:100%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202311/PXL_20231105_094609926.jpg" style="max-width:100%;"/></center>
 
 After the two sessions, the staff presented bouquet on the stage.
 Hayato Sumino didn't seem to know that was staff, and tried to dodge the bouquet. 😂
@@ -174,7 +174,7 @@ After that, he also had three encores because audiences kept clapping!
 
 For the 4th encore, he closed the piano lid as the end! 😂😂😂 OMG this is definitely a meme!
 
-<center><video src="{{ site.cdn }}imgs/202311/PXL_20231105_101210820.LS.5s.mp4" type="video/mp4" style="max-width:60%;" autoplay loop muted controls></video></center>
+<center><video src="{{ site.baseurl }}imgs/202311/PXL_20231105_101210820.LS.5s.mp4" type="video/mp4" style="max-width:60%;" autoplay loop muted controls></video></center>
 
 ## After and After-Story
 
@@ -237,18 +237,18 @@ Note that initially I thought Yiruma was the reason I joined [Jpopsuki](https://
 when I was looking for a complete lossless album containing _River Flows in You_.
 Then, I realized the album covers didn't match my memory.
 
-<center><img src="{{ site.cdn }}imgs/202311/yiruma-best-of-album-cover.jpg" style="max-width:50%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202311/yiruma-best-of-album-cover.jpg" style="max-width:50%;"/></center>
 
 After further searches and recalls, I found it was from _July (줄라이) - Beyond the Memory_.
 Here's the cover of the first album I downloaded from PT world (I should probably write another post about it 👻):
 
-<center><img src="{{ site.cdn }}imgs/202311/july-beyond-the-memory-album-cover.jpg" style="max-width:50%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202311/july-beyond-the-memory-album-cover.jpg" style="max-width:50%;"/></center>
 
 ### Swags
 
 Got a shopping bag (quality is pretty good) and a poster (fully of black ink). 😂
 I also laminated the printed-out tickets for my collection.
 
-<center><img src="{{ site.cdn }}imgs/202311/PXL_20231109_143901164.jpg" style="max-width:50%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202311/PXL_20231109_143901164.jpg" style="max-width:50%;"/></center>
 
 **_The End._**

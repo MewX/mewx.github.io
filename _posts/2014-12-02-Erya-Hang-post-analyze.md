@@ -19,7 +19,7 @@ categories: [web]
 
 **先来看看很久以前抓包弄出来的小库吧：**
 
-<center><a href="{{ site.cdn }}imgs/201412/01-erya-db-old.png" target="_blank"><img src="{{ site.cdn }}imgs/201412/01-erya-db-old.png" style="max-width:100%;"/></a></center>
+<center><a href="{{ site.baseurl }}imgs/201412/01-erya-db-old.png" target="_blank"><img src="{{ site.baseurl }}imgs/201412/01-erya-db-old.png" style="max-width:100%;"/></a></center>
 
 准备有空弄个汉语词典来抓取整个库。没事，可以通过多个云计算平台作为跳板的。
 

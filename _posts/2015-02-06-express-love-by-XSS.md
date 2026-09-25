@@ -30,7 +30,7 @@ categories: [web, python]
 
 效果图如下，直接给刷了9999次。
 
-<center><a href="{{ site.cdn }}imgs/201502/01-9999-loves.jpeg" target="_blank"><img src="{{ site.cdn }}imgs/201502/01-9999-loves.jpeg" style="max-width:100%;"/></a></center>
+<center><a href="{{ site.baseurl }}imgs/201502/01-9999-loves.jpeg" target="_blank"><img src="{{ site.baseurl }}imgs/201502/01-9999-loves.jpeg" style="max-width:100%;"/></a></center>
 
 看代码的时候应该可以看到，这表单竟然提交了一个submit元素上去，真是用(sang)心(xin)良(bing)苦(kuang)啊，为后面XSS增加了难度呢！
 
@@ -79,7 +79,7 @@ P.S. 刚刚push上来发现自己网页被挂上那个脚本了 \_(:3」∠)\_ �
 
 最终效果：如图，每个访问该页面的人都会帮我提交一份表白啦！~~
 
-<center><a href="{{ site.cdn }}imgs/201502/02-XSS-express-love.jpeg" target="_blank"><img src="{{ site.cdn }}imgs/201502/02-XSS-express-love.jpeg" style="max-width:100%;"/></a></center>
+<center><a href="{{ site.baseurl }}imgs/201502/02-XSS-express-love.jpeg" target="_blank"><img src="{{ site.baseurl }}imgs/201502/02-XSS-express-love.jpeg" style="max-width:100%;"/></a></center>
 
 不知到2月14号会有多少访问量呢？哈哈，刚刚看到有人和我的脚本对刷！！！
 

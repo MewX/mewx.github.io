@@ -42,12 +42,12 @@ and I even caught a cold in Australian and brought it back to China LOL!
 
 I even had several nice meals in Shanghai Office on Jan 10th:
 
-<center><img src="{{ site.cdn }}imgs/202003/sha-office-lunch.jpg" style="max-width:100%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202003/sha-office-lunch.jpg" style="max-width:100%;"/></center>
 
 Also, to show the comparison, here's what Shanghai Railway station looked like
 before the pandemic:
 
-<center><img src="{{ site.cdn }}imgs/202003/sha-railway-station-before.jpg" style="max-width:100%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202003/sha-railway-station-before.jpg" style="max-width:100%;"/></center>
 
 Then I had several trips within China
 including having a Chinese New Year in my parents' hometown.
@@ -118,18 +118,18 @@ Luckily, it was winter in China, and the air was very cold which cool down my sk
 
 _Photo I took around Shanghai Railway Station:_
 
-<center><img src="{{ site.cdn }}imgs/202003/sha-railway-station.jpg" style="max-width:100%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202003/sha-railway-station.jpg" style="max-width:100%;"/></center>
 
 I took the subway to the Office which was located in the World Finance Center.
 There was a temperature screening at every door as well.
 
 _Photo I took around Shanghai Subway Station:_
 
-<center><img src="{{ site.cdn }}imgs/202003/sha-subway-station.jpg" style="max-width:100%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202003/sha-subway-station.jpg" style="max-width:100%;"/></center>
 
 _and inside a subway:_
 
-<center><img src="{{ site.cdn }}imgs/202003/sha-railway-inside.jpg" style="max-width:50%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202003/sha-railway-inside.jpg" style="max-width:50%;"/></center>
 
 I successfully badged in the office, which was the best news after the travel ban.
 I took the laptop out and back to my hometown again on the same day.
@@ -139,9 +139,9 @@ Especially around Lujiazui, which was the financial center of China.
 
 _Photos I took around Shanghai Lujiazui Area:_
 
-<center><img src="{{ site.cdn }}imgs/202003/sha-lujiazui.jpg" style="max-width:100%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202003/sha-lujiazui.jpg" style="max-width:100%;"/></center>
 
-<center><img src="{{ site.cdn }}imgs/202003/sha-lujiazui-2.jpg" style="max-width:100%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202003/sha-lujiazui-2.jpg" style="max-width:100%;"/></center>
 
 Having a laptop, I can more or less work from home.
 The network was really bad when connecting to Google service.
@@ -234,7 +234,7 @@ Many people were the same as me, traveling to Thailand or Malaysia for 14 days.
 _Photo I took when boarding the plane, most people were students._
 _One sitting nearly me was to have IELTS test in Bangkok since all test centers in China were closed._
 
-<center><img src="{{ site.cdn }}imgs/202003/sha-boarding-to-thailand.jpg" style="max-width:100%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202003/sha-boarding-to-thailand.jpg" style="max-width:100%;"/></center>
 
 Thailand was really hot and I sweated all the time which proved me not being in a fever.
 People wearing masks were everywhere which made me feel safer.
@@ -247,7 +247,7 @@ Apart from that, people in Thailand were very friendly and I had a pretty good t
 
 One thing I've never seen in other country was that Monks actually were priority people:
 
-<center><img src="{{ site.cdn }}imgs/202003/bkk-monk.jpg" style="max-width:100%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202003/bkk-monk.jpg" style="max-width:100%;"/></center>
 
 ### Working from Bangkok
 
@@ -272,11 +272,11 @@ One fun fact was that I noticed the date in Thailand was quite different.
 Here's a receipt that I received in Thailand, which indicated the purchase
 happend in 08/03/63 (WTH???):
 
-<center><img src="{{ site.cdn }}imgs/202003/bkk-kfc.jpg" style="max-width:50%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202003/bkk-kfc.jpg" style="max-width:50%;"/></center>
 
 Then I found this LOL:
 
-<center><img src="{{ site.cdn }}imgs/202003/bkk-be-year.png" style="max-width:50%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202003/bkk-be-year.png" style="max-width:50%;"/></center>
 
 ### Extending my Visa on Arrival
 
@@ -288,7 +288,7 @@ I took the metro then a bus to get to the Government Complex building.
 
 _Photo around bus station:_
 
-<center><img src="{{ site.cdn }}imgs/202003/bkk-bus-station.jpg" style="max-width:100%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202003/bkk-bus-station.jpg" style="max-width:100%;"/></center>
 
 The traffic was quite bad since the building was in a suburb
 and the highways were around the bus station.
@@ -304,7 +304,7 @@ And she took me to take the shuttle bus for free LOL which saved me a 2-km walki
 
 _Photo of the institution:_
 
-<center><img src="{{ site.cdn }}imgs/202003/bkk-ins.jpg" style="max-width:100%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202003/bkk-ins.jpg" style="max-width:100%;"/></center>
 
 Then, I walked to a super-crowded building to do the visa extension.
 I was quite lucky to finish everything in the morning.
@@ -315,7 +315,7 @@ Also, one of my uni mates who arrived in the afternoon finished his extension at
 
 _Photo inside Immigration building:_
 
-<center><img src="{{ site.cdn }}imgs/202003/bkk-immi.jpg" style="max-width:100%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202003/bkk-immi.jpg" style="max-width:100%;"/></center>
 
 ### Leaving Bangkok
 After checking out and finishing lunch - again Pinapple rice, I went to the airport directly
@@ -323,7 +323,7 @@ which was 4 hours ahead of check-in open.
 
 _One of the pineapple rice I had in Bangkok:_
 
-<center><img src="{{ site.cdn }}imgs/202003/bkk-pineapple-rice.jpg" style="max-width:100%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202003/bkk-pineapple-rice.jpg" style="max-width:100%;"/></center>
 
 Most travelers were American. I could barely see Chinese people then.
 There were also lockdown news from Australia urging people to travel to Australia asap.
@@ -335,7 +335,7 @@ Lots of people were going to Aukland via Thailand as well.
 By the time I arrived in Hong Kong,
 there was roughly no one at the airport as it was late night.
 
-<center><img src="{{ site.cdn }}imgs/202003/hkg-airport.jpg" style="max-width:50%;"/></center>
+<center><img src="{{ site.baseurl }}imgs/202003/hkg-airport.jpg" style="max-width:50%;"/></center>
 
 Also, the flight back to Sydney had very few people,
 which was quite empty - each row had only one person.
