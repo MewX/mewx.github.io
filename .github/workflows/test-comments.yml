@@ -25,13 +25,17 @@ jobs:
           node-version: 22
 
       - name: Install dependencies
+        working-directory: .github/tests
         run: npm ci
 
       - name: Run Unit Tests
+        working-directory: .github/tests
         run: npm run test:unit
 
       - name: Install Playwright Chromium
+        working-directory: .github/tests
         run: npx playwright install --with-deps chromium
 
       - name: Run Disqus E2E Tests
+        working-directory: .github/tests
         run: npm run test:e2e

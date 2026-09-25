@@ -4,7 +4,7 @@ import { getPostUrls } from './disqus-pruner.mjs';
 
 const CONCURRENCY = parseInt(process.env.CONCURRENCY || '2', 10);
 const DELAY_MS = parseInt(process.env.DELAY_MS || '1000', 10);
-const postsDir = path.resolve('_posts');
+const postsDir = process.env.POSTS_DIR || path.resolve(import.meta.dirname, '../../_posts');
 
 // Discover all published posts from _posts directory or allow manual override
 const allPosts = process.env.TEST_URLS

@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import os from 'node:os';
-import { pruneDisqusAds, validateCommentsState, getPostUrls } from '../scripts/disqus-pruner.mjs';
+import { pruneDisqusAds, validateCommentsState, getPostUrls } from './disqus-pruner.mjs';
 
 function createMockElement(tagName, attributes = {}) {
   const children = [];
@@ -198,7 +198,8 @@ test('getPostUrls discovers published posts and formats URLs correctly', () => {
 });
 
 test('getPostUrls correctly discovers actual workspace repository posts', () => {
-  const posts = getPostUrls(path.resolve('_posts'), 'https://www.mewx.org');
+  const postsDir = path.resolve(import.meta.dirname, '../../_posts');
+  const posts = getPostUrls(postsDir, 'https://www.mewx.org');
   assert.equal(posts.length, 35, 'Should discover all 35 published posts in repository');
   const nestWifi = posts.find(p => p.url.includes('google-nest-wifi-h2d-pppoe-mesh-troubleshooting'));
   assert.ok(nestWifi, 'Should include Google Nest Wifi post');
