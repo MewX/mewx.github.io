@@ -2,7 +2,8 @@ import path from 'node:path';
 import { chromium } from 'playwright';
 import { getPostUrls } from './disqus-pruner.mjs';
 
-const CONCURRENCY = parseInt(process.env.CONCURRENCY || '5', 10);
+const CONCURRENCY = parseInt(process.env.CONCURRENCY || '2', 10);
+const DELAY_MS = parseInt(process.env.DELAY_MS || '1000', 10);
 const postsDir = path.resolve('_posts');
 
 // Discover all published posts from _posts directory or allow manual override
@@ -11,7 +12,8 @@ const allPosts = process.env.TEST_URLS
   : getPostUrls(postsDir, process.env.BASE_URL || 'https://www.mewx.org');
 
 console.log(`=== Disqus E2E Test Suite ===`);
-console.log(`Discovered ${allPosts.length} post pages to test with concurrency ${CONCURRENCY}\n`);
+console.log(`Testing ${allPosts.length} published post pages`);
+console.log(`Settings: Concurrency=${CONCURRENCY}, Inter-page delay=${DELAY_MS}ms\n`);
 
 async function testSinglePost(context, item, index, total) {
   const { url, title, file } = item;
@@ -27,6 +29,9 @@ async function testSinglePost(context, item, index, total) {
     // 2. Wait for the primary comments iframe
     const commentsIframe = page.locator('#disqus_thread iframe[src*="disqus.com/embed/comments"], #disqus_thread iframe[id^="dsq-app"]:not([src*="ads"])');
     await commentsIframe.waitFor({ state: 'visible', timeout: 25000 });
+
+    // Allow Disqus layout / async resize to settle
+    await page.waitForTimeout(500);
 
     // 3. Verify expanded height
     const box = await commentsIframe.boundingBox();
@@ -61,6 +66,11 @@ async function runWorkerPool(context, items) {
       const idx = currentIndex++;
       const res = await testSinglePost(context, items[idx], idx, items.length);
       results.push(res);
+
+      // Add gentle delay between requests to prevent hotspotting or rate limits
+      if (DELAY_MS > 0 && currentIndex < items.length) {
+        await new Promise(resolve => setTimeout(resolve, DELAY_MS));
+      }
     }
   }
 
