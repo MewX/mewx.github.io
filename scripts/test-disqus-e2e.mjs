@@ -1,45 +1,77 @@
+import path from 'node:path';
 import { chromium } from 'playwright';
+import { getPostUrls } from './disqus-pruner.mjs';
 
-const DEFAULT_TARGET_URLS = [
-  'https://www.mewx.org/blog/202608/google-nest-wifi-h2d-pppoe-mesh-troubleshooting/',
-  'https://www.mewx.org/blog/201807/xposed-in-practice/'
-];
+const CONCURRENCY = parseInt(process.env.CONCURRENCY || '5', 10);
+const postsDir = path.resolve('_posts');
 
-const targetUrls = process.env.TEST_URLS
-  ? process.env.TEST_URLS.split(',').map(s => s.trim())
-  : DEFAULT_TARGET_URLS;
+// Discover all published posts from _posts directory or allow manual override
+const allPosts = process.env.TEST_URLS
+  ? process.env.TEST_URLS.split(',').map(u => ({ url: u.trim(), title: u.trim(), file: 'manual' }))
+  : getPostUrls(postsDir, process.env.BASE_URL || 'https://www.mewx.org');
 
-async function testPageComments(page, url) {
-  console.log(`\n[E2E] Testing URL: ${url}`);
-  await page.goto(url, { waitUntil: 'domcontentloaded' });
+console.log(`=== Disqus E2E Test Suite ===`);
+console.log(`Discovered ${allPosts.length} post pages to test with concurrency ${CONCURRENCY}\n`);
 
-  // 1. Ensure container exists
-  const disqus = page.locator('#disqus_thread');
-  await disqus.waitFor({ state: 'attached', timeout: 20000 });
-  console.log('  ✓ Found #disqus_thread container');
+async function testSinglePost(context, item, index, total) {
+  const { url, title, file } = item;
+  const page = await context.newPage();
 
-  // 2. Wait for the main comments iframe
-  const commentsIframe = page.locator('#disqus_thread iframe[src*="disqus.com/embed/comments"]');
-  await commentsIframe.waitFor({ state: 'visible', timeout: 20000 });
-  console.log('  ✓ Comments iframe is attached and visible');
+  try {
+    await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
 
-  // 3. Verify comments iframe expanded
-  const box = await commentsIframe.boundingBox();
-  if (!box || box.height < 100) {
-    throw new Error(`Comments iframe height too small: ${box?.height}px`);
+    // 1. Wait for Disqus container
+    const disqus = page.locator('#disqus_thread');
+    await disqus.waitFor({ state: 'attached', timeout: 25000 });
+
+    // 2. Wait for the primary comments iframe
+    const commentsIframe = page.locator('#disqus_thread iframe[src*="disqus.com/embed/comments"], #disqus_thread iframe[id^="dsq-app"]:not([src*="ads"])');
+    await commentsIframe.waitFor({ state: 'visible', timeout: 25000 });
+
+    // 3. Verify expanded height
+    const box = await commentsIframe.boundingBox();
+    if (!box || box.height < 100) {
+      throw new Error(`Comments iframe height too small: ${box?.height}px`);
+    }
+
+    // 4. Verify no ad iframes remain
+    const adIframes = await page.locator(
+      '#disqus_thread iframe[src*="ads-iframe"], #disqus_thread iframe[src*="disqusads"], #disqus_thread iframe[src*="taboola"]'
+    ).count();
+    if (adIframes > 0) {
+      throw new Error(`Found ${adIframes} unpruned ad iframe(s)`);
+    }
+
+    console.log(`[${index + 1}/${total}] ✓ ${file}: "${title.slice(0, 45)}" (${box.height}px)`);
+    return { success: true, url, title };
+  } catch (err) {
+    console.error(`[${index + 1}/${total}] ✗ ${file}: ${err.message}`);
+    return { success: false, url, title, error: err.message };
+  } finally {
+    await page.close();
   }
-  console.log(`  ✓ Comments iframe height is expanded (${box.height}px)`);
+}
 
-  // 4. Verify no ad iframes remain
-  const adIframes = await page.locator('#disqus_thread iframe[src*="ads-iframe"], #disqus_thread iframe[src*="disqusads"], #disqus_thread iframe[src*="taboola"]').count();
-  if (adIframes > 0) {
-    throw new Error(`Detected ${adIframes} unpruned ad iframe(s) in #disqus_thread`);
+async function runWorkerPool(context, items) {
+  const results = [];
+  let currentIndex = 0;
+
+  async function worker() {
+    while (currentIndex < items.length) {
+      const idx = currentIndex++;
+      const res = await testSinglePost(context, items[idx], idx, items.length);
+      results.push(res);
+    }
   }
-  console.log('  ✓ No intrusive ad iframes present');
+
+  const workers = Array.from({ length: Math.min(CONCURRENCY, items.length) }, () => worker());
+  await Promise.all(workers);
+  return results;
 }
 
 async function main() {
-  console.log('=== Starting Disqus E2E Test Suite ===');
+  const startTime = Date.now();
+
   const browser = await chromium.launch({
     headless: true,
     args: ['--no-sandbox', '--disable-setuid-sandbox']
@@ -50,24 +82,23 @@ async function main() {
     viewport: { width: 1280, height: 800 }
   });
 
-  const page = await context.newPage();
-
-  let hasError = false;
-  for (const url of targetUrls) {
-    try {
-      await testPageComments(page, url);
-    } catch (err) {
-      console.error(`  ✗ Test failed for ${url}:`, err.message);
-      hasError = true;
-    }
-  }
+  const results = await runWorkerPool(context, allPosts);
 
   await browser.close();
-  if (hasError) {
-    console.error('\n❌ Disqus E2E Test Suite Failed');
+
+  const duration = ((Date.now() - startTime) / 1000).toFixed(1);
+  const failed = results.filter(r => !r.success);
+
+  console.log(`\n========================================`);
+  console.log(`Test Results: ${results.length - failed.length}/${results.length} passed in ${duration}s`);
+  if (failed.length > 0) {
+    console.error(`\nFailed pages (${failed.length}):`);
+    for (const f of failed) {
+      console.error(` - ${f.url} : ${f.error}`);
+    }
     process.exit(1);
   } else {
-    console.log('\n✅ All Disqus E2E tests passed successfully');
+    console.log(`All ${results.length} post pages verified successfully! 🎉`);
   }
 }
 

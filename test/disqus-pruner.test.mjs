@@ -1,6 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { pruneDisqusAds, validateCommentsState } from '../scripts/disqus-pruner.mjs';
+import fs from 'node:fs';
+import path from 'node:path';
+import os from 'node:os';
+import { pruneDisqusAds, validateCommentsState, getPostUrls } from '../scripts/disqus-pruner.mjs';
 
 function createMockElement(tagName, attributes = {}) {
   const children = [];
@@ -143,7 +146,6 @@ test('regression: demonstrates bug where index-based selection destroyed comment
 test('validateCommentsState detects missing or wiped comments iframe', () => {
   const container = createMockElement('div', { id: 'disqus_thread' });
 
-  // Only indicator-north remains (wiped state)
   const indicatorNorth = createMockElement('iframe', {
     id: 'indicator-north',
     src: ''
@@ -159,4 +161,46 @@ test('pruneDisqusAds safely handles null or empty input', () => {
   assert.deepEqual(pruneDisqusAds(null), []);
   assert.deepEqual(pruneDisqusAds({}), []);
   assert.equal(validateCommentsState(null).valid, false);
+});
+
+test('getPostUrls discovers published posts and formats URLs correctly', () => {
+  const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'posts-test-'));
+
+  try {
+    fs.writeFileSync(
+      path.join(tempDir, '2026-08-11-nest-wifi.md'),
+      '---\ntitle: "Nest Wifi"\ncomments: true\npublished: true\n---\nHello'
+    );
+    fs.writeFileSync(
+      path.join(tempDir, '2018-07-18-xposed.md'),
+      '---\ntitle: "Xposed"\ncomments: true\n---\nHello'
+    );
+    // Should be skipped (published: false)
+    fs.writeFileSync(
+      path.join(tempDir, '2022-01-22-wip.md'),
+      '---\ntitle: "WIP"\ncomments: true\npublished: false\n---\nHello'
+    );
+    // Should be skipped (comments: false)
+    fs.writeFileSync(
+      path.join(tempDir, '2020-05-01-no-comments.md'),
+      '---\ntitle: "No Comments"\ncomments: false\npublished: true\n---\nHello'
+    );
+
+    const posts = getPostUrls(tempDir, 'https://www.mewx.org');
+    assert.equal(posts.length, 2);
+    assert.deepEqual(posts.map(p => p.url), [
+      'https://www.mewx.org/blog/201807/xposed/',
+      'https://www.mewx.org/blog/202608/nest-wifi/'
+    ]);
+  } finally {
+    fs.rmSync(tempDir, { recursive: true, force: true });
+  }
+});
+
+test('getPostUrls correctly discovers actual workspace repository posts', () => {
+  const posts = getPostUrls(path.resolve('_posts'), 'https://www.mewx.org');
+  assert.equal(posts.length, 35, 'Should discover all 35 published posts in repository');
+  const nestWifi = posts.find(p => p.url.includes('google-nest-wifi-h2d-pppoe-mesh-troubleshooting'));
+  assert.ok(nestWifi, 'Should include Google Nest Wifi post');
+  assert.equal(nestWifi.url, 'https://www.mewx.org/blog/202608/google-nest-wifi-h2d-pppoe-mesh-troubleshooting/');
 });

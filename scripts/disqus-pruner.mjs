@@ -1,6 +1,48 @@
+import fs from 'node:fs';
+import path from 'node:path';
+
 /**
- * Disqus Ad Pruner & Validator utilities.
+ * Disqus Ad Pruner, Validator & Post Discovery utilities.
  */
+
+/**
+ * Discovers published blog post URLs with comments enabled by inspecting Markdown front matter.
+ *
+ * @param {string} postsDir - Path to _posts directory
+ * @param {string} baseUrl - Base site URL (default: https://www.mewx.org)
+ * @returns {Array<{ file: string, url: string, title: string }>}
+ */
+export function getPostUrls(postsDir, baseUrl = 'https://www.mewx.org') {
+  if (!fs.existsSync(postsDir)) return [];
+  const normalizedBase = baseUrl.replace(/\/+$/, '');
+  const files = fs.readdirSync(postsDir)
+    .filter(f => f.endsWith('.md'))
+    .sort();
+
+  const results = [];
+  for (const file of files) {
+    const fullPath = path.join(postsDir, file);
+    const content = fs.readFileSync(fullPath, 'utf8');
+
+    // Skip posts that are explicitly unpublished or have comments disabled
+    if (/^published:\s*false/m.test(content)) continue;
+    if (/^comments:\s*false/m.test(content)) continue;
+
+    const match = file.match(/^(\d{4})-(\d{2})-\d{2}-(.+)\.md$/);
+    if (match) {
+      const year = match[1];
+      const month = match[2];
+      const slug = match[3];
+      const url = `${normalizedBase}/blog/${year}${month}/${slug}/`;
+
+      const titleMatch = content.match(/^title:\s*["']?(.*?)["']?$/m);
+      const title = titleMatch ? titleMatch[1] : slug;
+
+      results.push({ file, url, title });
+    }
+  }
+  return results;
+}
 
 /**
  * Prunes ad iframes from a Disqus container without removing
